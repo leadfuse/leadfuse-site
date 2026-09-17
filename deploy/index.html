@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html><head>
+<script>window.__resources={"https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "vendor/react-dom.production.min.js", "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "vendor/react.production.min.js", "https://unpkg.com/@babel/standalone@7.29.0/babel.min.js": "vendor/babel.min.js"};</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/005fae6d.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>LEADFUSE | We Turn Ad Spend Into Booked Jobs</title>
+<meta name="description" content="A calendar full of the jobs you want, at the prices you want, without chasing a single lead. LEADFUSE builds that for service businesses. 100+ shops served. $3.2M+ in tracked client booking revenue. 5.0 on Trustpilot.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/a4e552f9.png">
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url("assets/790ae5f1.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url("assets/3f2123ce.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url("assets/25358baf.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url("assets/735fb92f.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url("assets/143c585b.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url("assets/fa04c06a.woff2") format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url("assets/27bf5574.woff2") format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url("assets/aebf70b3.woff2") format('woff2')}
+</style>
+<style>:root{
+/* base — brandbook palette (Slide 9) */
+--lf-black:#000000;
+--lf-red:#E50011;
+--lf-orange:#F07800;
+--lf-amber:#F5B300;
+--lf-gray:#F2F2F2;
+--lf-white:#FFFFFF;
+/* derived neutrals */
+--lf-ink:#0A0A0A;
+--lf-panel-dark:#161616;
+--lf-line-dark:#2A2A2A;
+--lf-gray-700:#4D4D4D;
+--lf-gray-600:#818181;
+--lf-gray-500:#A7A7A7;
+--lf-gray-300:#D6D6D6;
+--lf-gray-200:#E6E6E6;
+/* red states */
+--lf-red-hover:#C9000F;
+--lf-red-press:#AB000C;
+--lf-red-tint:#FDE8EA;
+/* semantic — light surfaces */
+--surface-page:var(--lf-gray);
+--surface-card:var(--lf-white);
+--surface-sunken:#EAEAEA;
+--text-heading:var(--lf-black);
+--text-body:#333333;
+--text-muted:#6E6E6E;
+--border-subtle:#E2E2E2;
+/* semantic — dark surfaces */
+--surface-dark:var(--lf-black);
+--surface-dark-raised:var(--lf-panel-dark);
+--text-on-dark:var(--lf-white);
+--text-on-dark-muted:var(--lf-gray-500);
+--border-on-dark:var(--lf-line-dark);
+/* accent */
+--accent:var(--lf-red);
+--accent-hover:var(--lf-red-hover);
+--accent-press:var(--lf-red-press);
+--accent-support:var(--lf-orange);
+--accent-highlight:var(--lf-amber);
+/* gradients — wordmark fades (from logo SVGs) */
+--grad-wordmark:linear-gradient(90deg,#000000,#818181); /* @kind color */
+--grad-wordmark-on-dark:linear-gradient(90deg,#A7A7A7,#FFFFFF); /* @kind color */
+--grad-white-fade:linear-gradient(90deg,#FFFFFF,rgba(255,255,255,.3)); /* @kind color */
+}
+</style>
+<style>:root{
+--font-sans:'Poppins',ui-sans-serif,system-ui,'Segoe UI',sans-serif;
+--font-serif-display:'Instrument Serif',Georgia,serif; /* editorial accent — italic emphasis words in display lines only */
+/* scale */
+--fs-display:64px;
+--fs-h1:48px;
+--fs-h2:36px;
+--fs-h3:28px;
+--fs-h4:22px;
+--fs-body-lg:18px;
+--fs-body:16px;
+--fs-sm:14px;
+--fs-xs:12px;
+/* weights */
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-extrabold:800; /* @kind font */
+/* line heights */
+--lh-display:1.05; /* @kind font */
+--lh-heading:1.15; /* @kind font */
+--lh-snug:1.35; /* @kind font */
+--lh-body:1.6; /* @kind font */
+/* tracking */
+--ls-tight:-0.01em; /* @kind font */
+--ls-caps:0.18em; /* @kind font */
+--ls-caps-wide:0.32em; /* @kind font */
+}
+body{font-family:var(--font-sans);color:var(--text-body);font-size:var(--fs-body);line-height:var(--lh-body)}
+h1,h2,h3,h4{color:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--fw-bold);margin:0;text-wrap:pretty}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+</style>
+<style>:root{
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-16:64px;--sp-24:96px;
+/* corners: marks & tiles stay square; interactive surfaces are softly rounded (2026 refresh) */
+--radius-0:0px;
+--radius-sm:4px;
+--radius-md:8px;
+--radius-interactive:10px; /* buttons, inputs */
+--radius-card:16px; /* cards, panels, media frames */
+--radius-lg:16px;
+--radius-pill:999px;
+--container:1200px; /* @kind spacing */
+--logo-safe-x:1em; /* @kind spacing */ /* logo safe area = width of letter E on all sides (Slide 5) */
+}
+</style>
+<style>:root{
+--shadow-card:0 10px 30px rgba(0,0,0,.08);
+--shadow-pop:0 24px 64px rgba(0,0,0,.16);
+--shadow-dark:0 16px 48px rgba(0,0,0,.5);
+--glow-red:0 0 40px rgba(229,0,17,.35),0 0 120px rgba(229,0,17,.15); /* @kind shadow */
+--glow-red-soft:0 0 24px rgba(229,0,17,.22); /* @kind shadow */
+--glass-bg:rgba(255,255,255,.04); /* @kind color */
+--glass-border:1px solid rgba(255,255,255,.09); /* @kind other */
+--glass-blur:saturate(140%) blur(14px); /* @kind other */
+--border-light:1px solid var(--border-subtle); /* @kind other */
+--border-dark:1px solid var(--border-on-dark); /* @kind other */
+--focus-ring:0 0 0 2px #fff,0 0 0 4px var(--accent); /* @kind shadow */
+--focus-ring-dark:0 0 0 2px #000,0 0 0 4px var(--accent); /* @kind shadow */
+--ease-brand:cubic-bezier(.4,0,.2,1); /* @kind other */
+--dur-fast:140ms; /* @kind other */
+--dur-base:240ms; /* @kind other */
+}
+</style>
+<style>@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url("assets/790ae5f1.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url("assets/3f2123ce.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url("assets/25358baf.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url("assets/735fb92f.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url("assets/143c585b.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:800;font-display:swap;src:url("assets/fa04c06a.woff2") format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url("assets/27bf5574.woff2") format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url("assets/aebf70b3.woff2") format('woff2')}
+
+:root{
+/* base — brandbook palette (Slide 9) */
+--lf-black:#000000;
+--lf-red:#E50011;
+--lf-orange:#F07800;
+--lf-amber:#F5B300;
+--lf-gray:#F2F2F2;
+--lf-white:#FFFFFF;
+/* derived neutrals */
+--lf-ink:#0A0A0A;
+--lf-panel-dark:#161616;
+--lf-line-dark:#2A2A2A;
+--lf-gray-700:#4D4D4D;
+--lf-gray-600:#818181;
+--lf-gray-500:#A7A7A7;
+--lf-gray-300:#D6D6D6;
+--lf-gray-200:#E6E6E6;
+/* red states */
+--lf-red-hover:#C9000F;
+--lf-red-press:#AB000C;
+--lf-red-tint:#FDE8EA;
+/* semantic — light surfaces */
+--surface-page:var(--lf-gray);
+--surface-card:var(--lf-white);
+--surface-sunken:#EAEAEA;
+--text-heading:var(--lf-black);
+--text-body:#333333;
+--text-muted:#6E6E6E;
+--border-subtle:#E2E2E2;
+/* semantic — dark surfaces */
+--surface-dark:var(--lf-black);
+--surface-dark-raised:var(--lf-panel-dark);
+--text-on-dark:var(--lf-white);
+--text-on-dark-muted:var(--lf-gray-500);
+--border-on-dark:var(--lf-line-dark);
+/* accent */
+--accent:var(--lf-red);
+--accent-hover:var(--lf-red-hover);
+--accent-press:var(--lf-red-press);
+--accent-support:var(--lf-orange);
+--accent-highlight:var(--lf-amber);
+/* gradients — wordmark fades (from logo SVGs) */
+--grad-wordmark:linear-gradient(90deg,#000000,#818181); /* @kind color */
+--grad-wordmark-on-dark:linear-gradient(90deg,#A7A7A7,#FFFFFF); /* @kind color */
+--grad-white-fade:linear-gradient(90deg,#FFFFFF,rgba(255,255,255,.3)); /* @kind color */
+}
+
+:root{
+--font-sans:'Poppins',ui-sans-serif,system-ui,'Segoe UI',sans-serif;
+--font-serif-display:'Instrument Serif',Georgia,serif; /* editorial accent — italic emphasis words in display lines only */
+/* scale */
+--fs-display:64px;
+--fs-h1:48px;
+--fs-h2:36px;
+--fs-h3:28px;
+--fs-h4:22px;
+--fs-body-lg:18px;
+--fs-body:16px;
+--fs-sm:14px;
+--fs-xs:12px;
+/* weights */
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-extrabold:800; /* @kind font */
+/* line heights */
+--lh-display:1.05; /* @kind font */
+--lh-heading:1.15; /* @kind font */
+--lh-snug:1.35; /* @kind font */
+--lh-body:1.6; /* @kind font */
+/* tracking */
+--ls-tight:-0.01em; /* @kind font */
+--ls-caps:0.18em; /* @kind font */
+--ls-caps-wide:0.32em; /* @kind font */
+}
+body{font-family:var(--font-sans);color:var(--text-body);font-size:var(--fs-body);line-height:var(--lh-body)}
+h1,h2,h3,h4{color:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--fw-bold);margin:0;text-wrap:pretty}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}
+
+:root{
+--sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:20px;--sp-6:24px;--sp-8:32px;--sp-10:40px;--sp-12:48px;--sp-16:64px;--sp-24:96px;
+/* corners: marks & tiles stay square; interactive surfaces are softly rounded (2026 refresh) */
+--radius-0:0px;
+--radius-sm:4px;
+--radius-md:8px;
+--radius-interactive:10px; /* buttons, inputs */
+--radius-card:16px; /* cards, panels, media frames */
+--radius-lg:16px;
+--radius-pill:999px;
+--container:1200px; /* @kind spacing */
+--logo-safe-x:1em; /* @kind spacing */ /* logo safe area = width of letter E on all sides (Slide 5) */
+}
+
+:root{
+--shadow-card:0 10px 30px rgba(0,0,0,.08);
+--shadow-pop:0 24px 64px rgba(0,0,0,.16);
+--shadow-dark:0 16px 48px rgba(0,0,0,.5);
+--glow-red:0 0 40px rgba(229,0,17,.35),0 0 120px rgba(229,0,17,.15); /* @kind shadow */
+--glow-red-soft:0 0 24px rgba(229,0,17,.22); /* @kind shadow */
+--glass-bg:rgba(255,255,255,.04); /* @kind color */
+--glass-border:1px solid rgba(255,255,255,.09); /* @kind other */
+--glass-blur:saturate(140%) blur(14px); /* @kind other */
+--border-light:1px solid var(--border-subtle); /* @kind other */
+--border-dark:1px solid var(--border-on-dark); /* @kind other */
+--focus-ring:0 0 0 2px #fff,0 0 0 4px var(--accent); /* @kind shadow */
+--focus-ring-dark:0 0 0 2px #000,0 0 0 4px var(--accent); /* @kind shadow */
+--ease-brand:cubic-bezier(.4,0,.2,1); /* @kind other */
+--dur-fast:140ms; /* @kind other */
+--dur-base:240ms; /* @kind other */
+}
+
+</style>
+<script src="assets/f7b8f60b.js"></script>
+<script src="assets/ee4aba37.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#F2F2F2;color:#0A0A0A;font-family:var(--font-sans);-webkit-font-smoothing:antialiased}
+::selection{background:#E50011;color:#fff}
+a{color:#E50011}a:hover{color:#C9000F}
+[data-lf-phone] *::-webkit-scrollbar{display:none}
+[data-lf-phone] *{scrollbar-width:none}
+image-slot[data-filled]+.avi{display:none}
+[data-snap]::-webkit-scrollbar{display:none}
+[data-snap]{scrollbar-width:none}
+@keyframes lfIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lfProgress{from{width:0}to{width:100%}}
+@keyframes lfDot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-2px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+
+<dc-import name="SiteNav" active="home" booking-url="{{ bookingUrl }}" hint-size="100%,64px"></dc-import>
+
+<header id="top" data-screen-label="Hero" style="position:relative;overflow:hidden;padding:clamp(100px,15vw,160px) 20px clamp(48px,7vw,80px)">
+  
+  <div style="position:relative;z-index:1;max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(40px,6vw,72px);align-items:center">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><div style="display:flex;align-items:center"><img src="assets/7d449f67.png" alt="Detail Dawgs" style="width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #F2F2F2;object-fit:cover;display:block;box-shadow:0 2px 6px rgba(0,0,0,.08)"><img src="assets/18c30462.png" alt="Caruso’s Auto Boutique" style="width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #F2F2F2;object-fit:cover;display:block;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-left:-10px"><img src="assets/9caba14d.png" alt="Paradise Auto Care" style="width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #F2F2F2;object-fit:cover;display:block;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-left:-10px"><img src="assets/5ecfbb14.png" alt="Toranzo Property Pros" style="width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #F2F2F2;object-fit:cover;display:block;box-shadow:0 2px 6px rgba(0,0,0,.08);margin-left:-10px"></div><span style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#5A5A5A;font-weight:700;line-height:1.5">Trusted by <b style="color:#0A0A0A">100+</b> service businesses across North America</span><a href="https://www.facebook.com/business/marketing-partners" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 8px;border-radius:999px;background:#fff;border:1px solid #DADADA;text-decoration:none;color:#0A0A0A;box-shadow:0 2px 8px rgba(0,0,0,.06)" style-hover="border:1px solid #0A0A0A"><img src="assets/e125edd8.svg" alt="Meta" width="16" height="16" style="width:16px;height:16px;display:block"><span style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;line-height:1">Meta Certified</span></a></div>
+      <h1 style="margin:22px 0 0;font-size:clamp(40px,10.5vw,76px);font-weight:800;line-height:1;letter-spacing:-.035em;color:#0A0A0A;text-wrap:balance">We turn ad spend into <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011;letter-spacing:-.01em">booked jobs.</em></h1>
+      <p style="margin:22px 0 0;max-width:470px;font-size:clamp(17px,2vw,20px);line-height:1.5;color:#333">More, better leads. People who can afford $1,000+ jobs, on your calendar every week.</p>
+      <div style="display:flex;gap:12px 24px;margin-top:30px;flex-wrap:wrap;align-items:center">
+        <a href="{{ bookingUrl }}" style="text-decoration:none;flex:1 1 220px;max-width:320px"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.Button" variant="primary" size="lg" block="{{ true }}" hint-size="100%,54px">Book my call</x-import></a>
+        <a href="#how" style="font-size:14px;font-weight:600;color:#0A0A0A;text-decoration:none;padding:12px 0;display:inline-flex;align-items:center;gap:8px" style-hover="color:#E50011">How it works <span style="color:#E50011">↓</span></a>
+      </div>
+      
+      
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;justify-self:center;width:100%;max-width:520px">
+      <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}"><div data-marquee2="" style="width:100%;overflow:hidden;position:relative;margin-top:6px">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,#F2F2F2,rgba(242,242,242,0));z-index:1;pointer-events:none"></div>
+        <div style="position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(270deg,#F2F2F2,rgba(242,242,242,0));z-index:1;pointer-events:none"></div>
+        <div data-marquee2-track="" style="display:flex;gap:10px;width:max-content;align-items:flex-start;will-change:transform"><div style="width:300px;flex-shrink:0"><div style="position:relative;width:100%;padding-bottom:110px">
+        <div style="background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.18);overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',var(--font-sans)">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #DADDE1;background:#F7F8FA">
+            <span style="font-size:13px;font-weight:700;color:#050505;letter-spacing:-.01em">Campaigns</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:7px;border:1px solid #CED0D4;background:#fff;font-size:11.5px;color:#050505;min-width:0"><span style="width:16px;height:16px;border-radius:4px;background:#E7F0FF;color:#1B74E4;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">C</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">LF | Carusos Auto Boutiq…</span><span style="color:#65676B;font-size:9px">▼</span></span>
+            <span style="margin-left:auto;font-size:11px;color:#65676B;white-space:nowrap">Updated just now</span>
+            <img src="assets/0a01d6c2.png" alt="Sebastian Fonseca" style="width:28px;height:28px;border-radius:50%;display:block;flex-shrink:0">
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.95fr) minmax(0,.7fr) minmax(0,.95fr);background:#fff;font-variant-numeric:tabular-nums">
+            <div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:left">Campaign</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Amount spent</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Results</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Cost per result</div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | CAB | LEAD GEN</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$82,103.73</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">6,272<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$13.09<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | CAB | Launch Camp</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$1,050.54</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">152<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$6.91<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+          </div>
+          <div style="padding:9px 10px 10px;font-size:11px;color:#65676B">Results from 2 campaigns</div>
+        </div>
+        <div data-lens-m="" style="position:absolute;right:-8px;bottom:0;width:220px;height:220px;transform-origin:bottom right;transform:scale(.8);filter:drop-shadow(0 30px 40px rgba(0,0,0,.35)) drop-shadow(0 4px 8px rgba(0,0,0,.18))">
+          <span style="position:absolute;left:147px;top:147px;width:78px;height:24px;border-radius:12px;background:linear-gradient(180deg,#3A3A3C 0%,#0A0A0A 55%,#2C2C2E 100%);transform:rotate(45deg);transform-origin:12px 50%;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)"></span>
+          <span style="position:absolute;left:150px;top:150px;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#E8E8EA,#8E8E93);transform:translate(-8px,-8px)"></span>
+          <div style="position:absolute;left:0;top:0;width:190px;height:190px;border-radius:50%;padding:9px;box-sizing:border-box;background:conic-gradient(from 210deg,#F4F4F6,#9A9AA0 18%,#F7F7F9 34%,#7C7C82 52%,#EDEDF0 68%,#A6A6AB 84%,#F4F4F6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 0 0 2px rgba(0,0,0,.08)">
+            <div style="position:relative;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFFFFF 0%,#FAFAFA 55%,#ECECEE 100%);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18),inset 0 10px 24px rgba(0,0,0,.06),inset 0 -8px 18px rgba(0,0,0,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:14px;box-sizing:border-box;overflow:hidden">
+              <span style="position:absolute;left:14%;top:8%;width:52%;height:22%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,0));transform:rotate(-24deg);pointer-events:none"></span>
+              <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E50011;font-weight:700">One campaign</div>
+              <div style="font-family:var(--font-serif-display);font-size:30px;line-height:1;color:#0A0A0A;letter-spacing:-.02em">$82,103</div>
+              <div style="font-size:10px;color:#5A5A5A;margin-top:-2px">spent</div>
+              <div style="display:flex;gap:14px;margin-top:2px">
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">6,272</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">leads</div></div>
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#E50011">$13.09</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">per lead</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+          <div style="width:300px;flex-shrink:0"><div style="position:relative;width:100%;padding-bottom:110px">
+        <div style="background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.18);overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',var(--font-sans)">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #DADDE1;background:#F7F8FA">
+            <span style="font-size:13px;font-weight:700;color:#050505;letter-spacing:-.01em">Campaigns</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:7px;border:1px solid #CED0D4;background:#fff;font-size:11.5px;color:#050505;min-width:0"><span style="width:16px;height:16px;border-radius:4px;background:#E7F0FF;color:#1B74E4;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">C</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">LF | Alpine Auto Lab</span><span style="color:#65676B;font-size:9px">▼</span></span>
+            <span style="margin-left:auto;font-size:11px;color:#65676B;white-space:nowrap">Updated just now</span>
+            <img src="assets/0a01d6c2.png" alt="Sebastian Fonseca" style="width:28px;height:28px;border-radius:50%;display:block;flex-shrink:0">
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.95fr) minmax(0,.7fr) minmax(0,.95fr);background:#fff;font-variant-numeric:tabular-nums">
+            <div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:left">Campaign</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Amount spent</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Results</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Cost per result</div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | Alpine | LEAD GEN</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$22,682.05</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">1,617<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$14.03<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">$299 SELF COATING</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$93.84</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">3<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$31.28<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+          </div>
+          <div style="padding:9px 10px 10px;font-size:11px;color:#65676B">Results from 6 campaigns</div>
+        </div>
+        <div data-lens-m2="" style="position:absolute;right:-8px;bottom:0;width:220px;height:220px;transform-origin:bottom right;transform:scale(.8);filter:drop-shadow(0 30px 40px rgba(0,0,0,.35)) drop-shadow(0 4px 8px rgba(0,0,0,.18))">
+          <span style="position:absolute;left:147px;top:147px;width:78px;height:24px;border-radius:12px;background:linear-gradient(180deg,#3A3A3C 0%,#0A0A0A 55%,#2C2C2E 100%);transform:rotate(45deg);transform-origin:12px 50%;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)"></span>
+          <span style="position:absolute;left:150px;top:150px;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#E8E8EA,#8E8E93);transform:translate(-8px,-8px)"></span>
+          <div style="position:absolute;left:0;top:0;width:190px;height:190px;border-radius:50%;padding:9px;box-sizing:border-box;background:conic-gradient(from 210deg,#F4F4F6,#9A9AA0 18%,#F7F7F9 34%,#7C7C82 52%,#EDEDF0 68%,#A6A6AB 84%,#F4F4F6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 0 0 2px rgba(0,0,0,.08)">
+            <div style="position:relative;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFFFFF 0%,#FAFAFA 55%,#ECECEE 100%);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18),inset 0 10px 24px rgba(0,0,0,.06),inset 0 -8px 18px rgba(0,0,0,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:14px;box-sizing:border-box;overflow:hidden">
+              <span style="position:absolute;left:14%;top:8%;width:52%;height:22%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,0));transform:rotate(-24deg);pointer-events:none"></span>
+              <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E50011;font-weight:700">One campaign</div>
+              <div style="font-family:var(--font-serif-display);font-size:30px;line-height:1;color:#0A0A0A;letter-spacing:-.02em">$22,682</div>
+              <div style="font-size:10px;color:#5A5A5A;margin-top:-2px">spent</div>
+              <div style="display:flex;gap:14px;margin-top:2px">
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">1,617</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">leads</div></div>
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#E50011">$14.03</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">per lead</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+          
+          <div style="width:300px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-2" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 2]"></image-slot></div>
+          <div style="width:300px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-3" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 3]"></image-slot></div>
+          <div style="width:300px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-4" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 4]"></image-slot></div>
+        </div>
+      </div><span style="font-size:11.5px;color:#5A5A5A">Real accounts. Real numbers. Caruso’s Auto Boutique and Alpine Auto Lab.</span>
+      </sc-if><sc-if value="{{ notMobile }}" hint-placeholder-val="{{ true }}"><div data-rv="" style="position:relative;width:100%;padding-bottom:{{ adsPadB }}">
+        <div style="background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.18);overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',var(--font-sans)">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #DADDE1;background:#F7F8FA">
+            <span style="font-size:13px;font-weight:700;color:#050505;letter-spacing:-.01em">Campaigns</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:7px;border:1px solid #CED0D4;background:#fff;font-size:11.5px;color:#050505;min-width:0"><span style="width:16px;height:16px;border-radius:4px;background:#E7F0FF;color:#1B74E4;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">C</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">LF | Carusos Auto Boutiq…</span><span style="color:#65676B;font-size:9px">▼</span></span>
+            <span style="margin-left:auto;font-size:11px;color:#65676B;white-space:nowrap">Updated just now</span>
+            <img src="assets/0a01d6c2.png" alt="Sebastian Fonseca" style="width:28px;height:28px;border-radius:50%;display:block;flex-shrink:0">
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.95fr) minmax(0,.7fr) minmax(0,.95fr);background:#fff;font-variant-numeric:tabular-nums">
+            <div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:left">Campaign</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Amount spent</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Results</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Cost per result</div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | CAB | LEAD GEN</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$82,103.73</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">6,272<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$13.09<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | CAB | Launch Camp</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$1,050.54</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">152<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$6.91<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+          </div>
+          <div style="padding:9px 10px 10px;font-size:11px;color:#65676B">Results from 2 campaigns</div>
+        </div>
+        <div data-lens="" style="position:absolute;right:-8px;bottom:0;width:220px;height:220px;transform-origin:bottom right;transform:scale({{ lensScale }});filter:drop-shadow(0 30px 40px rgba(0,0,0,.35)) drop-shadow(0 4px 8px rgba(0,0,0,.18))">
+          <span style="position:absolute;left:147px;top:147px;width:78px;height:24px;border-radius:12px;background:linear-gradient(180deg,#3A3A3C 0%,#0A0A0A 55%,#2C2C2E 100%);transform:rotate(45deg);transform-origin:12px 50%;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)"></span>
+          <span style="position:absolute;left:150px;top:150px;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#E8E8EA,#8E8E93);transform:translate(-8px,-8px)"></span>
+          <div style="position:absolute;left:0;top:0;width:190px;height:190px;border-radius:50%;padding:9px;box-sizing:border-box;background:conic-gradient(from 210deg,#F4F4F6,#9A9AA0 18%,#F7F7F9 34%,#7C7C82 52%,#EDEDF0 68%,#A6A6AB 84%,#F4F4F6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 0 0 2px rgba(0,0,0,.08)">
+            <div style="position:relative;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFFFFF 0%,#FAFAFA 55%,#ECECEE 100%);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18),inset 0 10px 24px rgba(0,0,0,.06),inset 0 -8px 18px rgba(0,0,0,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:14px;box-sizing:border-box;overflow:hidden">
+              <span style="position:absolute;left:14%;top:8%;width:52%;height:22%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,0));transform:rotate(-24deg);pointer-events:none"></span>
+              <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E50011;font-weight:700">One campaign</div>
+              <div style="font-family:var(--font-serif-display);font-size:30px;line-height:1;color:#0A0A0A;letter-spacing:-.02em">$82,103</div>
+              <div style="font-size:10px;color:#5A5A5A;margin-top:-2px">spent</div>
+              <div style="display:flex;gap:14px;margin-top:2px">
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">6,272</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">leads</div></div>
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#E50011">$13.09</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">per lead</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span style="font-size:11.5px;color:#5A5A5A">Real accounts. Real numbers. Caruso’s Auto Boutique and Alpine Auto Lab.</span>
+      <div data-marquee2="" style="width:100%;overflow:hidden;position:relative;margin-top:6px">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,#F2F2F2,rgba(242,242,242,0));z-index:1;pointer-events:none"></div>
+        <div style="position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(270deg,#F2F2F2,rgba(242,242,242,0));z-index:1;pointer-events:none"></div>
+        <div data-marquee2-track="" style="display:flex;gap:10px;width:max-content;will-change:transform">
+          <div style="width:240px;height:0px;flex-shrink:0;overflow:hidden;height:auto"><div style="width:300px;transform:scale(.8);transform-origin:top left;margin-bottom:-20%"><div style="width:300px"><div style="position:relative;width:100%;padding-bottom:110px">
+        <div style="background:#fff;border-radius:14px;box-shadow:0 30px 60px rgba(0,0,0,.18);overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',var(--font-sans)">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid #DADDE1;background:#F7F8FA">
+            <span style="font-size:13px;font-weight:700;color:#050505;letter-spacing:-.01em">Campaigns</span>
+            <span style="display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:7px;border:1px solid #CED0D4;background:#fff;font-size:11.5px;color:#050505;min-width:0"><span style="width:16px;height:16px;border-radius:4px;background:#E7F0FF;color:#1B74E4;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">C</span><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">LF | Alpine Auto Lab</span><span style="color:#65676B;font-size:9px">▼</span></span>
+            <span style="margin-left:auto;font-size:11px;color:#65676B;white-space:nowrap">Updated just now</span>
+            <img src="assets/0a01d6c2.png" alt="Sebastian Fonseca" style="width:28px;height:28px;border-radius:50%;display:block;flex-shrink:0">
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,.95fr) minmax(0,.7fr) minmax(0,.95fr);background:#fff;font-variant-numeric:tabular-nums">
+            <div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:left">Campaign</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Amount spent</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Results</div><div style="font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#65676B;font-weight:600;padding:8px 8px;border-bottom:1px solid #DADDE1;line-height:1.25;text-align:right">Cost per result</div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">LF | Alpine | LEAD GEN</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$22,682.05</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">1,617<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(11px,3.2vw,13px);color:#050505;font-weight:600;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$14.03<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+            <div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;display:flex;align-items:center;gap:7px;min-width:0"><span style="width:24px;height:14px;border-radius:7px;background:#1B74E4;position:relative;flex-shrink:0"><i style="position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:#fff"></i></span><span style="font-size:clamp(10.5px,3vw,12px);color:#1B74E4;font-weight:500;line-height:1.25;min-width:0;overflow-wrap:anywhere">$299 SELF COATING</span></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$93.84</div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">3<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Leads (Form)</div></div><div style="padding:9px 8px;border-bottom:1px solid #EEF0F2;font-size:clamp(10.5px,3vw,12px);color:#050505;font-weight:400;text-align:right;line-height:1.25;white-space:nowrap;min-width:0">$31.28<div style="font-size:9.5px;color:#65676B;font-weight:400;margin-top:2px;white-space:normal;line-height:1.2">Per Lead (Form)</div></div>
+          </div>
+          <div style="padding:9px 10px 10px;font-size:11px;color:#65676B">Results from 6 campaigns</div>
+        </div>
+        <div data-lens-d2="" style="position:absolute;right:-8px;bottom:0;width:220px;height:220px;transform-origin:bottom right;transform:scale(.8);filter:drop-shadow(0 30px 40px rgba(0,0,0,.35)) drop-shadow(0 4px 8px rgba(0,0,0,.18))">
+          <span style="position:absolute;left:147px;top:147px;width:78px;height:24px;border-radius:12px;background:linear-gradient(180deg,#3A3A3C 0%,#0A0A0A 55%,#2C2C2E 100%);transform:rotate(45deg);transform-origin:12px 50%;box-shadow:inset 0 1px 0 rgba(255,255,255,.18)"></span>
+          <span style="position:absolute;left:150px;top:150px;width:26px;height:26px;border-radius:50%;background:linear-gradient(180deg,#E8E8EA,#8E8E93);transform:translate(-8px,-8px)"></span>
+          <div style="position:absolute;left:0;top:0;width:190px;height:190px;border-radius:50%;padding:9px;box-sizing:border-box;background:conic-gradient(from 210deg,#F4F4F6,#9A9AA0 18%,#F7F7F9 34%,#7C7C82 52%,#EDEDF0 68%,#A6A6AB 84%,#F4F4F6);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 0 0 2px rgba(0,0,0,.08)">
+            <div style="position:relative;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFFFFF 0%,#FAFAFA 55%,#ECECEE 100%);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.18),inset 0 10px 24px rgba(0,0,0,.06),inset 0 -8px 18px rgba(0,0,0,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;padding:14px;box-sizing:border-box;overflow:hidden">
+              <span style="position:absolute;left:14%;top:8%;width:52%;height:22%;border-radius:50%;background:linear-gradient(180deg,rgba(255,255,255,.95),rgba(255,255,255,0));transform:rotate(-24deg);pointer-events:none"></span>
+              <div style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#E50011;font-weight:700">One campaign</div>
+              <div style="font-family:var(--font-serif-display);font-size:30px;line-height:1;color:#0A0A0A;letter-spacing:-.02em">$22,682</div>
+              <div style="font-size:10px;color:#5A5A5A;margin-top:-2px">spent</div>
+              <div style="display:flex;gap:14px;margin-top:2px">
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">1,617</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">leads</div></div>
+                <div><div style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#E50011">$14.03</div><div style="font-size:9.5px;color:#5A5A5A;margin-top:2px">per lead</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+          </div></div>
+          <div style="width:240px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-2" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 2]"></image-slot></div>
+          <div style="width:240px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-3" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 3]"></image-slot></div>
+          <div style="width:240px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #DADADA;flex-shrink:0"><image-slot id="campaign-4" shape="rect" placeholder="[CAMPAIGN SCREENSHOT 4]"></image-slot></div>
+        </div>
+      </div></sc-if>
+    </div>
+  </div>
+</header>
+
+<section data-screen-label="Trusted by" style="border-top:1px solid #DADADA;border-bottom:1px solid #DADADA;background:#fff;padding:22px 0 24px;overflow:hidden">
+  <div style="text-align:center;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#5A5A5A;padding:0 20px">Trusted by leading service businesses across North America</div>
+  <div data-marquee="" style="margin-top:18px;overflow:hidden;position:relative">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:60px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0));z-index:1;pointer-events:none"></div>
+    <div style="position:absolute;right:0;top:0;bottom:0;width:60px;background:linear-gradient(270deg,#fff,rgba(255,255,255,0));z-index:1;pointer-events:none"></div>
+    <div data-marquee-track="" style="display:flex;gap:14px;width:max-content;padding:0 7px;will-change:transform"><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/66658588.png" alt="Caruso’s Auto Boutique" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/4946008a.png" alt="Detail Dawgs" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/0ebf2e9c.png" alt="Paradise Auto Care" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/4b4ebdc6.png" alt="Ace Pro Detailing" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/4b639405.png" alt="M3 Auto Detailing" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/8b64d097.png" alt="Toranzo Property Pros" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/c9a0e1e8.png" alt="One Way Mobile Detailing" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/cc1770ed.png" alt="Red Wagon Detailing" style="width:100%;height:100%;object-fit:contain;display:block"></div><div style="width:170px;height:64px;flex-shrink:0;display:flex;align-items:center;justify-content:center"><img src="assets/44740026.png" alt="Hampton Auto Detailing" style="width:100%;height:100%;object-fit:contain;display:block"></div></div>
+  </div>
+</section>
+
+<section id="results" data-screen-label="Client proof wall" style="padding:clamp(60px,10vw,110px) 20px">
+  <div style="max-width:1140px;margin:0 auto">
+    <div data-rv="" style="max-width:680px;margin-bottom:clamp(28px,5vw,40px)">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:2px;background:#E50011;flex-shrink:0"></span><span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E50011;font-weight:700">Proof, not promises</span></div>
+      <h2 style="margin:18px 0 0;font-size:clamp(32px,8vw,54px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.02">Real shops. Real messages. Real money.</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.55;color:#333">Unprompted, from our client Slack. This is what a full calendar looks like when it lands in your inbox.</p>
+    </div>
+    <sc-if value="{{ wallMobile }}" hint-placeholder-val="{{ false }}"><div data-rv="" style="display:flex;flex-direction:column;align-items:center;padding-top:4px"><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);transform:rotate(-1.6deg) translateX(-6px)"><img src="assets/2cf0c021.jpg" alt="Slack message from Austin Elworth" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(1.6deg) translateX(6px)"><img src="assets/11e1f626.jpg" alt="Slack message from Grayson Abercrombie" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(-1.6deg) translateX(-6px)"><img src="assets/65a2ba8c.png" alt="Slack message from Price Dyer" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(1.6deg) translateX(6px)"><img src="assets/49b3ab90.jpg" alt="Slack message from Mike Reynoso" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(-1.6deg) translateX(-6px)"><img src="assets/d12f2159.png" alt="Slack message from Brayden Stacy" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(1.6deg) translateX(6px)"><img src="assets/6a132543.jpg" alt="Slack message from Christian Douglas" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(-1.6deg) translateX(-6px)"><img src="assets/715c3993.png" alt="Slack message from Pete Tienken" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(1.6deg) translateX(6px)"><img src="assets/504fa2cd.png" alt="Slack message from Trey Scott" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(-1.6deg) translateX(-6px)"><img src="assets/bb05fb8b.png" alt="Slack message from Jared Santana" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="position:relative;width:min(100%,370px);border-radius:12px;overflow:hidden;background:#1A1D21;box-shadow:0 18px 44px rgba(0,0,0,.28);margin-top:-64px;transform:rotate(1.6deg) translateX(6px)"><img src="assets/4b5d04f4.jpg" alt="Slack message from Vincent Caruso" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div></div></sc-if>
+    <sc-if value="{{ wallDesktop }}" hint-placeholder-val="{{ true }}"><div data-rv="" style="column-width:340px;column-gap:12px"><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/2cf0c021.jpg" alt="Slack message from Austin Elworth" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/11e1f626.jpg" alt="Slack message from Grayson Abercrombie" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/65a2ba8c.png" alt="Slack message from Price Dyer" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/49b3ab90.jpg" alt="Slack message from Mike Reynoso" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/d12f2159.png" alt="Slack message from Brayden Stacy" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/6a132543.jpg" alt="Slack message from Christian Douglas" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/715c3993.png" alt="Slack message from Pete Tienken" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/504fa2cd.png" alt="Slack message from Trey Scott" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/bb05fb8b.png" alt="Slack message from Jared Santana" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div><div style="break-inside:avoid;margin-bottom:12px;border-radius:12px;overflow:hidden;background:#1A1D21"><img src="assets/4b5d04f4.jpg" alt="Slack message from Vincent Caruso" loading="lazy" decoding="async" style="width:100%;height:auto;display:block"></div></div></sc-if>
+    <div data-rv="" style="margin-top:clamp(24px,5vw,36px)"><a href="#" style="display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:#0A0A0A;text-decoration:none;padding:8px 0" style-hover="color:#E50011">See the full wall of proof <span style="color:#E50011">→</span></a></div>
+  </div>
+</section>
+
+<section data-screen-label="Trustpilot proof" style="padding:clamp(60px,10vw,110px) 20px;border-top:1px solid #DADADA;background:#fff">
+  <div style="max-width:1140px;margin:0 auto">
+    <div data-rv="" style="max-width:680px">
+      <div style="display:flex;align-items:center;gap:10px"><img src="assets/fb8f50c9.svg" alt="" width="28" height="28" style="width:28px;height:28px;display:block"><span style="font-size:24px;font-weight:700;letter-spacing:-.02em;color:#191919;line-height:1">Trustpilot</span></div>
+      <h2 style="margin:18px 0 0;font-size:clamp(32px,8vw,54px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.02">100% five star reviews. On a site we can’t edit.</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.55;color:#333;max-width:480px">Every review on our Trustpilot page is five stars. Don’t take our word for it. Read them.</p>
+    </div>
+    <div data-marquee3="" style="margin:32px -20px 0;overflow:hidden;position:relative">
+      <div style="position:absolute;left:0;top:0;bottom:0;width:40px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0));z-index:1;pointer-events:none"></div>
+      <div style="position:absolute;right:0;top:0;bottom:0;width:40px;background:linear-gradient(270deg,#fff,rgba(255,255,255,0));z-index:1;pointer-events:none"></div>
+      <div data-marquee3-track="" style="display:flex;gap:12px;width:max-content;padding:0 6px 24px;align-items:flex-start;will-change:transform"><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/508078c8.png" alt="Trustpilot review from Jack TerHaar: scaling my business to $100K+/month" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/3af725c6.png" alt="Trustpilot review from Austin Elworth: exit and scale my detailing biz for over 100K" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/443eb4ed.png" alt="Trustpilot review from Michael T: revenue generated with LEADFUSE was astronomical" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/ed97f559.png" alt="Trustpilot review from Pete Tienken: from side hustle to career" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/04a0f7a8.png" alt="Trustpilot review from Brayden Stacy: never had a marketing team work as hard" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/5452a768.png" alt="Trustpilot review from Christian Douglas: changing the marketing game for good" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/c022fdee.png" alt="Trustpilot review from Jacob Thomas: shift from basic detailing to higher-value services" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div><div style="width:min(78vw,300px);height:380px;flex-shrink:0;position:relative;border-radius:12px;overflow:hidden;border:1px solid #DADADA;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.08)"><img src="assets/d1a802dc.jpg" alt="Trustpilot review from Vincent Caruso" loading="lazy" style="width:100%;height:auto;display:block"><div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 80%);pointer-events:none"></div></div></div>
+    </div>
+    <a data-rv="" href="https://www.trustpilot.com/review/leadfuse.co" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:24px;font-size:14.5px;font-weight:600;color:#0A0A0A;text-decoration:none;padding:8px 0" style-hover="color:#E50011">Read the reviews on Trustpilot <span style="color:#E50011">→</span></a>
+  </div>
+</section>
+
+<section id="compare" data-screen-label="How we compare" style="background:#0A0A0A;color:#fff;padding:clamp(60px,10vw,110px) 20px;position:relative;overflow:hidden">
+  <img src="assets/44d84d3a.svg" alt="" style="position:absolute;right:-140px;top:-120px;width:520px;opacity:.04;pointer-events:none">
+  <div style="max-width:1140px;margin:0 auto;position:relative">
+    <div data-rv="" style="max-width:720px">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:2px;background:#E50011;flex-shrink:0"></span><span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E50011;font-weight:700">How we compare</span></div>
+      <h2 style="margin:18px 0 0;font-size:clamp(32px,8vw,54px);font-weight:800;letter-spacing:-.03em;color:#fff;line-height:1.02">LEADFUSE vs. the last agency you hired.</h2>
+    </div>
+    <sc-if value="{{ cmpMobile }}" hint-placeholder-val="{{ false }}">
+      <div data-rv="" style="margin-top:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;padding:18px 20px;border-radius:16px;background:#161616;border:1px solid rgba(255,255,255,.08)">
+        <div><img src="assets/bdd3a254.png" alt="LEADFUSE" style="height:14px;width:auto;display:block"><div style="margin-top:8px;font-family:var(--font-serif-display);font-size:44px;line-height:1;color:#fff" data-count="7">7</div></div>
+        <div style="font-family:var(--font-serif-display);font-style:italic;font-size:22px;color:#E50011">vs</div>
+        <div style="text-align:right"><div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45);line-height:14px">Other agencies</div><div style="margin-top:8px;font-family:var(--font-serif-display);font-size:44px;line-height:1;color:rgba(255,255,255,.35)">0</div></div>
+      </div>
+      <div style="margin-top:10px;border-bottom:1px solid rgba(255,255,255,.1)"><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">01 · Who they serve</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>Anyone with a credit card.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>Local service businesses only. 100+ of them.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">02 · What you get</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>A list of names.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>Booked jobs on your calendar.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">03 · Your leads</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>Sit in a form until you call.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>Texted back in seconds, already qualified.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">04 · Proof</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>"Trust us."</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>Real numbers on every account. Ask to see them.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">05 · Your numbers</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>A monthly PDF, if that.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>Every week, one screen.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">06 · When you need help</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>A ticket queue.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>A real person, same business day.</span></div>
+      </div><div data-rv="" style="padding:18px 0;border-top:1px solid rgba(255,255,255,.1)">
+        <div style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.45)">07 · If it isn’t working</div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:rgba(255,255,255,.45);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.35)"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:inline-flex;align-items:center;justify-content:center;font-size:11px;text-decoration:none">✕</span><span>They go quiet.</span></div>
+        <div style="margin-top:8px;display:flex;gap:10px;align-items:flex-start;font-size:17px;line-height:1.4;color:#fff;font-weight:700;letter-spacing:-.01em"><span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;margin-top:2px">✓</span><span>We tell you, and we fix it.</span></div>
+      </div></div>
+    </sc-if>
+    <sc-if value="{{ cmpDesktop }}" hint-placeholder-val="{{ true }}"><div data-rv="" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px;align-items:start"><div style="border-radius:16px;overflow:hidden;border:1px solid #E50011;background:#0A0A0A;color:#fff">
+        <div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.14);display:flex;align-items:center;min-height:20px"><img src="assets/bdd3a254.png" alt="LEADFUSE" style="height:16px;width:auto;display:block"></div>
+        <div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">Who they serve</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>Local service businesses only. 100+ of them.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">What you get</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>Booked jobs on your calendar.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">Your leads</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>Texted back in seconds, already qualified.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">Proof</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>Real numbers on every account. Ask to see them.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">Your numbers</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>Every week, one screen.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">When you need help</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>A real person, same business day.</div></div><div style="padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.1)"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#E50011">If it isn’t working</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:600"><span style="color:#E50011;margin-right:8px">✓</span>We tell you, and we fix it.</div></div>
+      </div><div style="border-radius:16px;overflow:hidden;border:1px solid #DADADA;background:#fff;color:#333">
+        <div style="padding:16px 20px;border-bottom:1px solid #DADADA;display:flex;align-items:center;min-height:20px"><span style="font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#5A5A5A">Other agencies</span></div>
+        <div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">Who they serve</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>Anyone with a credit card.</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">What you get</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>A list of names.</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">Your leads</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>Sit in a form until you call.</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">Proof</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>"Trust us."</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">Your numbers</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>A monthly PDF, if that.</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">When you need help</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>A ticket queue.</div></div><div style="padding:14px 20px;border-bottom:1px solid #EEE"><div style="font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#8A8A8A">If it isn’t working</div><div style="margin-top:4px;font-size:15px;line-height:1.45;font-weight:400"><span style="color:#8A8A8A;margin-right:8px">✕</span>They go quiet.</div></div>
+      </div></div></sc-if>
+  </div>
+</section>
+
+<section id="how" data-screen-label="How it works" style="padding:clamp(60px,10vw,110px) 20px;border-top:1px solid #DADADA;background:#fff">
+  <div style="max-width:1140px;margin:0 auto">
+    <div data-rv="" style="max-width:720px">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:2px;background:#E50011;flex-shrink:0"></span><span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E50011;font-weight:700">What it looks like fixed</span></div>
+      <h2 style="margin:18px 0 0;font-size:clamp(32px,8vw,54px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.02">What a full calendar actually looks like.</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.55;color:#333;max-width:560px">An offer, an ad, and hope is not a plan. We fix the whole path. Tap through.</p>
+    </div>
+    <div data-rv="" data-tabs="" style="display:flex;gap:4px;margin-top:30px;padding:4px;border-radius:12px;background:#F2F2F2;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none"><button data-tab="1" sc-camel-on-click="{{ pick1 }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 auto;min-width:112px;padding:10px 10px;text-align:center;font-family:var(--font-sans);min-height:52px;border-radius:9px;position:relative;overflow:hidden;scroll-snap-align:start;background:{{ bg1 }};color:{{ fg1 }};transition:background .25s,color .25s"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7">01</div><div style="margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.2">Offer</div><sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;bottom:0;left:0;height:2px;background:#E50011;animation:lfProgress {{ dur }} linear forwards"></div></sc-if></button><button data-tab="2" sc-camel-on-click="{{ pick2 }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 auto;min-width:112px;padding:10px 10px;text-align:center;font-family:var(--font-sans);min-height:52px;border-radius:9px;position:relative;overflow:hidden;scroll-snap-align:start;background:{{ bg2 }};color:{{ fg2 }};transition:background .25s,color .25s"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7">02</div><div style="margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.2">Acquisition</div><sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:0;left:0;height:2px;background:#E50011;animation:lfProgress {{ dur }} linear forwards"></div></sc-if></button><button data-tab="3" sc-camel-on-click="{{ pick3 }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 auto;min-width:112px;padding:10px 10px;text-align:center;font-family:var(--font-sans);min-height:52px;border-radius:9px;position:relative;overflow:hidden;scroll-snap-align:start;background:{{ bg3 }};color:{{ fg3 }};transition:background .25s,color .25s"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7">03</div><div style="margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.2">Conversion</div><sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:0;left:0;height:2px;background:#E50011;animation:lfProgress {{ dur }} linear forwards"></div></sc-if></button><button data-tab="4" sc-camel-on-click="{{ pick4 }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 auto;min-width:112px;padding:10px 10px;text-align:center;font-family:var(--font-sans);min-height:52px;border-radius:9px;position:relative;overflow:hidden;scroll-snap-align:start;background:{{ bg4 }};color:{{ fg4 }};transition:background .25s,color .25s"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7">04</div><div style="margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.2">Sales</div><sc-if value="{{ step4 }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:0;left:0;height:2px;background:#E50011;animation:lfProgress {{ dur }} linear forwards"></div></sc-if></button><button data-tab="5" sc-camel-on-click="{{ pick5 }}" style="all:unset;box-sizing:border-box;cursor:pointer;flex:1 0 auto;min-width:112px;padding:10px 10px;text-align:center;font-family:var(--font-sans);min-height:52px;border-radius:9px;position:relative;overflow:hidden;scroll-snap-align:start;background:{{ bg5 }};color:{{ fg5 }};transition:background .25s,color .25s"><div style="font-size:10px;font-weight:700;letter-spacing:.14em;opacity:.7">05</div><div style="margin-top:2px;font-size:12.5px;font-weight:700;line-height:1.2">Economics</div><sc-if value="{{ step5 }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:0;left:0;height:2px;background:#E50011;animation:lfProgress {{ dur }} linear forwards"></div></sc-if></button></div>
+    <div data-rv="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(24px,4vw,56px);align-items:center;margin-top:30px">
+      <div style="min-height:140px">
+        <sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}"><div style="animation:lfIn .4s both"><h3 style="margin:0;font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.1">Build an offer people actually pay for.</h3><p style="margin:14px 0 0;font-size:17px;line-height:1.55;color:#333">Price, positioning, bonuses, urgency, margin. A reason to say yes now.</p></div></sc-if>
+        <sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}"><div style="animation:lfIn .4s both"><h3 style="margin:0;font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.1">Put it in front of the right people.</h3><p style="margin:14px 0 0;font-size:17px;line-height:1.55;color:#333">Tested hooks, fresh creative, tight targeting. Not one ad and a prayer.</p></div></sc-if>
+        <sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}"><div style="animation:lfIn .4s both"><h3 style="margin:0;font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.1">Capture, qualify, and follow up in seconds.</h3><p style="margin:14px 0 0;font-size:17px;line-height:1.55;color:#333">A personal text before they can call the next shop.</p></div></sc-if>
+        <sc-if value="{{ step4 }}" hint-placeholder-val="{{ false }}"><div style="animation:lfIn .4s both"><h3 style="margin:0;font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.1">Fix the conversation after the lead comes in.</h3><p style="margin:14px 0 0;font-size:17px;line-height:1.55;color:#333">Calls recorded, scripts in hand. Jobs booked without you on the phone.</p></div></sc-if>
+        <sc-if value="{{ step5 }}" hint-placeholder-val="{{ false }}"><div style="animation:lfIn .4s both"><h3 style="margin:0;font-size:clamp(26px,6vw,36px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.1">Track the numbers that find the next constraint.</h3><p style="margin:14px 0 0;font-size:17px;line-height:1.55;color:#333">Five numbers, one screen, every week. You know which lever to pull.</p></div></sc-if>
+      </div>
+      <div style="padding:clamp(18px,3vw,28px);border-radius:16px;background:#F2F2F2;color:#0A0A0A;height:{{ panelH }};display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;position:relative">
+        <sc-if value="{{ step1 }}" hint-placeholder-val="{{ true }}"><div style="width:100%;max-width:340px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;animation:lfIn .4s both"><div style="padding:18px 18px 0"><span style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#E50011;font-weight:700">Your offer</span><div style="margin-top:8px;font-size:21px;font-weight:800;letter-spacing:-.02em;line-height:1.1;color:#0A0A0A">5-Year Ceramic Coating</div><div style="display:flex;align-items:baseline;gap:10px;margin-top:8px"><span style="font-family:var(--font-serif-display);font-size:36px;line-height:1;color:#0A0A0A">$997</span><span style="font-size:15px;color:#8A8A8A;text-decoration:line-through">$1,497</span></div></div>
+          <div style="padding:14px 18px 0;display:flex;flex-direction:column;gap:9px"><div style="display:flex;gap:9px;font-size:13.5px;line-height:1.45;color:#333"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px"><path d="M20 6L9 17l-5-5"></path></svg><span><b>$497 in free add-ons.</b> Interior detail and a maintenance kit.</span></div><div style="display:flex;gap:9px;font-size:13.5px;line-height:1.45;color:#333"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px"><path d="M20 6L9 17l-5-5"></path></svg><span><b>10 spots this month.</b> Real capacity.</span></div><div style="display:flex;gap:9px;font-size:13.5px;line-height:1.45;color:#333"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px"><path d="M20 6L9 17l-5-5"></path></svg><span><b>We come to you.</b> Or free shuttle from the shop.</span></div><div style="display:flex;gap:9px;font-size:13.5px;line-height:1.45;color:#333"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px"><path d="M20 6L9 17l-5-5"></path></svg><span><b>110% satisfaction guarantee.</b> Licensed and insured. 150+ five star reviews.</span></div></div>
+          <div style="padding:16px 18px 18px"><div style="height:44px;border-radius:10px;background:#E50011;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center">Claim my spot</div><div style="margin-top:8px;text-align:center;font-size:11px;color:#5A5A5A">Price goes back up Sunday night</div></div></div></sc-if>
+        <sc-if value="{{ step2 }}" hint-placeholder-val="{{ false }}"><div style="width:100%;max-width:340px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;animation:lfIn .4s both"><div style="display:flex;align-items:center;gap:10px;padding:12px 14px"><img src="assets/18c30462.png" alt="" style="width:34px;height:34px;border-radius:50%;background:#F2F2F2;display:block"><div><div style="font-size:13px;font-weight:700;color:#0A0A0A">Caruso’s Auto Boutique</div><div style="font-size:11px;color:#8A8A8A">Sponsored</div></div></div>
+          <div style="padding:0 14px 12px;font-size:13.5px;line-height:1.45;color:#0A0A0A">5-Year Ceramic Coating. Was $1,497, now $997 with $497 in free add-ons. 10 spots this month.</div>
+          <div style="aspect-ratio:16/9;background:#111"><image-slot id="ad-video" shape="rect" placeholder="[AD VIDEO] Send me the file and it autoplays here, muted"></image-slot></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;background:#F2F2F2"><div><div style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#8A8A8A">carusosautoboutique.com</div><div style="font-size:12.5px;font-weight:700;color:#0A0A0A;margin-top:2px">Book your free inspection</div></div><span style="font-size:12px;font-weight:700;padding:9px 14px;border-radius:8px;background:#E4E6EB;color:#0A0A0A;white-space:nowrap">Book now</span></div></div></sc-if>
+        <sc-if value="{{ step3 }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;animation:lfIn .4s both"><div data-lf-phone="" style="position:relative;filter:drop-shadow(0 30px 40px rgba(0,0,0,.18))">
+        <x-import component-from-global-scope="IOSDevice" from="assets/8beac992.bin#/ios-frame.jsx" dark="{{ false }}" width="{{ phoneW }}" height="{{ phoneH }}" hint-size="300px,620px">
+          <div style="padding:52px 0 0;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text',var(--font-sans);color:#000;display:flex;flex-direction:column;background:#fff;height:100%;box-sizing:border-box;overflow:hidden">
+            <div style="display:grid;grid-template-columns:36px 1fr 36px;align-items:start;padding:4px 12px 8px;border-bottom:1px solid #E5E5EA;background:rgba(249,249,249,.94)">
+              <span style="width:36px;height:36px;border-radius:50%;background:#E9E9EB;display:flex;align-items:center;justify-content:center;margin-top:10px"><svg width="11" height="18" sc-camel-view-box="0 0 12 20" fill="none" stroke="#1B8CFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 10l8 8"></path></svg></span>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
+                <img src="assets/ab4a9acc.png" alt="Vincent Caruso" style="width:50px;height:50px;border-radius:50%;object-fit:cover;display:block">
+                <div style="font-size:11px;font-weight:600;color:#000;background:#F2F2F7;padding:3px 9px;border-radius:999px;white-space:nowrap">Maybe: Vincent Caruso <span style="color:#8E8E93">›</span></div>
+              </div>
+              <span style="width:36px;height:36px;border-radius:50%;background:#E9E9EB;display:flex;align-items:center;justify-content:center;margin-top:10px"><svg width="18" height="13" sc-camel-view-box="0 0 24 16" fill="none" stroke="#1B8CFF" stroke-width="2" stroke-linejoin="round"><rect x="1.5" y="1.5" width="14" height="13" rx="3"></rect><path d="M15.5 6l7-4v12l-7-4z"></path></svg></span>
+            </div>
+            <div style="flex:1;padding:12px 12px 10px;display:flex;flex-direction:column;justify-content:flex-start;gap:6px;overflow:hidden">
+              <div data-at="0" data-msg="stamp" style="text-align:center;font-size:10.5px;color:#8E8E93;font-weight:600;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">Today 2:14 PM</div>
+              <div data-at="0" data-msg="in" style="align-self:flex-start;max-width:82%;padding:8px 12px;border-radius:18px 18px 18px 5px;background:#E9E9EB;color:#000;font-size:14px;line-height:1.35;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">Hey Sebastian</div>
+              <div data-at="2000" data-msg="in" style="align-self:flex-start;max-width:82%;padding:8px 12px;border-radius:18px 18px 18px 5px;background:#E9E9EB;color:#000;font-size:14px;line-height:1.35;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">This is Vincent with Caruso’s Auto Boutique.</div>
+              <div data-at="6000" data-msg="in" style="align-self:flex-start;max-width:82%;padding:8px 12px;border-radius:18px 18px 18px 5px;background:#E9E9EB;color:#000;font-size:14px;line-height:1.35;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">Saw you filled out the form for a 5-year ceramic coating on your 2025 BMW M4. Are you mainly looking to protect the paint, improve the appearance, or both?</div>
+              <div data-at="9400" data-msg="out" style="align-self:flex-end;max-width:80%;padding:8px 12px;border-radius:18px 18px 5px 18px;background:#1B8CFF;color:#fff;font-size:14px;line-height:1.35;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">Both. It’s brand new and I want to keep it that way</div>
+              <div data-at="14400" data-msg="in" style="align-self:flex-start;max-width:82%;padding:8px 12px;border-radius:18px 18px 18px 5px;background:#E9E9EB;color:#000;font-size:14px;line-height:1.35;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)">Sweet. Happy to take care of it for you. Before we call, give this quick video a watch if you haven’t already. It answers most of what you’ll want to ask. 2 minutes on 2x speed.</div>
+              <div data-at="16400" data-msg="video" data-display="block" style="align-self:flex-start;width:82%;max-width:240px;border-radius:18px 18px 18px 5px;overflow:hidden;background:#E9E9EB;opacity:0;transform:translateY(12px) scale(.96);transition:opacity .38s cubic-bezier(.2,.8,.2,1),transform .38s cubic-bezier(.2,.8,.2,1)"><div style="position:relative;aspect-ratio:16/9;background:#111"><image-slot id="yt-thumb" shape="rect" placeholder="[VIDEO THUMBNAIL] The YouTube thumbnail"></image-slot><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:42px;height:30px;border-radius:9px;background:#FF0000;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.35)"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="#fff" style="margin-left:2px"><path d="M8 5v14l11-7z"></path></svg></span></div><div style="padding:8px 10px 9px"><div style="font-size:12px;font-weight:600;color:#000;line-height:1.3">Watch this before our call</div><div style="margin-top:3px;font-size:11px;color:#8E8E93">youtube.com</div></div></div>
+              <div data-typing="" style="display:none;align-self:flex-start;align-items:center;gap:4px;padding:12px 14px;border-radius:18px 18px 18px 5px;background:#E9E9EB"><i style="width:7px;height:7px;border-radius:50%;background:#8E8E93;display:block;animation:lfDot 1.2s 0s infinite"></i><i style="width:7px;height:7px;border-radius:50%;background:#8E8E93;display:block;animation:lfDot 1.2s 0.15s infinite"></i><i style="width:7px;height:7px;border-radius:50%;background:#8E8E93;display:block;animation:lfDot 1.2s 0.3s infinite"></i></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;padding:8px 12px 8px;background:#fff">
+              <span style="width:30px;height:30px;border-radius:50%;background:#E9E9EB;display:inline-flex;align-items:center;justify-content:center;color:#8E8E93;font-size:20px;line-height:1;flex-shrink:0">+</span>
+              <span style="flex:1;min-height:34px;border-radius:17px;border:1px solid #D1D1D6;display:flex;align-items:center;justify-content:space-between;gap:6px;padding:0 4px 0 12px;font-size:13.5px"><span data-field="" style="color:#8E8E93;line-height:1.3;padding:6px 0">iMessage</span><span data-mic="" style="display:flex;padding-right:6px"><svg width="12" height="16" sc-camel-view-box="0 0 12 18" fill="none" stroke="#8E8E93" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="1" width="5" height="9" rx="2.5"></rect><path d="M1.5 8.5a4.5 4.5 0 009 0M6 13v3.5M4 16.5h4"></path></svg></span><span data-send="" style="display:none;width:26px;height:26px;border-radius:50%;background:#1B8CFF;align-items:center;justify-content:center;flex-shrink:0"><svg width="12" height="14" sc-camel-view-box="0 0 12 14" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13V1M1.5 5.5L6 1l4.5 4.5"></path></svg></span></span>
+            </div>
+            <div data-home="" style="height:22px;background:#fff"></div>
+            <div data-kb="" style="display:none;flex-direction:column;gap:9px;padding:7px 0 0;background:#D1D3D9;font-family:-apple-system,BlinkMacSystemFont,var(--font-sans)"><div style="display:flex;gap:5px;padding:0 3px"><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">q</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">w</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">e</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">r</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">t</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">y</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">u</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">i</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">o</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">p</span></div><div style="display:flex;gap:5px;padding:0 3px"><span style="flex:.5 0 0"></span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">a</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">s</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">d</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">f</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">g</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">h</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">j</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">k</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">l</span><span style="flex:.5 0 0"></span></div><div style="display:flex;gap:5px;padding:0 3px"><span style="flex:1.4 0 0;height:34px;border-radius:5px;background:#ADB3BC;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 9h-5v9H9v-9H4z"></path></svg></span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">z</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">x</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">c</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">v</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">b</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">n</span><span style="flex:1 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000">m</span><span style="flex:1.4 0 0;height:34px;border-radius:5px;background:#ADB3BC;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:15px;color:#000"><svg width="20" height="14" sc-camel-view-box="0 0 26 18" fill="none" stroke="#000" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M9 1h15v16H9l-8-8z"></path><path d="M13 6l6 6M19 6l-6 6"></path></svg></span></div><div style="display:flex;gap:5px;padding:0 3px"><span style="flex:1.3 0 0;height:34px;border-radius:5px;background:#ADB3BC;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:13px;color:#000">123</span><span style="flex:4.6 0 0;height:34px;border-radius:5px;background:#fff;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:13px;color:#000">space</span><span style="flex:1.6 0 0;height:34px;border-radius:5px;background:#ADB3BC;box-shadow:0 1px 0 #898A8D;display:flex;align-items:center;justify-content:center;font-size:13px;color:#000">return</span></div><div style="display:flex;align-items:center;justify-content:space-between;padding:8px 24px 6px"><span style="font-size:11px;color:#50555C">☺</span><span style="width:110px;height:5px;border-radius:3px;background:#000"></span><span style="font-size:11px;color:#50555C">🎤</span></div></div>
+          </div>
+        </x-import>
+      </div>
+      </div></sc-if>
+        <sc-if value="{{ step4 }}" hint-placeholder-val="{{ false }}"><div style="width:100%;max-width:340px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;animation:lfIn .4s both"><div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 18px 0"><span style="font-size:13px;font-weight:700;color:#0A0A0A">Inbound call · Vincent</span><span style="font-size:11px;color:#8A8A8A">Recorded · 12:41</span></div>
+          <div style="display:flex;align-items:center;gap:12px;padding:14px 18px 0"><span style="width:40px;height:40px;border-radius:50%;background:#E50011;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="#fff" style="margin-left:2px"><path d="M8 5v14l11-7z"></path></svg></span><span style="flex:1;display:flex;align-items:center;gap:3px;height:32px"><i style="flex:1;height:30%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:70%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:45%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:90%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:55%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:100%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:40%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:75%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:50%;border-radius:2px;background:#E50011;display:block"></i><i style="flex:1;height:35%;border-radius:2px;background:#D1D1D6;display:block"></i><i style="flex:1;height:60%;border-radius:2px;background:#D1D1D6;display:block"></i><i style="flex:1;height:25%;border-radius:2px;background:#D1D1D6;display:block"></i><i style="flex:1;height:50%;border-radius:2px;background:#D1D1D6;display:block"></i><i style="flex:1;height:38%;border-radius:2px;background:#D1D1D6;display:block"></i><i style="flex:1;height:64%;border-radius:2px;background:#D1D1D6;display:block"></i></span><span style="font-size:11px;color:#8A8A8A">8:12</span></div>
+          <div style="padding:16px 18px 0;display:flex;flex-direction:column;gap:9px;font-size:13px;line-height:1.45;color:#333"><div><b style="color:#0A0A0A">Lead</b>&nbsp; Is $997 really the best you can do?</div><div><b style="color:#E50011">Vincent</b>&nbsp; That’s $500 off and it includes the interior. I have two spots left this week. Thursday or Friday?</div></div>
+          <div style="margin:16px 18px 18px;display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:10px;background:#F2F2F2;font-size:12.5px;color:#333"><span>Outcome</span><span style="color:#E50011;font-weight:700">Booked · $997 + add-ons</span></div></div></sc-if>
+        <sc-if value="{{ step5 }}" hint-placeholder-val="{{ false }}"><div style="width:100%;max-width:340px;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;animation:lfIn .4s both"><div style="display:flex;justify-content:space-between;align-items:baseline;padding:16px 18px 6px"><span style="font-size:13px;font-weight:700;color:#0A0A0A">Your 5 numbers</span><span style="font-size:11px;color:#8A8A8A">This week</span></div>
+          <div style="padding:0 18px 12px;display:flex;flex-direction:column"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid #ECECEC"><span style="font-size:13px;color:#333">What a lead costs you</span><span style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">$24</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid #ECECEC"><span style="font-size:13px;color:#333">How many leads are real</span><span style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">39%</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid #ECECEC"><span style="font-size:13px;color:#333">How many you close</span><span style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">33%</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid #ECECEC"><span style="font-size:13px;color:#333">What a customer costs you</span><span style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#0A0A0A">$188</span></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:11px 0;border-top:1px solid #ECECEC"><span style="font-size:13px;color:#0A0A0A;font-weight:700">What you made</span><span style="font-family:var(--font-serif-display);font-size:22px;line-height:1;color:#E50011">$5,030</span></div></div></div></sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-screen-label="FAQ" style="padding:clamp(60px,10vw,110px) 20px;border-top:1px solid #DADADA;background:#fff">
+  <div style="max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(24px,5vw,72px);align-items:start">
+    <div data-rv="">
+      <div style="display:flex;align-items:center;gap:12px"><span style="width:28px;height:2px;background:#E50011;flex-shrink:0"></span><span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#E50011;font-weight:700">FAQ</span></div>
+      <h2 style="margin:18px 0 0;font-size:clamp(32px,8vw,54px);font-weight:800;letter-spacing:-.03em;color:#0A0A0A;line-height:1.02">FAQ.</h2>
+      <p style="margin:18px 0 0;font-size:17px;line-height:1.55;color:#333;max-width:420px">Answered the way we answer them on the call.</p>
+    </div>
+    <div data-rv="" style="display:flex;flex-direction:column;border-top:1px solid #D0D0D0">
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle1 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>Am I the right fit for this?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon1 }}</span></button><sc-if value="{{ faq1 }}" hint-placeholder-val="{{ true }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both"><b style="“color:#0A0A0A;font-weight:700“">We don’t take on everyone.</b> A credit card, cash, and a pulse are not the sole qualifiers that grant you access to our service. We’ve worked with over 100 businesses and we know exactly who gets the biggest result, so the guidelines are strict. This is for you if you’re doing <b style="“color:#0A0A0A;font-weight:700“">at least $25K a month</b>, you sell coatings, PPF, tint, or wraps at <b style="“color:#0A0A0A;font-weight:700“">$1,000+ per job</b>, you have <b style="“color:#0A0A0A;font-weight:700“">a team handling the work</b>, you’re <b style="“color:#0A0A0A;font-weight:700“">already spending on Meta ads</b>, and you’re <b style="“color:#0A0A0A;font-weight:700“">stuck at the same number every month</b> because somewhere between the ad and the sale, something’s broken and you can’t find it. Could be the ads, the page, the follow-up, or you burned through the <em>“ready to buy“</em> part of the market. <b style="“color:#0A0A0A;font-weight:700“">If that’s you, book the call.</b> If it’s not, don’t waste your time or ours.</p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle2 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>What does LEADFUSE actually do?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon2 }}</span></button><sc-if value="{{ faq2 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both">The corporate answer is “we help local service businesses generate more lead flow through Meta ads.” That answer is why most businesses stay stuck: an offer, an ad, and hope. The actual answer: <b style="“color:#0A0A0A;font-weight:700“">we find the biggest constraint on your revenue and fix it.</b> The <b style="“color:#0A0A0A;font-weight:700“">offer</b>, the thing people actually pay for. The <b style="“color:#0A0A0A;font-weight:700“">ads</b>, the right people on Meta with tested hooks and fresh creative. The <b style="“color:#0A0A0A;font-weight:700“">follow-up</b>, every lead captured, qualified, and texted back in seconds through the LEADFUSE App. The <b style="“color:#0A0A0A;font-weight:700“">sales call</b>, the conversation after the lead comes in. The <b style="“color:#0A0A0A;font-weight:700“">numbers</b>, by service, so you know which lever is holding you back. The goal isn’t more leads, it’s <b style="“color:#0A0A0A;font-weight:700“">more, better leads</b>: people who can afford $1,000+ jobs, on your calendar every week.</p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle3 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>How are you different from the agency I’m already paying?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon3 }}</span></button><sc-if value="{{ faq3 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both">Every agency answers this the same way: “we only work with your industry, we’re the best.” So here are <b style="“color:#0A0A0A;font-weight:700“">two differences you can verify.</b> <b style="“color:#0A0A0A;font-weight:700“">One:</b> agencies live off retainers and running your ads is the whole product, so teaching you the skill is the last thing they want. Most of our clients choose to have us show them exactly what we’d do, launch it themselves, and whether they keep us, bring it in-house, or run it alone becomes <em>their</em> choice. <b style="“color:#0A0A0A;font-weight:700“">Two:</b> instead of calling ourselves the best, here are the receipts. <b style="“color:#0A0A0A;font-weight:700“">$3.2M+ in tracked client booking revenue in 2025 alone</b>, <b style="“color:#0A0A0A;font-weight:700“">100+ client result screenshots</b> on the LEADFUSE Instagram, <b style="“color:#0A0A0A;font-weight:700“">100% 5-star on Trustpilot</b>, and <b style="“color:#0A0A0A;font-weight:700“">45+ video testimonials</b> from owners we took from $25K and $50K a month to $75K and $100K+ a month. Don’t take our word for it. <b style="“color:#0A0A0A;font-weight:700“">When you book, our team texts you. Ask them to send you one.</b></p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle4 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>Do I need to be running ads already?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon4 }}</span></button><sc-if value="{{ faq4 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both"><b style="“color:#0A0A0A;font-weight:700“">F<em>ck yes.</em></b><em> We’re not here to teach you which button to press in Meta, and we don’t launch on an ad account with zero pixel data. We work with owners who </em>already know ads work*, whose problem is growing past the point they’re stuck at. Whether you run them yourself or pay somebody to run them badly, we find the bottleneck keeping you from spending more and making more. The working minimum is <b style="“color:#0A0A0A;font-weight:700“">$3,000 a month in ad spend, $100 a day</b>, whether we do it for you or teach you. <b style="“color:#0A0A0A;font-weight:700“">If $100 a day gives you butterflies, this isn’t the service for you.</b></p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle5 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>How fast am I going to see results?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon5 }}</span></button><sc-if value="{{ faq5 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both">Our internal goal is to <b style="“color:#0A0A0A;font-weight:700“">make you back what you paid us within your first week.</b> The first thing we do is an SMS and email blast to your existing customer list, <b style="“color:#0A0A0A;font-weight:700“">no ad spend needed</b>, and most clients have made their entire investment back from that alone. From there, your clock doesn’t start until your first campaign goes live, so expect us to bug the shit out of you until onboarding is done. Don’t film, approve, or implement, and the clock still moves. We won’t promise a result, because no agency can press a button and make you money. We bring the plan and the leads. <b style="“color:#0A0A0A;font-weight:700“">Speed depends on how fast you follow up and how well you close.</b> Pushing you to do both is part of what you’re paying us for.</p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle6 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>What happens if this doesn’t work?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon6 }}</span></button><sc-if value="{{ faq6 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both">We’re not fans of guarantees. A guarantee is a safety net, and <em>people with safety nets play soft</em>. What we have is <b style="“color:#0A0A0A;font-weight:700“">one performance condition</b>, because our reputation matters more than any dollar amount, and we walk you through it on the call. A qualified lead is a real person in your area, asking about a service you sell, who responded to at least one touch, all tracked in your dashboard inside the LEADFUSE App, so there’s no arguing the count. No refunds, because we can’t control your follow-up or your closing. If the leads don’t show up, that’s on us. If they do and you don’t work them, that’s on you. <b style="“color:#0A0A0A;font-weight:700“">Acquisition is our job; an aggressive bias for action is yours.</b></p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle7 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>How much does this cost?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon7 }}</span></button><sc-if value="{{ faq7 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both"><b style="“color:#0A0A0A;font-weight:700“">You get the exact number on the call</b>, once we know your business. Paid in full. Ad spend is on top, <b style="“color:#0A0A0A;font-weight:700“">minimum $3,000 a month</b>, and that money goes to Meta, not us. Financing is available, but it costs more and we don’t typically recommend it. We want clients who can pay in full and still fund ad spend without sweating, because that’s the position you close from. <b style="“color:#0A0A0A;font-weight:700“">No bargaining, no discounts.</b> Prices go up consistently, so <b style="“color:#0A0A0A;font-weight:700“">today’s price is the lowest it will ever be.</b> If the number feels like a lot, you’re not at the level yet to make this decision, and that’s fine. Come back when you are.</p></sc-if></div>
+      <div style="border-bottom:1px solid #D0D0D0"><button sc-camel-on-click="{{ toggle8 }}" style="all:unset;box-sizing:border-box;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%;padding:18px 2px;font-family:var(--font-sans);font-size:16.5px;font-weight:600;color:#0A0A0A;text-align:left;min-height:56px"><span>What if I’m not spending $3,000 a month on ads yet?</span><span style="font-family:var(--font-serif-display);font-size:26px;line-height:1;color:#E50011;flex-shrink:0;width:20px;text-align:center">{{ icon8 }}</span></button><sc-if value="{{ faq8 }}" hint-placeholder-val="{{ false }}"><p style="margin:0;padding:0 2px 20px;font-size:15.5px;line-height:1.65;color:#333;animation:lfIn .3s both"><b style="“color:#0A0A0A;font-weight:700“">Then this isn’t the service for you yet.</b> If you’re under $100 a day, one of two things is true: somebody’s charging you a small retainer to barely manage a campaign you could run yourself, or you haven’t had a big enough reason to commit real money. <b style="“color:#0A0A0A;font-weight:700“">We exist to make growing businesses grow faster</b>, the polite way of saying we make rich owners richer, and that’s easier when you’ve got some gambling money to play with. Our minimums are <em>minimum</em>. $3,000 a month shouldn’t be a stretch, it should be an “okay, let’s see what happens.” When that $3,000 makes you money, we grow the spend, because now spending more means making more. Not there yet? <b style="“color:#0A0A0A;font-weight:700“">Go get to $25K a month and come back.</b> We’ll be more expensive, but you’ll be ready.</p></sc-if></div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;autoplay&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;How it works&quot;}, &quot;bookingUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apply.leadfuse.co&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Global&quot;}}">
+class Component extends DCLogic {
+  state = { faq: 1, step: 1, cmp: 'lf', isMobile: typeof window !== 'undefined' && window.innerWidth <= 760 };
+  paused = false;
+  componentDidMount() {
+    this._lastStep = this.state.step;
+    import('./site.js').then(m => m.initMotion());
+    setTimeout(() => { this.startMarquee('[data-marquee-track]', -1, 0.07); this.startMarquee('[data-marquee2-track]', 1, 0.07); this.startMarquee('[data-marquee3-track]', -1, 0.04); }, 400);
+    this.mq = window.matchMedia('(max-width: 760px)'); this.onMq = () => this.setState({ isMobile: this.mq.matches }, () => setTimeout(() => this.startMarquee('[data-marquee2-track]', 1, 0.07), 50)); this.mq.addEventListener('change', this.onMq);
+    this.mqWall = window.matchMedia('(max-width: 699px)'); this.onMqWall = () => this.setState({ wallNarrow: this.mqWall.matches }); this.mqWall.addEventListener('change', this.onMqWall); this.onMqWall();
+    if (this.props.autoplay !== false) {
+      this.timer = setInterval(() => { if (!this.paused) this.setState(s => ({ step: (s.step % 5) + 1 })); }, 5000);
+    }
+  }
+  componentWillUnmount() { clearInterval(this.timer); clearTimeout(this.hold); cancelAnimationFrame(this.raf); }
+  startMarquee(sel, dir, speed) {
+    const track = document.querySelector(sel); if (!track) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const wrap = track.parentElement;
+    if (!track.dataset.cloned) { track.dataset.cloned = '1'; const clone = track.cloneNode(true); clone.removeAttribute(sel.slice(1, -1)); clone.querySelectorAll('image-slot').forEach(el => el.id = el.id + '-dup'); wrap.appendChild(clone); clone.style.position = 'absolute'; clone.style.top = '0'; clone.style.left = '0'; track._clone = clone; }
+    let x = 0, last = performance.now(), paused = false;
+    wrap.addEventListener('pointerenter', () => paused = true); wrap.addEventListener('pointerleave', () => paused = false);
+    wrap.addEventListener('touchstart', () => paused = true, { passive: true }); wrap.addEventListener('touchend', () => paused = false);
+    const gap = parseFloat(getComputedStyle(track).gap) || 14;
+    const w0 = () => track.scrollWidth + gap;
+    if (dir > 0) x = -w0();
+    const step = now => {
+      const dt = Math.min(48, now - last); last = now;
+      if (!paused) { const w = w0(); x += dir * dt * speed; if (dir < 0 && -x >= w) x += w; if (dir > 0 && x >= 0) x -= w; track.style.transform = 'translateX(' + x + 'px)'; track._clone.style.transform = 'translateX(' + (x + w) + 'px)'; }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  playThread(tries = 0) {
+    // the phone frame mounts asynchronously; wait until its messages exist
+    const phone = document.querySelector('[data-lf-phone]');
+    const msgs = phone ? [...phone.querySelectorAll('[data-msg]')] : [];
+    if (!msgs.length) { if (tries < 80) setTimeout(() => this.playThread(tries + 1), 250); return; }
+    const typing = phone.querySelector('[data-typing]');
+    msgs.forEach(m => { m.style.display = 'none'; });
+    const show = m => { m.style.display = m.dataset.display || 'block'; requestAnimationFrame(() => requestAnimationFrame(() => { m.style.opacity = '1'; m.style.transform = 'none'; })); };
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { msgs.forEach(show); return; }
+    const run = () => {
+      const T = (fn, t) => setTimeout(fn, t);
+      const on = () => { if (typing) typing.style.display = 'flex'; }, off = () => { if (typing) typing.style.display = 'none'; };
+      const kb = phone.querySelector('[data-kb]'), home = phone.querySelector('[data-home]'), field = phone.querySelector('[data-field]'), mic = phone.querySelector('[data-mic]'), send = phone.querySelector('[data-send]');
+      msgs.forEach(m => { const t = +(m.dataset.at || 0); if (t === 0) show(m); else T(() => { off(); show(m); }, t); });
+      // Vincent is "typing" between each of his messages
+      [300, 2400, 9700, 14800].forEach(t => T(on, t));
+      // the viewer types the reply: keyboard up, letters land one by one, send
+      const reply = 'Both. It' + String.fromCharCode(8217) + 's brand new and I want to keep it that way';
+      T(() => { if (kb) kb.style.display = 'flex'; if (home) home.style.display = 'none'; }, 7000);
+      let sent = false;
+      for (let i = 1; i <= reply.length; i++) T(() => { if (sent) return; if (field) { field.textContent = reply.slice(0, i); field.style.color = '#000'; } if (i === 1 && mic && send) { mic.style.display = 'none'; send.style.display = 'flex'; } }, 7500 + i * 28);
+      T(() => { sent = true; if (field) { field.textContent = 'iMessage'; field.style.color = '#8E8E93'; } if (mic && send) { send.style.display = 'none'; mic.style.display = 'flex'; } if (kb) kb.style.display = 'none'; if (home) home.style.display = 'block'; }, 9400);
+    };
+    let started = false;
+    const start = () => { if (started) return; started = true; io.disconnect(); clearInterval(poll); removeEventListener('scroll', check); run(); };
+    const check = () => { const r = phone.getBoundingClientRect(); if (r.top < innerHeight * 0.7 && r.bottom > 0) start(); };
+    const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) start(); }, { threshold: 0.35 });
+    io.observe(phone);
+    addEventListener('scroll', check, { passive: true });
+    const poll = setInterval(check, 500); // fallback where IntersectionObserver never fires
+    check();
+  }
+  pick(i) { this.paused = true; clearInterval(this.timer); clearTimeout(this.hold); this.setState({ step: i }); }
+  armRotation(ms) {
+    clearInterval(this.timer); clearTimeout(this.hold);
+    if (this.paused || this.props.autoplay === false) return;
+    this.hold = setTimeout(() => {
+      if (this.paused) return;
+      this.setState(s => ({ step: (s.step % 5) + 1 }));
+      this.timer = setInterval(() => { if (!this.paused) this.setState(s => ({ step: (s.step % 5) + 1 })); }, 5000);
+    }, ms);
+  }
+  componentDidUpdate() {
+    const step = this.state.step; if (step === this._lastStep) return; this._lastStep = step;
+    if (step === 3) { this.armRotation(20000); setTimeout(() => this.playThread(), 60); }
+    const c = document.querySelector('[data-tabs]'); const b = c && c.querySelector('[data-tab="' + step + '"]');
+    if (c && b && c.scrollWidth > c.clientWidth) c.scrollTo({ left: b.offsetLeft - 4, behavior: 'smooth' });
+  }
+  renderVals() {
+    const v = { bookingUrl: this.props.bookingUrl ?? 'Book.dc.html', isMobile: this.state.isMobile, notMobile: !this.state.isMobile, cmpMobile: this.state.isMobile, cmpDesktop: !this.state.isMobile, cmpIsLf: this.state.cmp === 'lf', cmpIsOther: this.state.cmp === 'other', cmpLf: () => this.setState({ cmp: 'lf' }), cmpOther: () => this.setState({ cmp: 'other' }), cmpLfBg: this.state.cmp === 'lf' ? '#0A0A0A' : 'transparent', cmpLfFg: this.state.cmp === 'lf' ? '#fff' : '#5A5A5A', cmpOtherBg: this.state.cmp === 'other' ? '#0A0A0A' : 'transparent', cmpOtherFg: this.state.cmp === 'other' ? '#fff' : '#5A5A5A', wallMobile: !!this.state.wallNarrow, wallDesktop: !this.state.wallNarrow, wallBtnPad: this.state.isMobile ? '23px 30px' : '21px 38px', wallBtnSize: this.state.isMobile ? '16px' : '15px', phoneW: this.state.isMobile ? 280 : 300, phoneH: 600, panelH: this.state.isMobile ? '520px' : '560px', adsPadB: this.state.isMobile ? '120px' : '110px', lensScale: this.state.isMobile ? .9 : 1.2, dur: this.state.step === 3 ? '20s' : '5s', threeCols: !this.state.isMobile, twoCols: this.state.isMobile };
+    for (let i = 1; i <= 8; i++) {
+      const open = this.state.faq === i;
+      v['faq' + i] = open;
+      v['icon' + i] = open ? '−' : '+';
+      v['toggle' + i] = () => this.setState(s => ({ faq: s.faq === i ? 0 : i }));
+    }
+    for (let i = 1; i <= 5; i++) {
+      const on = this.state.step === i;
+      v['step' + i] = on;
+      v['bg' + i] = on ? '#0A0A0A' : 'transparent';
+      v['fg' + i] = on ? '#fff' : '#5A5A5A';
+      v['pick' + i] = () => this.pick(i);
+    }
+    return v;
+  }
+}
+</script>
+
+
+<div id="__claude_design_branding"><style>#__claude_design_branding{position:fixed;right:16px;bottom:16px;z-index:2147483646;display:flex;align-items:center;gap:7px;height:30px;padding:0 5px 0 10px;border-radius:999px;font-family:"Anthropic Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:12.5px;font-weight:400;line-height:1;letter-spacing:normal;text-transform:none;color:#141413;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:0 0 0 .5px rgba(31,30,29,.14),0 2px 10px rgba(0,0,0,.09)}
+#__claude_design_branding *{box-sizing:border-box;margin:0}
+#__claude_design_branding a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+#__claude_design_branding a:hover span{text-decoration:underline}
+#__claude_design_branding svg{flex:none}
+#__claude_design_branding a svg{color:#D97757}
+#__claude_design_branding button{width:20px;height:20px;padding:0;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:currentColor;opacity:.55;border:0;background:none;cursor:pointer;flex:none;font:inherit;transition:opacity .14s}
+#__claude_design_branding button:hover{opacity:1;background:rgba(127,127,127,.22)}
+@media print{#__claude_design_branding{display:none}}</style><button type="button" aria-label="Dismiss" onclick="this.parentElement.remove()"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button></div><script>
+(function(){var q=location.search;if(!q||q.length<2)return;var keep=/^(utm_[a-z]+|fbclid|formsource)$/i,out=[];
+q.slice(1).split('&').forEach(function(kv){var k=kv.split('=')[0];if(keep.test(k))out.push(kv)});if(!out.length)return;
+function fix(){document.querySelectorAll('a[href^="https://apply.leadfuse.co"]').forEach(function(a){if(a.href.indexOf('utm_')>-1)return;a.href+=(a.href.indexOf('?')>-1?'&':'?')+out.join('&')})}
+fix();setTimeout(fix,1500);setTimeout(fix,4000)})();
+</script>
+</body></html>

@@ -1,0 +1,34 @@
+:root{
+--font-sans:'Poppins',ui-sans-serif,system-ui,'Segoe UI',sans-serif;
+--font-serif-display:'Instrument Serif',Georgia,serif; /* editorial accent — italic emphasis words in display lines only */
+/* scale */
+--fs-display:64px;
+--fs-h1:48px;
+--fs-h2:36px;
+--fs-h3:28px;
+--fs-h4:22px;
+--fs-body-lg:18px;
+--fs-body:16px;
+--fs-sm:14px;
+--fs-xs:12px;
+/* weights */
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+--fw-extrabold:800; /* @kind font */
+/* line heights */
+--lh-display:1.05; /* @kind font */
+--lh-heading:1.15; /* @kind font */
+--lh-snug:1.35; /* @kind font */
+--lh-body:1.6; /* @kind font */
+/* tracking */
+--ls-tight:-0.01em; /* @kind font */
+--ls-caps:0.18em; /* @kind font */
+--ls-caps-wide:0.32em; /* @kind font */
+}
+body{font-family:var(--font-sans);color:var(--text-body);font-size:var(--fs-body);line-height:var(--lh-body)}
+h1,h2,h3,h4{color:var(--text-heading);line-height:var(--lh-heading);font-weight:var(--fw-bold);margin:0;text-wrap:pretty}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover)}

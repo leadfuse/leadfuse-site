@@ -1,0 +1,46 @@
+:root{
+/* base — brandbook palette (Slide 9) */
+--lf-black:#000000;
+--lf-red:#E50011;
+--lf-orange:#F07800;
+--lf-amber:#F5B300;
+--lf-gray:#F2F2F2;
+--lf-white:#FFFFFF;
+/* derived neutrals */
+--lf-ink:#0A0A0A;
+--lf-panel-dark:#161616;
+--lf-line-dark:#2A2A2A;
+--lf-gray-700:#4D4D4D;
+--lf-gray-600:#818181;
+--lf-gray-500:#A7A7A7;
+--lf-gray-300:#D6D6D6;
+--lf-gray-200:#E6E6E6;
+/* red states */
+--lf-red-hover:#C9000F;
+--lf-red-press:#AB000C;
+--lf-red-tint:#FDE8EA;
+/* semantic — light surfaces */
+--surface-page:var(--lf-gray);
+--surface-card:var(--lf-white);
+--surface-sunken:#EAEAEA;
+--text-heading:var(--lf-black);
+--text-body:#333333;
+--text-muted:#6E6E6E;
+--border-subtle:#E2E2E2;
+/* semantic — dark surfaces */
+--surface-dark:var(--lf-black);
+--surface-dark-raised:var(--lf-panel-dark);
+--text-on-dark:var(--lf-white);
+--text-on-dark-muted:var(--lf-gray-500);
+--border-on-dark:var(--lf-line-dark);
+/* accent */
+--accent:var(--lf-red);
+--accent-hover:var(--lf-red-hover);
+--accent-press:var(--lf-red-press);
+--accent-support:var(--lf-orange);
+--accent-highlight:var(--lf-amber);
+/* gradients — wordmark fades (from logo SVGs) */
+--grad-wordmark:linear-gradient(90deg,#000000,#818181); /* @kind color */
+--grad-wordmark-on-dark:linear-gradient(90deg,#A7A7A7,#FFFFFF); /* @kind color */
+--grad-white-fade:linear-gradient(90deg,#FFFFFF,rgba(255,255,255,.3)); /* @kind color */
+}
