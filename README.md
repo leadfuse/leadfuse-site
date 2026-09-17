@@ -1,10 +1,10 @@
 # leadfuse.co
 
-Marketing site for LEADFUSE. Static, served by `serve` from `deploy/` (same setup as the apply.leadfuse.co funnel).
+Marketing site for LEADFUSE, served by GitHub Pages from the `main` branch (custom domain in `CNAME`).
 
-- Pages are Claude Design exports (`index.html` = Home, `about.html` = About) plus Privacy/Terms copied from the funnel.
-- `SiteNav.dc.html` / `SiteFooter.dc.html` are shared components; `_ds/` is the LEADFUSE design system; `vendor/` self-hosts React and Babel.
+- `index.html` = Home, `about/`, `privacy/`, `terms/`, `apply/` (forwards to apply.leadfuse.co keeping UTMs). Pages are Claude Design exports.
+- `SiteNav.dc.html` / `SiteFooter.dc.html` are shared components; `_ds/` is the LEADFUSE design system (`.nojekyll` keeps GitHub from hiding it); `vendor/` self-hosts React and Babel.
 - Nav links for pages not yet exported (Services, Results, Careers, Resources) point to `#`.
 - Every link to https://apply.leadfuse.co forwards utm_*, fbclid and formsource from the current URL.
 
-Deploy: Railway, start command `npm start` (see package.json). Custom domain: www.leadfuse.co.
+Push to `main` = live in about a minute.

@@ -25,7 +25,7 @@ body:not([data-theme=light]) [data-logo=light]{display:none !important}
     <a href="/" style="display:block;flex-shrink:0;padding:6px 0"><img data-logo="dark" src="assets/logo-silver@4x.png" alt="LEADFUSE" style="height:20px;width:auto;display:block"><img data-logo="light" src="assets/logo-primary@4x.png" alt="LEADFUSE" style="height:20px;width:auto;display:block"></a>
     <sc-if value="{{ showLinks }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex;gap:26px;margin-left:auto;align-items:center">
-        <a href="/about" style="color:{{ cAbout }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">About</a>
+        <a href="/about/" style="color:{{ cAbout }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">About</a>
         <a href="#" style="color:{{ cServices }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">Services</a>
         <a href="#" style="color:{{ cResults }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">Results</a>
         <a href="#" style="color:{{ cCareers }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">Careers</a>
@@ -46,7 +46,7 @@ body:not([data-theme=light]) [data-logo=light]{display:none !important}
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <div style="border-top:1px solid var(--lf-line-soft,rgba(255,255,255,.07));padding:8px 12px 18px;display:flex;flex-direction:column;background:var(--lf-nav,rgba(5,5,5,.75))">
       <a href="/" onClick="{{ closeMenu }}" style="color:{{ cHome }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Home</a>
-      <a href="/about" onClick="{{ closeMenu }}" style="color:{{ cAbout }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">About</a>
+      <a href="/about/" onClick="{{ closeMenu }}" style="color:{{ cAbout }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">About</a>
       <a href="#" onClick="{{ closeMenu }}" style="color:{{ cServices }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Services</a>
       <a href="#" onClick="{{ closeMenu }}" style="color:{{ cResults }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Results</a>
       <a href="#" onClick="{{ closeMenu }}" style="color:{{ cCareers }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Careers</a>
