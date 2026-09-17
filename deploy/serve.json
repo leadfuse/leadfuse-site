@@ -38,5 +38,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/apply",
+      "destination": "/apply.html"
+    }
   ]
 }
