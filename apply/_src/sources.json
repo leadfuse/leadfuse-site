@@ -1,0 +1,15 @@
+{
+  "_readme": "One entry per place a LEADFUSE application link gets posted. slug = the folder under /apply/ and the value of formsource + utm_source. medium = utm_medium. utm_campaign is always 'apply'. Add a row, run build.py, commit. Never rename a slug that has already been posted somewhere.",
+  "root": { "slug": "site", "medium": "website", "where": "leadfuse.co itself (nav, footer, anyone who types /apply)" },
+  "sources": [
+    { "slug": "sebas",        "medium": "dm",      "where": "@sebassmfonseca Instagram DMs (ManyChat and by hand)" },
+    { "slug": "leadfuse",     "medium": "dm",      "where": "@leadfuse Instagram DMs" },
+    { "slug": "bio-sebas",    "medium": "bio",     "where": "@sebassmfonseca Instagram bio link" },
+    { "slug": "bio-leadfuse", "medium": "bio",     "where": "@leadfuse Instagram bio link" },
+    { "slug": "free",         "medium": "skool",   "where": "LEADFUSE Training Material (the free Skool room): lesson 4.3, Start Here, pinned post" },
+    { "slug": "skool",        "medium": "skool",   "where": "Skool anywhere else: profile bio, posts in other communities" },
+    { "slug": "vip",          "medium": "skool",   "where": "LEADFUSE VIP (the paid room): upgrades and renewals" },
+    { "slug": "yt",           "medium": "youtube", "where": "YouTube descriptions, pinned comments, end screens" },
+    { "slug": "email",        "medium": "email",   "where": "Emails from the App (nurture, follow-up, newsletters)" }
+  ]
+}
