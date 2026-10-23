@@ -28,13 +28,15 @@ application link gets posted uses a source link on this site, one folder per sou
 | leadfuse.co/apply/email | emails from the App |
 
 How it works: `apply/_src/sources.json` lists the sources; `apply/_src/build.py` writes `apply/index.html` and
-`apply/<slug>/index.html` from `apply/_src/template.html`. The only difference between pages is the hidden fields handed
-to the Typeform (xPLSrpmn, the same form the ads funnel uses): `formsource` and `utm_source` = the slug, `utm_medium` =
-dm / bio / skool / youtube / email / website, `utm_campaign` = apply, `lf_host` = leadfuse.co. Typeform can only redirect
-to one host, so it still sends everyone to apply.leadfuse.co/book; that page reads `lf_host=leadfuse.co` and hands the
-visitor straight back to leadfuse.co/apply/book before its pixel loads. From there the three pages are copies of the ads
-funnel's pages made by `apply/_src/port.py` (booking -> `apply/book`, book-red -> `apply/book-red`, confirmation ->
-`apply/confirmation`), so both funnels always look the same: when those pages change in client-leadfuse-funnel, re-run
-port.py here. The booking page only opens with `?email=` on the URL (a fresh Typeform redirect); anything else is sent
-back to /apply. `robots.txt` keeps search engines off book, book-red and confirmation, and every /apply page is noindex.
+`apply/<slug>/index.html` from `apply/_src/template.html`. Each page is the full application form and nothing else: the
+Typeform D8gcUEt2 filling the screen. D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and
+App webhook; `funnel-forms/typeform_site_copy.py` re-syncs it after any scoring change) whose endings redirect to
+`leadfuse.co/apply/book/` and `leadfuse.co/apply/not-ready/`, so nobody who starts on leadfuse.co ever touches
+apply.leadfuse.co. The only difference between the source pages is the hidden fields handed to the form: `formsource` and
+`utm_source` = the slug, `utm_medium` = dm / bio / skool / youtube / email / website, `utm_campaign` = apply. The three
+pages after the form are copies of the ads funnel's pages made by `apply/_src/port.py` (booking -> `apply/book`,
+book-red -> `apply/not-ready`, confirmation -> `apply/confirmation`), so both funnels always look the same: when those pages
+change in client-leadfuse-funnel, re-run port.py here. The booking page only opens with `?email=` on the URL (a fresh
+Typeform redirect); anything else is sent back to /apply. `/apply/book-red/` forwards to `/apply/not-ready/`. `robots.txt`
+keeps search engines off book, not-ready and confirmation, and every /apply page is noindex.
 To add a source: add a row to sources.json, run build.py, commit. Never rename a slug that has been posted somewhere.

@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /apply/book
 Disallow: /apply/book-red
+Disallow: /apply/not-ready
 Disallow: /apply/confirmation

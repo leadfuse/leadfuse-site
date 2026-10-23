@@ -22,7 +22,7 @@
       var red = t && Date.now() - t < 30 * 864e5;
       window.LF_BOOK_BLOCKED = true;
       window.LF_SKIP_PAGEVIEW = true;
-      window.location.replace((red ? '/apply/book-red/' : '/apply/') + window.location.search);
+      window.location.replace((red ? '/apply/not-ready/' : '/apply/') + window.location.search);
     }
   } catch (e) {}
 })();

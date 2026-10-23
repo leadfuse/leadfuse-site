@@ -3,20 +3,20 @@
 share one design. Source = the client-leadfuse-funnel deploy folder (the live apply.leadfuse.co code).
 Run after any change to those three pages there:  python3 apply/_src/port.py [/path/to/client-leadfuse-funnel/deploy]
 What changes in the copy: paths become absolute (/_ds, /assets, /vendor, /attribution.js ...), the gate and the
-after-booking hop point at /apply/..., the footer's legal links point at this site's pages, noindex is added, and the
+after-booking hop point at /apply/... (book-red is published as /apply/not-ready/), the footer's legal links point at this site's pages, noindex is added, and the
 ads-side "hand site traffic back to leadfuse.co" bounce (which would loop here) is stripped."""
 import pathlib, re, shutil, sys
 HERE = pathlib.Path(__file__).resolve().parent
 SITE = HERE.parent.parent
 SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "/Users/fuseai/Documents/client-leadfuse-funnel/deploy")
-PAGES = {"booking.html": "book", "book-red.html": "book-red", "confirmation.html": "confirmation"}
+PAGES = {"booking.html": "book", "book-red.html": "not-ready", "confirmation.html": "confirmation"}
 ASSETS = ["favicon-32.png", "logo-silver@4x.png", "confirm-calendar-invite.jpg", "confirm-text-thread.jpg"]
 
 def port(name, html):
     html = re.sub(r'<script>\s*/\* Site traffic\..*?</script>\s*', '', html, flags=re.S)       # the ads-side bounce never ships here
     html = html.replace('src="./attribution.js"', 'src="/attribution.js"').replace('src="./meta-pixel.js"', 'src="/meta-pixel.js"').replace('src="./support.js"', 'src="/support.js"')
     html = re.sub(r'(["\'(])(assets|vendor|_ds)/', r'\1/\2/', html)                               # every relative asset path becomes absolute
-    html = html.replace("(red ? '/book-red' : '/') + window.location.search", "(red ? '/apply/book-red/' : '/apply/') + window.location.search")
+    html = html.replace("(red ? '/book-red' : '/') + window.location.search", "(red ? '/apply/not-ready/' : '/apply/') + window.location.search")
     html = html.replace("const to = '/confirmation' + window.location.search;", "const to = '/apply/confirmation/' + window.location.search;")
     html = html.replace('href="/privacy-policy"', 'href="/privacy/"').replace('href="/terms-of-use"', 'href="/terms/"').replace('href="/earnings-disclaimer"', 'href="https://apply.leadfuse.co/earnings-disclaimer"')
     html = html.replace('<meta name="viewport" content="width=device-width, initial-scale=1">', '<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="robots" content="noindex">', 1)
