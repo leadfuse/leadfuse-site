@@ -14,18 +14,22 @@ Push to `main` = live in about a minute.
 apply.leadfuse.co (the VSL funnel, repo client-leadfuse-funnel) is for Meta ads only. Every other place a LEADFUSE
 application link gets posted uses a source link on this site, one folder per source, all the same page:
 
-| Link | Posted where |
-|---|---|
-| leadfuse.co/apply | this site (source `site`) |
-| leadfuse.co/apply/sebas | @sebassmfonseca DMs |
-| leadfuse.co/apply/leadfuse | @leadfuse DMs |
-| leadfuse.co/apply/bio-sebas | @sebassmfonseca bio |
-| leadfuse.co/apply/bio-leadfuse | @leadfuse bio |
-| leadfuse.co/apply/free | LEADFUSE Training Material (free Skool room) |
-| leadfuse.co/apply/skool | Skool anywhere else |
-| leadfuse.co/apply/vip | LEADFUSE VIP (paid room) |
-| leadfuse.co/apply/yt | YouTube |
-| leadfuse.co/apply/email | emails from the App |
+| Link | Posted where | utm_source |
+|---|---|---|
+| leadfuse.co/apply | this site | website |
+| leadfuse.co/apply/sebas | @sebassmfonseca DMs | dm_personal |
+| leadfuse.co/apply/leadfuse | @leadfuse DMs | dm_business |
+| leadfuse.co/apply/bio-sebas | @sebassmfonseca bio | bio_personal |
+| leadfuse.co/apply/bio-leadfuse | @leadfuse bio | bio_business |
+| leadfuse.co/apply/linkedin | LinkedIn | linkedin |
+| leadfuse.co/apply/free | LEADFUSE Training Material (free Skool room) | skool_free |
+| leadfuse.co/apply/skool | Skool anywhere else | skool |
+| leadfuse.co/apply/vip | LEADFUSE VIP (paid room) | skool_vip |
+| leadfuse.co/apply/yt | YouTube | youtube |
+| leadfuse.co/apply/email | emails from the App | email |
+
+utm_source follows the naming already on our bio links (bio_business, bio_personal). formsource = the folder name. utm_campaign =
+apply. Any utm_* on a link's URL (`?utm_campaign=black-friday`) overrides the page's own tags for that click.
 
 How it works: `apply/_src/sources.json` lists the sources; `apply/_src/build.py` writes `apply/index.html` and
 `apply/<slug>/index.html` from `apply/_src/template.html`. Each page is the full application form and nothing else: the
@@ -33,7 +37,7 @@ Typeform D8gcUEt2 filling the screen. D8gcUEt2 is the site's copy of the ads for
 App webhook; `funnel-forms/typeform_site_copy.py` re-syncs it after any scoring change) whose endings redirect to
 `leadfuse.co/apply/book/` and `leadfuse.co/apply/not-ready/`, so nobody who starts on leadfuse.co ever touches
 apply.leadfuse.co. The only difference between the source pages is the hidden fields handed to the form: `formsource` and
-`utm_source` = the slug, `utm_medium` = dm / bio / skool / youtube / email / website, `utm_campaign` = apply. The three
+`utm_source` = the place in our bio-link naming (see the table), `utm_medium` = dm / bio / skool / youtube / email / website, `utm_campaign` = apply; tags on the link's URL win. The three
 pages after the form are copies of the ads funnel's pages made by `apply/_src/port.py` (booking -> `apply/book`,
 book-red -> `apply/not-ready`, confirmation -> `apply/confirmation`), so both funnels always look the same: when those pages
 change in client-leadfuse-funnel, re-run port.py here. The booking page only opens with `?email=` on the URL (a fresh
