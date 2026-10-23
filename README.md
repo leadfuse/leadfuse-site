@@ -19,8 +19,8 @@ application link gets posted uses a source link on this site, one folder per sou
 | leadfuse.co/apply | this site | website |
 | leadfuse.co/apply/sebas | @sebassmfonseca DMs | dm_personal |
 | leadfuse.co/apply/leadfuse | @leadfuse DMs | dm_business |
-| leadfuse.co/apply/bio-sebas | @sebassmfonseca bio | bio_personal |
-| leadfuse.co/apply/bio-leadfuse | @leadfuse bio | bio_business |
+| leadfuse.co/apply/bio-smf | @sebassmfonseca bio | bio_personal |
+| leadfuse.co/apply/bio-lf | @leadfuse bio | bio_business |
 | leadfuse.co/apply/linkedin | LinkedIn | linkedin |
 | leadfuse.co/apply/free | LEADFUSE Training Material (free Skool room) | skool_free |
 | leadfuse.co/apply/skool | Skool anywhere else | skool |
@@ -43,4 +43,4 @@ book-red -> `apply/not-ready`, confirmation -> `apply/confirmation`), so both fu
 change in client-leadfuse-funnel, re-run port.py here. The booking page only opens with `?email=` on the URL (a fresh
 Typeform redirect); anything else is sent back to /apply. `/apply/book-red/` forwards to `/apply/not-ready/`. `robots.txt`
 keeps search engines off book, not-ready and confirmation, and every /apply page is noindex.
-To add a source: add a row to sources.json, run build.py, commit. Never rename a slug that has been posted somewhere.
+Old links bio-leadfuse and bio-sebas forward to bio-lf and bio-smf (`aliases` in sources.json). To add a source: add a row to sources.json, run build.py, commit. Never rename a slug that has been posted somewhere.

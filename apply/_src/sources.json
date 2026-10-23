@@ -20,13 +20,13 @@
       "where": "@leadfuse Instagram DMs"
     },
     {
-      "slug": "bio-sebas",
+      "slug": "bio-smf",
       "utm_source": "bio_personal",
       "medium": "bio",
       "where": "@sebassmfonseca Instagram bio link"
     },
     {
-      "slug": "bio-leadfuse",
+      "slug": "bio-lf",
       "utm_source": "bio_business",
       "medium": "bio",
       "where": "@leadfuse Instagram bio link"
@@ -69,5 +69,10 @@
     }
   ],
   "form": "D8gcUEt2",
-  "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py."
+  "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py.",
+  "aliases": {
+    "bio-leadfuse": "bio-lf",
+    "bio-sebas": "bio-smf"
+  },
+  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias."
 }
