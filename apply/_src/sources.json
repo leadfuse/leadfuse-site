@@ -1,57 +1,78 @@
 {
-  "_readme": "One entry per place a LEADFUSE application link gets posted. slug = the folder under /apply/ and the value of formsource + utm_source. medium = utm_medium. utm_campaign is always 'apply'. Add a row, run build.py, commit. Never rename a slug that has already been posted somewhere.",
+  "_readme": "One entry per place a LEADFUSE application link gets posted. slug = the folder under /apply/ and the value of formsource (the exact link). utm_source follows the naming Sebastian already uses on his bio links (bio_business, bio_personal): place_account, underscores. medium = utm_medium. utm_campaign is always 'apply'. Any utm_* added to a link's URL (?utm_campaign=black-friday) overrides these for that click. Add a row, run build.py, commit. Never rename a slug that has already been posted somewhere.",
   "root": {
     "slug": "site",
+    "utm_source": "website",
     "medium": "website",
     "where": "leadfuse.co itself (nav, footer, anyone who types /apply)"
   },
   "sources": [
     {
       "slug": "sebas",
+      "utm_source": "dm_personal",
       "medium": "dm",
       "where": "@sebassmfonseca Instagram DMs (ManyChat and by hand)"
     },
     {
       "slug": "leadfuse",
+      "utm_source": "dm_business",
       "medium": "dm",
       "where": "@leadfuse Instagram DMs"
     },
     {
-      "slug": "bio-sebas",
+      "slug": "bio-smf",
+      "utm_source": "bio_personal",
       "medium": "bio",
       "where": "@sebassmfonseca Instagram bio link"
     },
     {
-      "slug": "bio-leadfuse",
+      "slug": "bio-lf",
+      "utm_source": "bio_business",
       "medium": "bio",
       "where": "@leadfuse Instagram bio link"
     },
     {
+      "slug": "linkedin",
+      "utm_source": "linkedin",
+      "medium": "bio",
+      "where": "LinkedIn: Sebastian's profile, featured section, DMs"
+    },
+    {
       "slug": "free",
+      "utm_source": "skool_free",
       "medium": "skool",
       "where": "LEADFUSE Training Material (the free Skool room): lesson 4.3, Start Here, pinned post"
     },
     {
       "slug": "skool",
+      "utm_source": "skool",
       "medium": "skool",
       "where": "Skool anywhere else: profile bio, posts in other communities"
     },
     {
       "slug": "vip",
+      "utm_source": "skool_vip",
       "medium": "skool",
       "where": "LEADFUSE VIP (the paid room): upgrades and renewals"
     },
     {
       "slug": "yt",
+      "utm_source": "youtube",
       "medium": "youtube",
       "where": "YouTube descriptions, pinned comments, end screens"
     },
     {
       "slug": "email",
+      "utm_source": "email",
       "medium": "email",
       "where": "Emails from the App (nurture, follow-up, newsletters)"
     }
   ],
   "form": "D8gcUEt2",
-  "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py."
+  "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py.",
+  "aliases": {
+    "bio-leadfuse": "bio-lf",
+    "bio-sebas": "bio-smf"
+  },
+  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias."
 }
