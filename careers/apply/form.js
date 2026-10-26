@@ -48,7 +48,9 @@
     { id: 'resume_url', kind: 'url', req: false, q: 'Your LinkedIn or resume link', ph: 'https://' },
     { id: 'heard', kind: 'choice', req: true, q: 'How did you hear about this role?', options: HEARD, follow: FOLLOW },
     { id: 'days', kind: 'multi', req: true, q: 'Which days can you work?', hint: 'Pick every day that works.', options: DAYS },
-    { id: 'hours', kind: 'multi', req: true, q: 'Which hours can you work, US Central time?', hint: 'Pick every block that works.', options: HOURS }
+    { id: 'hours', kind: 'multi', req: true, q: 'Which hours can you work, US Central time?', hint: 'Pick every block that works.', options: HOURS },
+    /* The attention test. The job post and the careers page say what to type; the form doesn't. */
+    { id: 'subject_line', kind: 'text', req: true, q: 'Last one. Type the subject line from the post.', hint: 'Word for word, with your real name.', ph: 'Type it here' }
   ];
 
   /* ---------- state ---------- */
@@ -323,6 +325,7 @@
       heard: heard,
       days: (a.days || []).join(', '),
       hours: (a.hours || []).join(', '),
+      subject_line: String(a.subject_line || '').trim(),
       source: 'careers_page',
       page_url: location.href,
       submitted_at: new Date().toISOString()
