@@ -19,6 +19,7 @@ window.LF_ROLE_STATUS = {
    sales  = true adds "Sales seats are paid on cash collected." to the pay line.
    english = "required" or "optional" on the form.
    loom   = the three questions the applicant answers in the Loom (shown on the form's Loom step).
+            Setter and closer questions match HIRING SOPS | SOP-01 (the job posts). Change both together.
    proof  = the form's optional proof question for this role. */
 window.LF_ROLES = [
   {
@@ -34,9 +35,9 @@ window.LF_ROLES = [
       "You show up on time, every shift."
     ],
     loom: [
-      "Why would you be good on the phone with a shop owner?",
-      "Tell me about a time you got told no. What did you do next?",
-      "A lead picks up and says \"I'm busy.\" What do you say?"
+      "Why do you want to set calls for LEADFUSE?",
+      "Tell us about a time you got someone who didn't want to book to book. What did you say?",
+      "Tell us about a time a manager told you that you were doing something wrong. What did you change, and what happened?"
     ],
     proof: { q: "If you've set or closed before, what was your set rate or close rate?", hint: "Skip it if you haven't. If you have, be ready to show proof." }
   },
@@ -53,9 +54,9 @@ window.LF_ROLES = [
       "You follow up without being pushy."
     ],
     loom: [
-      "Read me the first DM you'd send a detailing shop owner. Why that message?",
-      "Tell me about a time someone ignored you. What did you do next?",
-      "A shop owner asks \"how much?\" in his second message. What do you send back?"
+      "Why do you want to set in DMs for LEADFUSE?",
+      "A shop owner comments \"how much?\" on one of our posts. What are your first two DMs to him?",
+      "Tell us about a time a manager told you that you were doing something wrong. What did you change, and what happened?"
     ],
     proof: { q: "If you've set or closed before, what was your set rate or close rate?", hint: "Skip it if you haven't. If you have, be ready to show proof." }
   },
@@ -72,9 +73,9 @@ window.LF_ROLES = [
       "You want your calls reviewed so you get better."
     ],
     loom: [
-      "Tell me about the biggest deal you've closed. How did the call go?",
-      "Tell me about a time you told a buyer he wasn't a fit. What happened?",
-      "An owner says \"I need to think about it.\" What do you say?"
+      "Tell us about your best high-ticket close: the offer, the objection, the outcome.",
+      "What's your close rate, and what do you say when someone says \"let me think about it\"?",
+      "Tell us about a time a manager told you that you were doing something wrong. What did you change, and what happened?"
     ],
     proof: { q: "If you've set or closed before, what was your set rate or close rate?", hint: "Skip it if you haven't. If you have, be ready to show proof." }
   },
