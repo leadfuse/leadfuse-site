@@ -66,6 +66,12 @@
       "utm_source": "email",
       "medium": "email",
       "where": "Emails from the App (nurture, follow-up, newsletters)"
+    },
+    {
+      "slug": "vincent",
+      "utm_source": "partner_vincent",
+      "medium": "partner",
+      "where": "Vincent Caruso, LEADFUSE partner (paid on every client his link brings): his YouTube descriptions and pinned comments, Instagram stories and bio. Add ?utm_content=<place-video> per placement (yt-1van, ig-story) so we can tell which video or post paid him."
     }
   ],
   "form": "D8gcUEt2",
