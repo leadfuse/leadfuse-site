@@ -4,7 +4,7 @@ Marketing site for LEADFUSE, served by GitHub Pages from the `main` branch (cust
 
 - `index.html` = Home, `about/`, `privacy/`, `terms/`. Pages are Claude Design exports. `apply/` is the application funnel for everything that is not a Meta ad (see below).
 - `SiteNav.dc.html` / `SiteFooter.dc.html` are shared components; `_ds/` is the LEADFUSE design system (`.nojekyll` keeps GitHub from hiding it); `vendor/` self-hosts React and Babel.
-- Nav links for pages not yet exported (Services, Results, Careers, Resources) point to `#`.
+- Nav links for pages not yet exported (Services, Results, Resources) point to `#`. Careers points to `/careers/`.
 - Any remaining link to https://apply.leadfuse.co forwards utm_*, fbclid and formsource from the current URL. The footer's apply link now points at `/apply/`.
 
 Push to `main` = live in about a minute.
@@ -44,3 +44,24 @@ change in client-leadfuse-funnel, re-run port.py here. The booking page only ope
 Typeform redirect); anything else is sent back to /apply. `/apply/book-red/` forwards to `/apply/not-ready/`. `robots.txt`
 keeps search engines off book, not-ready and confirmation, and every /apply page is noindex.
 Old links bio-leadfuse and bio-sebas forward to bio-lf and bio-smf (`aliases` in sources.json). To add a source: add a row to sources.json, run build.py, commit. Never rename a slug that has been posted somewhere.
+
+## /careers: the careers page and LEADFUSE's own application form
+
+`careers/index.html` is the careers page (hero, how we hire, role cards, FAQ). `careers/apply/` is the application:
+our own one-question-per-screen form (`careers/apply/form.js`), no Typeform. Plain static pages, no build step.
+
+- **Open or close a seat:** edit `LF_ROLE_STATUS` at the top of `careers/roles.js` (`"open"` = Open now, `"pool"` =
+  Talent pool), commit, push. The cards, their order (open seats first) and the form's "Open now" tags follow. The rest of
+  that file is each role's card copy, Loom questions and proof question. Never rename a slug that has been posted.
+- **Where applications go:** `careers/config.js`, `window.LF_CAREERS.webhookUrl` = the LEADFUSE App inbound webhook URL.
+  Empty = the form shows the thank-you screen but sends nothing (the browser console says so), which keeps previews clean.
+- **What it sends:** one flat JSON object (strings): role, role_label, full_name, first_name, last_name, email, phone,
+  location, english, experience, last_role, proof, why, besides_money, loom_url, resume_url, heard, days, hours,
+  source (`careers_page`), page_url, submitted_at, utm_source, utm_medium, utm_campaign, utm_content, utm_term, plus
+  `tags` = `["talent | applicant", "talent | <role slug>"]`. Job-board links can carry utm_* (`/careers/?utm_source=onlinejobs`);
+  the careers page hands them to the form.
+- **Link a role directly:** `leadfuse.co/careers/apply/?role=phone-setter` (slugs: phone-setter, dm-setter, closer,
+  video-editor, media-buyer, ghl-specialist, other).
+- No Meta pixel and no attribution relay on these pages, and no link into /apply: job applicants must never count as sales leads.
+- Spam guard: a hidden field bots fill, and a form finished in under 20 seconds is dropped. Answers stay in the tab
+  (sessionStorage) while someone fills the form and are cleared when they submit.
