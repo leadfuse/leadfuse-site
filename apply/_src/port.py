@@ -27,7 +27,14 @@ for src_name, folder in PAGES.items():
     out = SITE / "apply" / folder; out.mkdir(parents=True, exist_ok=True)
     (out / "index.html").write_text(port(src_name, (SRC / src_name).read_text()))
     print(f"apply/{folder}/index.html  <-  {src_name}")
-shutil.copy2(SRC / "meta-pixel.js", SITE / "meta-pixel.js"); print("meta-pixel.js")
+_px = (SRC / "meta-pixel.js").read_text()
+_keep = (SITE / "meta-pixel.js").read_text()
+_a = "  var PIXEL_ID = "
+if "NO META FROM THE BROWSER" in _keep and "NO META FROM THE BROWSER" not in _px:      # keep the site-only no-Meta rule (test drive)
+    _blk = _keep[_keep.index("\n  /* NO META FROM THE BROWSER"):_keep.index("  } catch (e) {}\n", _keep.index("NO META FROM THE BROWSER")) + len("  } catch (e) {}\n")]
+    _line_end = _px.index("\n", _px.index(_a)) + 1
+    _px = _px[:_line_end] + _blk + _px[_line_end:]
+(SITE / "meta-pixel.js").write_text(_px); print("meta-pixel.js (site no-Meta rule kept)")
 for a in ASSETS:
     if (SRC / "assets" / a).exists(): shutil.copy2(SRC / "assets" / a, SITE / "assets" / a)
 if (SRC / "assets" / "proof").is_dir():

@@ -25,6 +25,20 @@
 (function () {
   var PIXEL_ID = '1122537676630550'; // LEADFUSE - VSL PIXEL (Events Manager dataset)
 
+  /* NO META FROM THE BROWSER for the 4-Week Test Drive (Sebastian, Oct 27 2026). That campaign goes to people already in the
+     App by email and text, not to ad traffic, so it must not teach Meta anything: no PageView, no Lead, no Schedule (and no
+     "Booked Call" custom conversion, which is a PageView on /confirmation). The only Meta signal it may create is the
+     closer's Qualified on the intake form, sent server-side by the OS. formsource=test-drive rides every page of that path:
+     the offer page, /apply/book, /apply/confirmation and /apply/not-ready. Re-applied by apply/_src/port.py. */
+  try {
+    var lfq = new URLSearchParams(location.search);
+    if (location.pathname.indexOf('/apply/test-drive') === 0 || lfq.get('formsource') === 'test-drive' || lfq.get('utm_campaign') === 'test-drive') {
+      window.lfMetaTrack = function () {};
+      window.fbq = window.fbq || function () {};
+      return;
+    }
+  } catch (e) {}
+
   if (!PIXEL_ID || PIXEL_ID === 'PIXEL_ID_HERE') {
     // No ID yet: expose a no-op so page scripts calling lfMetaTrack don't error.
     window.lfMetaTrack = function () {};
