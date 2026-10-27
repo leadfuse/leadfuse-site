@@ -78,7 +78,9 @@
   "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py.",
   "aliases": {
     "bio-leadfuse": "bio-lf",
-    "bio-sebas": "bio-smf"
+    "bio-sebas": "bio-smf",
+    "free-trial": "test-drive"
   },
-  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias."
+  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias.",
+  "_test_drive_note": "apply/test-drive/ is NOT built from template.html. It is the apply.leadfuse.co landing page copied by apply/_src/test_drive.py with the 4-Week Test Drive words swapped in (same design). /apply/free-trial forwards to it."
 }
