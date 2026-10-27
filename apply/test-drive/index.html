@@ -70,7 +70,7 @@ if (Date.now() >= Date.UTC(2026, 10, 1, 7, 0, 0)) location.replace('/apply/' + l
   <script src="https://fast.wistia.com/player.js" async></script>
   <!-- Priority 1: the hero VSL video. Preload its media up front so it's the
        first thing ready. -->
-  <script src="https://fast.wistia.com/embed/bkldcfjakp.js" async type="module"></script>
+  
   <!-- Priority 2: the application form. -->
   <script src="https://embed.typeform.com/next/embed.js" async></script>
   <!-- Deferred: the three testimonial videos sit below the fold, so their
@@ -112,20 +112,16 @@ if (Date.now() >= Date.UTC(2026, 10, 1, 7, 0, 0)) location.replace('/apply/' + l
   <header data-screen-label="Hero" style="position:relative;padding:clamp(20px,5vw,44px) 20px 8px;overflow:hidden">
     <div style="position:absolute;top:-240px;left:50%;transform:translateX(-50%);width:min(1100px,150vw);height:620px;background:radial-gradient(ellipse at center,rgba(229,0,17,.16),transparent 62%);pointer-events:none"></div>
     <div style="max-width:880px;margin:0 auto;text-align:center;position:relative">
-      <img src="/assets/logo-silver@4x.png" alt="LEADFUSE" style="height:26px;width:auto;display:block;margin:0 auto clamp(16px,4vw,28px)">
-      <div style="margin-bottom:14px"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.Eyebrow" center="true" hint-size="auto,16px">The 4-Week Test Drive · Only 5 spots · Ends Sat, Oct 31</x-import></div>
-      <h1 style="margin:0;padding-bottom:.08em;font-size:clamp(30px,7.6vw,64px);font-weight:800;line-height:1.14;letter-spacing:-.02em;color:#fff;text-wrap:balance">We&#8217;ll run your <span style="color:#0082FB">Meta</span> ads for 4 weeks. <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">You decide after.</em></h1>
-      <p style="margin:12px auto 0;max-width:620px;font-size:clamp(15px,4vw,18px);line-height:1.6;color:rgba(255,255,255,.62);text-wrap:pretty">A test drive of our Done For You ads for detailing businesses doing $10K+ a month. Keep going after 4 weeks and your deposit comes off your program. Walk away and it covers your 4 weeks.</p>
-      <div style="margin:clamp(16px,3.5vw,30px) auto 0;max-width:880px;position:relative;text-align:left">
-        <div style="position:absolute;inset:-1px;border-radius:18px;background:linear-gradient(135deg,rgba(229,0,17,.5),rgba(255,255,255,.08) 40%,rgba(229,0,17,.25))"></div>
-        <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:16/9;background:#0C0C0C;box-shadow:0 30px 90px rgba(0,0,0,.7),var(--glow-red-soft)">
-          <wistia-player media-id="bkldcfjakp" aspect="1.7777777777777777" style="position:absolute;inset:0;width:100%;height:100%;display:block"></wistia-player>
-        </div>
+      <img src="/assets/logo-silver@4x.png" alt="LEADFUSE" style="height:26px;width:auto;display:block;margin:0 auto clamp(16px,4vw,26px)">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto clamp(18px,4vw,28px)">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E50011">This offer ends in</div>
+        <div style="display:flex;justify-content:center;gap:clamp(8px,2.4vw,14px)"><div style="min-width:clamp(64px,18vw,96px);padding:clamp(10px,2.6vw,16px) 8px;border-radius:14px;background:#0D0D0D;border:1px solid rgba(229,0,17,.35);box-shadow:var(--glow-red-soft)"><div data-td="d" style="font-size:clamp(30px,8.5vw,52px);font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em">00</div><div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)">Days</div></div><div style="min-width:clamp(64px,18vw,96px);padding:clamp(10px,2.6vw,16px) 8px;border-radius:14px;background:#0D0D0D;border:1px solid rgba(229,0,17,.35);box-shadow:var(--glow-red-soft)"><div data-td="h" style="font-size:clamp(30px,8.5vw,52px);font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em">00</div><div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)">Hours</div></div><div style="min-width:clamp(64px,18vw,96px);padding:clamp(10px,2.6vw,16px) 8px;border-radius:14px;background:#0D0D0D;border:1px solid rgba(229,0,17,.35);box-shadow:var(--glow-red-soft)"><div data-td="m" style="font-size:clamp(30px,8.5vw,52px);font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em">00</div><div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)">Minutes</div></div><div style="min-width:clamp(64px,18vw,96px);padding:clamp(10px,2.6vw,16px) 8px;border-radius:14px;background:#0D0D0D;border:1px solid rgba(229,0,17,.35);box-shadow:var(--glow-red-soft)"><div data-td="s" style="font-size:clamp(30px,8.5vw,52px);font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em">00</div><div style="margin-top:6px;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)">Seconds</div></div></div>
+        <div style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff"><span style="width:8px;height:8px;border-radius:999px;background:#E50011;box-shadow:0 0 10px rgba(229,0,17,.9),0 0 3px rgba(229,0,17,.9);animation:lfPulse 2.2s ease-in-out infinite"></span>Only 5 spots. Ends Saturday at midnight PT.</div>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px;margin-top:clamp(16px,3.5vw,26px)">
-        <x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.GlowButton" size="lg" block="true" on-click="{{ scrollToForm }}" dc-props="{{ ctaProps }}" hint-size="220px,62px" style="width:100%;max-width:440px">See if you qualify</x-import>
-        <div style="font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);text-align:center">Takes 2 minutes.</div>
-      </div>
+      <div style="margin-bottom:14px"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.Eyebrow" center="true" hint-size="auto,16px">The 4-Week Test Drive</x-import></div>
+      <h1 style="margin:0;padding-bottom:.08em;font-size:clamp(30px,7.6vw,64px);font-weight:800;line-height:1.14;letter-spacing:-.02em;color:#fff;text-wrap:balance">Get 4 weeks of Done For You <span style="color:#0082FB">Meta</span> ads <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">free.</em></h1>
+      <p style="margin:12px auto 0;max-width:640px;font-size:clamp(15px,4vw,18px);line-height:1.6;color:rgba(255,255,255,.62);text-wrap:pretty">We build and run your Facebook and Instagram ads for 4 weeks. You only put down a deposit, and it comes off your program if you keep going. For detailing businesses doing $10K+ a month that can spend $50 a day on ads.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:clamp(16px,3.5vw,24px) auto 0;max-width:780px"><span style="display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;background:var(--glass-bg);border:var(--glass-border);font-size:14px;font-weight:600;color:#fff;white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>4 weeks free</span><span style="display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;background:var(--glass-bg);border:var(--glass-border);font-size:14px;font-weight:600;color:#fff;white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Just a deposit to start</span><span style="display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;background:var(--glass-bg);border:var(--glass-border);font-size:14px;font-weight:600;color:#fff;white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>72-hour guarantee: full refund</span><span style="display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;background:var(--glass-bg);border:var(--glass-border);font-size:14px;font-weight:600;color:#fff;white-space:nowrap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Performance guarantee: deposit back</span></div>
     </div>
   </header>
 
@@ -133,7 +129,7 @@ if (Date.now() >= Date.UTC(2026, 10, 1, 7, 0, 0)) location.replace('/apply/' + l
     <div style="position:absolute;top:10%;left:50%;transform:translateX(-50%);width:min(760px,120vw);height:480px;background:radial-gradient(ellipse at center,rgba(229,0,17,.1),transparent 62%);pointer-events:none"></div>
     <div style="max-width:560px;margin:0 auto;position:relative">
       <div style="text-align:center">
-        <h2 style="margin:0;font-size:clamp(24px,5.8vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.08;color:#fff">Claim your test drive in <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">2 minutes.</em></h2>
+        <h2 style="margin:0;font-size:clamp(24px,5.8vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.08;color:#fff">Claim 1 of 5 spots in <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">2 minutes.</em></h2>
         <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 18px;margin-top:14px">
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff"><span style="width:8px;height:8px;border-radius:999px;background:#E50011;box-shadow:0 0 10px rgba(229,0,17,.9),0 0 3px rgba(229,0,17,.9);animation:lfPulse 2.2s ease-in-out infinite"></span>Fill out the application</span>
           <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:rgba(255,255,255,.38)"><span style="width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.22)"></span>Book your call</span>
@@ -428,6 +424,15 @@ class Component extends DCLogic {
     }, proofStyles, vidStyles);
   }
 }
+</script>
+<script>/* Test-drive countdown to Sat Oct 31 2026 midnight PT (Nov 1 07:00 UTC). Re-queries each tick so a re-render can't stop it. */
+(function () { var end = Date.UTC(2026, 10, 1, 7, 0, 0);
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function tick() { var t = Math.max(0, end - Date.now()), s = Math.floor(t / 1000),
+      v = { d: Math.floor(s / 86400), h: Math.floor(s % 86400 / 3600), m: Math.floor(s % 3600 / 60), s: s % 60 };
+    document.querySelectorAll('[data-td]').forEach(function (el) { el.textContent = pad(v[el.getAttribute('data-td')]); });
+    if (t <= 0) location.replace('/apply/' + location.search); }
+  tick(); setInterval(tick, 1000); })();
 </script>
 </body>
 </html>
