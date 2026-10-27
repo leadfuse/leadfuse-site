@@ -55,7 +55,7 @@ swap("filling the calendar.</em>", "You decide after.</em>")
 swap("We find what&#8217;s capping your ads, follow-up, and sales, then fix it for you or with you, until qualified buyers book every week. Even if an agency burned you before.",
      "A test drive of our Done For You ads for detailing businesses doing $10K+ a month. Keep going after 4 weeks and your deposit comes off your program. Walk away and it covers your 4 weeks.")
 swap("Takes 60 seconds.", "Takes 2 minutes.", count=html.count("Takes 60 seconds."))
-swap("Book your free discovery call in ", "Claim 1 of 5 spots in ")
+swap("Book your free discovery call in ", "See if you qualify in ")
 swap(">60 seconds.</em>", ">2 minutes.</em>")
 
 # 5. FAQ: same card design, test-drive answers (the funnel's price, minimum and guarantee answers would contradict the offer)
@@ -86,35 +86,30 @@ if a < 0 or b < a: raise SystemExit("FAQ cards not found")
 new_faq = faq[:a] + "".join(card(q, ans, first=(n == 0)) for n, (q, ans) in enumerate(FAQ)).rstrip() + faq[b:]
 html = html[:i] + new_faq + html[j:]
 
-# 6. hero (Sebastian, Oct 27 2026): no VSL (outdated), a big countdown, the offer stack in the headline, the form right below
-CHECK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>'
-def box(key, label):
-    return (f'<div style="min-width:clamp(64px,18vw,96px);padding:clamp(10px,2.6vw,16px) 8px;border-radius:14px;background:#0D0D0D;'
-            f'border:1px solid rgba(229,0,17,.35);box-shadow:var(--glow-red-soft)"><div data-td="{key}" style="font-size:clamp(30px,8.5vw,52px);'
-            f'font-weight:800;line-height:1;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-.02em">00</div><div style="margin-top:6px;'
-            f'font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45)">{label}</div></div>')
-def chip(text):
-    return (f'<span style="display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:999px;background:var(--glass-bg);'
-            f'border:var(--glass-border);font-size:14px;font-weight:600;color:#fff;white-space:nowrap">{CHECK}{text}</span>')
-NEW_HEADER = f"""<header data-screen-label="Hero" style="position:relative;padding:clamp(20px,5vw,44px) 20px 8px;overflow:hidden">
+# 6. hero (Sebastian, Oct 27 2026, mobile pass): the headline is the loudest thing on the screen. Above it, one small
+# countdown line. Under it, one short line (deposit + who it's for) and the two guarantees in plain small text.
+# No eyebrow, no chips, no countdown boxes, no VSL. The form starts right after.
+CHECK = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E50011" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M20 6 9 17l-5-5"/></svg>'
+def unit(key, label):
+    return f'<span data-td="{key}">00</span>{label}'
+def guarantee(text):
+    return f'<span style="display:inline-flex;align-items:center;gap:6px;white-space:nowrap">{CHECK}{text}</span>'
+NEW_HEADER = f"""<header data-screen-label="Hero" style="position:relative;padding:clamp(16px,4vw,36px) 20px 0;overflow:hidden">
     <div style="position:absolute;top:-240px;left:50%;transform:translateX(-50%);width:min(1100px,150vw);height:620px;background:radial-gradient(ellipse at center,rgba(229,0,17,.16),transparent 62%);pointer-events:none"></div>
-    <div style="max-width:880px;margin:0 auto;text-align:center;position:relative">
-      <img src="/assets/logo-silver@4x.png" alt="LEADFUSE" style="height:26px;width:auto;display:block;margin:0 auto clamp(16px,4vw,26px)">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;margin:0 auto clamp(18px,4vw,28px)">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E50011">This offer ends in</div>
-        <div style="display:flex;justify-content:center;gap:clamp(8px,2.4vw,14px)">{box('d','Days')}{box('h','Hours')}{box('m','Minutes')}{box('s','Seconds')}</div>
-        <div style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#fff"><span style="width:8px;height:8px;border-radius:999px;background:#E50011;box-shadow:0 0 10px rgba(229,0,17,.9),0 0 3px rgba(229,0,17,.9);animation:lfPulse 2.2s ease-in-out infinite"></span>Only 5 spots. Ends Saturday at midnight PT.</div>
-      </div>
-      <div style="margin-bottom:14px"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.Eyebrow" center="true" hint-size="auto,16px">The 4-Week Test Drive</x-import></div>
-      <h1 style="margin:0;padding-bottom:.08em;font-size:clamp(30px,7.6vw,64px);font-weight:800;line-height:1.14;letter-spacing:-.02em;color:#fff;text-wrap:balance">Get 4 weeks of Done For You <span style="color:#0082FB">Meta</span> ads <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">free.</em></h1>
-      <p style="margin:12px auto 0;max-width:640px;font-size:clamp(15px,4vw,18px);line-height:1.6;color:rgba(255,255,255,.62);text-wrap:pretty">We build and run your Facebook and Instagram ads for 4 weeks. You only put down a deposit, and it comes off your program if you keep going. For detailing businesses doing $10K+ a month that can spend $50 a day on ads.</p>
-      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:clamp(16px,3.5vw,24px) auto 0;max-width:780px">{chip('4 weeks free')}{chip('Just a deposit to start')}{chip('72-hour guarantee: full refund')}{chip('Performance guarantee: deposit back')}</div>
+    <div style="max-width:820px;margin:0 auto;text-align:center;position:relative">
+      <img src="/assets/logo-silver@4x.png" alt="LEADFUSE" style="height:22px;width:auto;display:block;margin:0 auto clamp(14px,3.5vw,22px)">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(229,0,17,.08);border:1px solid rgba(229,0,17,.3);font-size:13px;font-weight:600;color:rgba(255,255,255,.85);margin:0 auto clamp(16px,4vw,24px)"><span style="width:7px;height:7px;border-radius:999px;background:#E50011;box-shadow:0 0 10px rgba(229,0,17,.9);animation:lfPulse 2.2s ease-in-out infinite;flex:none"></span>Ends in <span style="font-weight:800;color:#fff;font-variant-numeric:tabular-nums">{unit('d','d')} {unit('h','h')} {unit('m','m')} {unit('s','s')}</span><span style="color:rgba(255,255,255,.35)">&middot;</span>Only 5 spots</div>
+      <h1 style="margin:0;padding-bottom:.06em;font-size:clamp(38px,10.5vw,72px);font-weight:800;line-height:1.06;letter-spacing:-.03em;color:#fff;text-wrap:balance">Get 4 weeks of Done For You <span style="color:#0082FB">Meta</span> ads <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011">free.</em></h1>
+      <p style="margin:14px auto 0;max-width:520px;font-size:clamp(14px,3.6vw,16px);line-height:1.5;color:rgba(255,255,255,.55);text-wrap:balance">Just a deposit to start. For detailing businesses doing $10K+ a month.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:12px auto 0;font-size:14px;font-weight:600;color:rgba(255,255,255,.85)">{guarantee('72-hour guarantee')}{guarantee('Performance guarantee')}</div>
     </div>
   </header>"""
 i = html.find('<header data-screen-label="Hero"'); j = html.find('</header>', i)
 if i < 0 or j < 0: raise SystemExit("hero not found")
 html = html[:i] + NEW_HEADER + html[j + len('</header>'):]
 swap('<script src="https://fast.wistia.com/embed/bkldcfjakp.js" async type="module"></script>', '')
+swap('<section id="qualify" data-screen-label="Qualification form" style="position:relative;padding:clamp(40px,8vw,72px) 20px clamp(48px,9vw,80px)">',
+     '<section id="qualify" data-screen-label="Qualification form" style="position:relative;padding:clamp(22px,5vw,44px) 20px clamp(48px,9vw,80px)">')
 TIMER = """<script>/* Test-drive countdown to Sat Oct 31 2026 midnight PT (Nov 1 07:00 UTC). Re-queries each tick so a re-render can't stop it. */
 (function () { var end = Date.UTC(2026, 10, 1, 7, 0, 0);
   function pad(n) { return (n < 10 ? '0' : '') + n; }
