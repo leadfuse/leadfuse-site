@@ -72,14 +72,6 @@
       "utm_source": "partner_vincent",
       "medium": "partner",
       "where": "Vincent Caruso, LEADFUSE partner (paid on every client his link brings): his YouTube descriptions and pinned comments, Instagram stories and bio. Add ?utm_content=<place-video> per placement (yt-1van, ig-story) so we can tell which video or post paid him."
-    },
-    {
-      "slug": "test-drive",
-      "utm_source": "test_drive",
-      "medium": "campaign",
-      "campaign": "test-drive",
-      "template": "offer-test-drive.html",
-      "where": "The 4-Week Test Drive offer (Oct 27 to Oct 31 2026): Gmail emails link with ?utm_medium=email, App texts with ?utm_medium=sms. Offer page + the same form. Closes itself after Oct 31 midnight PT."
     }
   ],
   "form": "D8gcUEt2",
@@ -89,5 +81,6 @@
     "bio-sebas": "bio-smf",
     "free-trial": "test-drive"
   },
-  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias."
+  "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias.",
+  "_test_drive_note": "apply/test-drive/ is NOT built from template.html. It is the apply.leadfuse.co landing page copied by apply/_src/test_drive.py with the 4-Week Test Drive words swapped in (same design). /apply/free-trial forwards to it."
 }
