@@ -72,6 +72,12 @@
       "utm_source": "partner_vincent",
       "medium": "partner",
       "where": "Vincent Caruso, LEADFUSE partner (paid on every client his link brings): his YouTube descriptions and pinned comments, Instagram stories and bio. Add ?utm_content=<place-video> per placement (yt-1van, ig-story) so we can tell which video or post paid him."
+    },
+    {
+      "slug": "dawson",
+      "utm_source": "referral_dawson",
+      "medium": "referral",
+      "where": "Dawson Keenan's referral link: his Instagram stories and bio, texts and DMs to other detailers. Add ?utm_content=<place> per placement (ig-story, ig-bio, text) to see which one worked."
     }
   ],
   "form": "D8gcUEt2",
