@@ -19,11 +19,17 @@
 html,body{height:100%;background:#000}
 body{min-height:100vh;min-height:100dvh;overflow:hidden}
 #form,#form iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000}
+/* /apply/refer/ only: who sent them, above the form. Hidden until the OS confirms the key. */
+#sent-by{display:none;position:fixed;top:0;left:0;right:0;z-index:2;min-height:52px;padding:14px 16px;background:#000;color:#fff;font-family:Poppins,system-ui,sans-serif;font-size:15px;line-height:1.4;text-align:center;border-bottom:1px solid #262626}
+#sent-by strong{font-weight:600}
+body.sent #sent-by{display:block}
+body.sent #form,body.sent #form iframe{top:52px;height:calc(100% - 52px)}
 .fallback{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-family:Poppins,system-ui,sans-serif;color:#fff;padding:24px;text-align:center}
 .fallback a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
+<div id="sent-by" role="status"></div>
 <div id="form" data-tf-widget="D8gcUEt2" data-tf-hidden="formsource=free,utm_source=skool_free,utm_medium=skool,utm_campaign=apply" data-tf-transitive-search-params="fbclid" data-tf-inline-on-mobile data-tf-opacity="100" data-tf-iframe-props="title=The LEADFUSE application" data-tf-medium="snippet"></div>
 <noscript><div class="fallback"><a href="https://form.typeform.com/to/D8gcUEt2#formsource=free&amp;utm_source=skool_free&amp;utm_medium=skool&amp;utm_campaign=apply">Open the application</a></div></noscript>
 <script>
@@ -41,6 +47,22 @@ body{min-height:100vh;min-height:100dvh;overflow:hidden}
       if (v) { if (!(k in tags)) order.push(k); tags[k] = v; }
     });
     el.setAttribute('data-tf-hidden', order.map(function (k) { return k + '=' + tags[k]; }).join(','));
+    /* A client's referral link (leadfuse.co/apply/refer/?utm_content=<their key>): say who sent them and what they get.
+       The OS only answers for a real key, with the business name and first name; anything else leaves the page as it is. */
+    if (tags.formsource === 'refer' && tags.utm_content && /^[a-z0-9-]{2,64}$/.test(tags.utm_content)) {
+      fetch('https://os.leadfuse.co/api/referrals/public/' + encodeURIComponent(tags.utm_content), { mode: 'cors' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.business) return;
+          var who = d.first ? d.first + ' at ' + d.business : d.business;
+          var bar = document.getElementById('sent-by');
+          bar.textContent = '';
+          var s = document.createElement('strong'); s.textContent = who + ' sent you.';
+          bar.appendChild(s); bar.appendChild(document.createTextNode(' Join and your first month is free.'));
+          document.body.classList.add('sent');
+        })
+        .catch(function () {});
+    }
   } catch (e) {}
 })();
 </script>
