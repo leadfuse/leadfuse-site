@@ -78,6 +78,12 @@
       "utm_source": "partner_mike",
       "medium": "partner",
       "where": "Mike Reynoso's referral link (Paradise Auto Care): his Instagram stories and bio, and texts to detailers he knows. Add ?utm_content=<place> per placement (ig-story, ig-bio, text) to see where it came from."
+    },
+    {
+      "slug": "refer",
+      "utm_source": "referral",
+      "medium": "referral",
+      "where": "Client referral links from the LEADFUSE App's Refer page (the OS adds ?utm_content=<client code> per client)"
     }
   ],
   "form": "D8gcUEt2",
