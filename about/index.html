@@ -12,6 +12,7 @@
 <title>About LEADFUSE | The Story Behind the Agency</title>
 <meta name="description" content="Sebastian Fonseca started a detailing business at 18, hit six figures in year one, and built LEADFUSE in 2024. Meet the team keeping service businesses booked.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050505">
 <link rel="icon" href="assets/c0bf22c5.png">
 <style>@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url("assets/c9a8f56e.woff2") format('woff2')}
 @font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url("assets/8689aee8.woff2") format('woff2')}
@@ -263,9 +264,11 @@ a:hover{color:var(--accent-hover)}
 <script src="assets/5c16dc48.js"></script>
 <script src="assets/0619a895.js"></script>
 <style>
-html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--font-sans);-webkit-font-smoothing:antialiased;--lf-bg:#F2F2F2;--lf-ink:#0A0A0A;--lf-ink2:#333333;--lf-ink3:#5A5A5A;--lf-card:#FFFFFF;--lf-card-hover:#FFFFFF;--lf-panel:#FFFFFF;--lf-line:#E2E2E2;--lf-line-soft:#E4E4E4;--lf-glow:.07;--lf-shadow:0 10px 30px rgba(0,0,0,.08);--lf-nav:rgba(242,242,242,.85);--lf-bubble:#ECECEC;--lf-tint:#FFFFFF;--lf-track:#DDDDDD;background:var(--lf-bg);color:var(--lf-ink)}
-::selection{background:#E50011;color:var(--lf-ink)}
+html{scroll-behavior:smooth;background:#050505}
+/* Dark theme (Nov 2026), matching /careers/. The page vars below also drive the shared nav and footer. */
+:root{--surface-page:#050505;--surface-card:rgba(255,255,255,.04);--surface-sunken:#0A0A0A;--text-heading:#fff;--text-body:rgba(255,255,255,.78);--text-muted:rgba(255,255,255,.55);--border-subtle:rgba(255,255,255,.09);--focus-ring:0 0 0 2px #000,0 0 0 4px var(--accent)}
+body{margin:0;font-family:var(--font-sans);-webkit-font-smoothing:antialiased;--lf-bg:#050505;--lf-bg2:#0A0A0A;--lf-ink:#FFFFFF;--lf-ink2:rgba(255,255,255,.78);--lf-ink3:rgba(255,255,255,.55);--lf-card:rgba(255,255,255,.04);--lf-card-hover:rgba(255,255,255,.06);--lf-panel:rgba(255,255,255,.04);--lf-line:rgba(255,255,255,.09);--lf-line-soft:rgba(255,255,255,.07);--lf-glow:.16;--lf-shadow:0 24px 60px rgba(0,0,0,.55);--lf-nav:rgba(5,5,5,.75);--lf-bubble:#161616;--lf-tint:rgba(255,255,255,.06);--lf-track:rgba(255,255,255,.12);background:var(--lf-bg);color:var(--lf-ink)}
+::selection{background:#E50011;color:#fff}
 a{color:#E50011}a:hover{color:#FF1524}
 @keyframes lfGlow{from{transform:translate(-50%,0) scale(1);opacity:.8}to{transform:translate(-46%,30px) scale(1.12);opacity:1}}
 @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
@@ -302,7 +305,7 @@ a{color:#E50011}a:hover{color:#FF1524}
   </div>
 </header>
 
-<section data-screen-label="Story" style="border-top:1px solid var(--lf-line-soft);padding:clamp(70px,9vw,110px) 20px;position:relative;overflow:hidden">
+<section data-screen-label="Story" style="border-top:1px solid var(--lf-line-soft);background:var(--lf-bg2);padding:clamp(70px,9vw,110px) 20px;position:relative;overflow:hidden">
   <div style="max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(60px,8vw,90px)">
     <div data-rv="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(30px,4vw,60px);align-items:center">
       <div>
@@ -310,7 +313,7 @@ a{color:#E50011}a:hover{color:#FF1524}
         <h2 style="margin:18px 0 0;font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--lf-ink)">The driveway years</h2>
         <p style="margin:16px 0 0;font-size:15.5px;line-height:1.75;color:var(--lf-ink2)">At 18 I left college and started First Class Mobile Detail. No investors. No safety net. Just work. Our first full year we passed six figures in revenue and collected over 150 five star Google reviews. I learned this industry with my own hands, one car at a time.</p>
       </div>
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel)"><image-slot id="story-detailing" shape="rect" placeholder="[FIRST CLASS MOBILE DETAIL PHOTO] You detailing, any real shot from those days"></image-slot></div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel);color:var(--lf-ink3)"><image-slot id="story-detailing" shape="rect" placeholder="[FIRST CLASS MOBILE DETAIL PHOTO] You detailing, any real shot from those days"></image-slot></div>
     </div>
     <div data-rv="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(30px,4vw,60px);align-items:center">
       <div style="order:2">
@@ -333,7 +336,7 @@ a{color:#E50011}a:hover{color:#FF1524}
         <h2 style="margin:18px 0 0;font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--lf-ink)">LEADFUSE</h2>
         <p style="margin:16px 0 0;font-size:15.5px;line-height:1.75;color:var(--lf-ink2)">In 2024 I built the agency I couldn't find when I needed one. We started with detailing and protection shops because that was my world, and we proved the system there. Over 100 launches deep, it books calendars in any service business that runs on appointments. That's who we serve now.</p>
       </div>
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel)"><image-slot id="story-leadfuse" shape="rect" placeholder="[SEBASTIAN AT WORK PHOTO] You and the team running campaigns, screens visible"></image-slot></div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel);color:var(--lf-ink3)"><image-slot id="story-leadfuse" shape="rect" placeholder="[SEBASTIAN AT WORK PHOTO] You and the team running campaigns, screens visible"></image-slot></div>
     </div>
   </div>
 </section>
@@ -356,7 +359,7 @@ a{color:#E50011}a:hover{color:#FF1524}
   </div>
 </section>
 
-<section data-screen-label="Team" style="padding:clamp(70px,9vw,110px) 20px;border-top:1px solid var(--lf-line-soft)">
+<section data-screen-label="Team" style="padding:clamp(70px,9vw,110px) 20px;border-top:1px solid var(--lf-line-soft);background:var(--lf-bg2)">
   <div style="max-width:1140px;margin:0 auto">
     <div data-rv="" style="max-width:560px">
       <x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.Eyebrow" hint-size="90px,16px">The team</x-import>
@@ -364,8 +367,8 @@ a{color:#E50011}a:hover{color:#FF1524}
       <p style="margin:18px 0 0;font-size:15.5px;color:var(--lf-ink2);line-height:1.7">Media buyers, editors and success managers working out of Newport Beach and across North America. Everyone here answers for a number.</p>
     </div>
     <div data-rv="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:44px">
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel)"><image-slot id="team-photo" shape="rect" placeholder="[TEAM PHOTO] The whole crew, HQ or offsite"></image-slot></div>
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel)"><image-slot id="team-work" shape="rect" placeholder="[TEAM WORK SESSION] Candid, screens and whiteboards"></image-slot></div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel);color:var(--lf-ink3)"><image-slot id="team-photo" shape="rect" placeholder="[TEAM PHOTO] The whole crew, HQ or offsite"></image-slot></div>
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel);color:var(--lf-ink3)"><image-slot id="team-work" shape="rect" placeholder="[TEAM WORK SESSION] Candid, screens and whiteboards"></image-slot></div>
       <div style="border-radius:16px;background:rgba(229,0,17,.06);border:1px solid rgba(229,0,17,.35);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;transition:all .3s cubic-bezier(.4,0,.2,1)" style-hover="background:rgba(229,0,17,.1);transform:translateY(-4px)">
         <span style="font-family:var(--font-serif-display);font-style:italic;font-size:34px;color:#E50011;line-height:1">Join us</span>
         <p style="margin:0;font-size:13.5px;color:var(--lf-ink2);line-height:1.6">We hire people who hate losing.</p>
@@ -394,7 +397,7 @@ a{color:#E50011}a:hover{color:#FF1524}
 </x-dc>
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;bookingUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apply.leadfuse.co&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
 class Component extends DCLogic {
-  componentDidMount() { document.body.dataset.theme = 'light'; import('./site.js').then(m => m.initMotion()); }
+  componentDidMount() { import('./site.js').then(m => m.initMotion()); }
   renderVals() {
     return { bookingUrl: this.props.bookingUrl ?? 'Book.dc.html' };
   }
@@ -402,7 +405,7 @@ class Component extends DCLogic {
 </script>
 
 
-<div id="__claude_design_branding"><style>#__claude_design_branding{position:fixed;right:16px;bottom:16px;z-index:2147483646;display:flex;align-items:center;gap:7px;height:30px;padding:0 5px 0 10px;border-radius:999px;font-family:"Anthropic Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:12.5px;font-weight:400;line-height:1;letter-spacing:normal;text-transform:none;color:#141413;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:0 0 0 .5px rgba(31,30,29,.14),0 2px 10px rgba(0,0,0,.09)}
+<div id="__claude_design_branding"><style>#__claude_design_branding{position:fixed;right:16px;bottom:16px;z-index:2147483646;display:flex;align-items:center;gap:7px;height:30px;padding:0 5px 0 10px;border-radius:999px;font-family:"Anthropic Sans",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;font-size:12.5px;font-weight:400;line-height:1;letter-spacing:normal;text-transform:none;color:#fff;background:rgba(22,22,22,.86);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:0 0 0 .5px rgba(31,30,29,.14),0 2px 10px rgba(0,0,0,.09)}
 #__claude_design_branding *{box-sizing:border-box;margin:0}
 #__claude_design_branding a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
 #__claude_design_branding a:hover span{text-decoration:underline}

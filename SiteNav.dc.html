@@ -15,14 +15,10 @@
 <link rel="stylesheet" href="_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/tokens/effects.css">
 <link rel="stylesheet" href="_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/styles.css">
 <script src="_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/_ds_bundle.js"></script>
-<style>
-body[data-theme=light] [data-logo=dark]{display:none !important}
-body:not([data-theme=light]) [data-logo=light]{display:none !important}
-</style>
 </helmet>
-<nav data-screen-label="Site nav" style="position:fixed;top:0;left:0;right:0;z-index:200;background:var(--lf-nav,rgba(5,5,5,.75));backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">
+<nav data-screen-label="Site nav" style="position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(5,5,5,.75);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-bottom:1px solid rgba(255,255,255,.07)">
   <div style="max-width:1140px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:12px 16px 12px 20px;min-height:40px">
-    <a href="/" style="display:block;flex-shrink:0;padding:6px 0"><img data-logo="dark" src="assets/logo-silver@4x.png" alt="LEADFUSE" style="height:20px;width:auto;display:block"><img data-logo="light" src="assets/logo-primary@4x.png" alt="LEADFUSE" style="height:20px;width:auto;display:block"></a>
+    <a href="/" style="display:block;flex-shrink:0;padding:6px 0"><img src="assets/logo-silver@4x.png" alt="LEADFUSE" style="height:20px;width:auto;display:block"></a>
     <sc-if value="{{ showLinks }}" hint-placeholder-val="{{ false }}">
       <div style="display:flex;gap:26px;margin-left:auto;align-items:center">
         <a href="/about/" style="color:{{ cAbout }};font-size:13.5px;font-weight:500;text-decoration:none;padding:8px 0;transition:opacity .15s" style-hover="opacity:.7">About</a>
@@ -36,22 +32,22 @@ body:not([data-theme=light]) [data-logo=light]{display:none !important}
       <a href="{{ bookingUrl }}" style="text-decoration:none"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.GlowButton" size="sm" hint-size="140px,40px">Book my call</x-import></a>
       <sc-if value="{{ showBurger }}" hint-placeholder-val="{{ true }}">
         <button onClick="{{ toggleMenu }}" aria-label="Menu" style="all:unset;box-sizing:border-box;cursor:pointer;width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-radius:10px" style-active="opacity:.6">
-          <i style="display:block;width:20px;height:2px;border-radius:2px;background:var(--lf-ink,#fff);transition:transform .25s cubic-bezier(.4,0,.2,1);transform:{{ bar1 }}"></i>
-          <i style="display:block;width:20px;height:2px;border-radius:2px;background:var(--lf-ink,#fff);transition:opacity .2s;opacity:{{ bar2 }}"></i>
-          <i style="display:block;width:20px;height:2px;border-radius:2px;background:var(--lf-ink,#fff);transition:transform .25s cubic-bezier(.4,0,.2,1);transform:{{ bar3 }}"></i>
+          <i style="display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .25s cubic-bezier(.4,0,.2,1);transform:{{ bar1 }}"></i>
+          <i style="display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:opacity .2s;opacity:{{ bar2 }}"></i>
+          <i style="display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .25s cubic-bezier(.4,0,.2,1);transform:{{ bar3 }}"></i>
         </button>
       </sc-if>
     </div>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top:1px solid var(--lf-line-soft,rgba(255,255,255,.07));padding:8px 12px 18px;display:flex;flex-direction:column;background:var(--lf-nav,rgba(5,5,5,.75))">
-      <a href="/" onClick="{{ closeMenu }}" style="color:{{ cHome }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Home</a>
-      <a href="/about/" onClick="{{ closeMenu }}" style="color:{{ cAbout }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">About</a>
-      <a href="#" onClick="{{ closeMenu }}" style="color:{{ cServices }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Services</a>
-      <a href="#" onClick="{{ closeMenu }}" style="color:{{ cResults }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Results</a>
-      <a href="/careers/" onClick="{{ closeMenu }}" style="color:{{ cCareers }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid var(--lf-line-soft,rgba(255,255,255,.07))">Careers</a>
+    <div style="border-top:1px solid rgba(255,255,255,.07);padding:8px 12px 18px;display:flex;flex-direction:column;background:rgba(5,5,5,.75)">
+      <a href="/" onClick="{{ closeMenu }}" style="color:{{ cHome }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.07)">Home</a>
+      <a href="/about/" onClick="{{ closeMenu }}" style="color:{{ cAbout }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.07)">About</a>
+      <a href="#" onClick="{{ closeMenu }}" style="color:{{ cServices }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.07)">Services</a>
+      <a href="#" onClick="{{ closeMenu }}" style="color:{{ cResults }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.07)">Results</a>
+      <a href="/careers/" onClick="{{ closeMenu }}" style="color:{{ cCareers }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px;border-bottom:1px solid rgba(255,255,255,.07)">Careers</a>
       <a href="#" onClick="{{ closeMenu }}" style="color:{{ cResources }};font-size:17px;font-weight:600;text-decoration:none;padding:14px 8px">Resources</a>
-      <div style="display:flex;gap:16px;padding:12px 8px 0;font-size:13px;color:var(--lf-ink3,rgba(255,255,255,.55))"><a href="mailto:info@leadfuse.co" style="color:inherit;text-decoration:none">info@leadfuse.co</a><a href="https://www.instagram.com/leadfuse/" target="_blank" style="color:inherit;text-decoration:none">@atleadfuse</a></div>
+      <div style="display:flex;gap:16px;padding:12px 8px 0;font-size:13px;color:rgba(255,255,255,.55)"><a href="mailto:info@leadfuse.co" style="color:inherit;text-decoration:none">info@leadfuse.co</a><a href="https://www.instagram.com/leadfuse/" target="_blank" style="color:inherit;text-decoration:none">@atleadfuse</a></div>
     </div>
   </sc-if>
 </nav>
@@ -68,7 +64,7 @@ class Component extends DCLogic {
   componentWillUnmount() { if (this.mq) this.mq.removeEventListener('change', this.onMq); }
   renderVals() {
     const active = this.props.active ?? '';
-    const c = key => (active === key ? '#E50011' : 'var(--lf-ink2,rgba(255,255,255,.78))');
+    const c = key => (active === key ? '#E50011' : 'rgba(255,255,255,.78)');
     const { isMobile, open } = this.state;
     return {
       showLinks: !isMobile,
