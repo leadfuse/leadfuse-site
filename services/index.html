@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Services: Done For You or Done With You | LEADFUSE</title>
+<meta name="description" content="Two ways to work with LEADFUSE: Done For You or Done With You. The Meta ads and lead conversion system behind 100+ automotive detailing and protection businesses.">
+<link rel="canonical" href="https://leadfuse.co/services/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEADFUSE">
+<meta property="og:url" content="https://leadfuse.co/services/">
+<meta property="og:title" content="Services | LEADFUSE">
+<meta property="og:description" content="Done For You or Done With You. One system for automotive detailing and protection businesses.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="/assets/favicon-32.png">
+<link rel="preload" href="/_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/tokens/fonts.css">
+<link rel="stylesheet" href="/assets/site/site.css?v=1">
+<script>if('IntersectionObserver' in window&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('js')</script>
+<!-- Tracking: same as the old Home (main:index.html), which loads no Meta pixel and no attribution relay. /apply/ loads both. -->
+<style>
+/* Hero doors */
+.doors{display:grid;gap:14px;grid-template-columns:1fr;margin:56px auto 0;max-width:860px;text-align:left}
+@media(min-width:700px){.doors{grid-template-columns:1fr 1fr}}
+.door{display:flex;align-items:center;gap:18px;padding:24px 24px;border-radius:18px;background:var(--glass);border:1px solid var(--glass-line);text-decoration:none;color:#fff;transition:all .3s var(--ease);min-height:96px}
+.door:hover{color:#fff;background:rgba(255,255,255,.06);border-color:rgba(229,0,17,.4);box-shadow:0 0 30px rgba(229,0,17,.18);transform:translateY(-2px)}
+.door__n{font-family:var(--serif);font-style:italic;font-size:44px;line-height:1;color:var(--red);min-width:48px}
+.door b{display:block;font-size:19px;font-weight:700;letter-spacing:-.01em}
+.door div span{display:block;margin-top:4px;font-size:15px;color:var(--ink3)}
+.door svg{margin-left:auto;color:var(--ink3);flex-shrink:0;transition:transform .3s var(--ease)}
+.door:hover svg{transform:translateY(3px);color:var(--red)}
+
+/* Offer blocks */
+.offer{display:grid;gap:48px;grid-template-columns:1fr}
+@media(min-width:960px){.offer{grid-template-columns:5fr 6fr;gap:80px}.offer__head{position:sticky;top:120px;align-self:start}}
+.offer__num{font-size:clamp(96px,16vw,180px);font-weight:800;line-height:.8;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.16);margin-bottom:22px;user-select:none}
+.offer__head .pill{margin-top:30px}
+.gets{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.1)}
+.gets li{display:grid;grid-template-columns:40px 1fr;gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.gets .ck{grid-row:span 2;width:30px;height:30px;border-radius:50%;background:rgba(229,0,17,.12);border:1px solid rgba(229,0,17,.5);display:flex;align-items:center;justify-content:center;color:#fff;margin-top:2px}
+.gets b{font-size:clamp(19px,2.4vw,23px);font-weight:700;line-height:1.3;letter-spacing:-.01em;color:#fff}
+.gets span{font-size:16px;line-height:1.6;color:var(--ink3)}
+
+/* Both get */
+.both{display:grid;gap:14px;grid-template-columns:1fr;margin-top:52px}
+@media(min-width:760px){.both{grid-template-columns:1fr 1fr}}
+.tile{padding:32px 28px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-line);transition:all .3s var(--ease)}
+.tile:hover{background:rgba(255,255,255,.06);border-color:rgba(229,0,17,.3)}
+.tile__ic{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:rgba(229,0,17,.1);border:1px solid rgba(229,0,17,.35);color:var(--red);box-shadow:0 0 30px rgba(229,0,17,.15)}
+.tile h3{margin:24px 0 0;font-size:clamp(22px,2.6vw,26px);font-weight:700;letter-spacing:-.015em;line-height:1.2}
+.tile p{margin:10px 0 0;font-size:16px;line-height:1.65;color:var(--ink2)}
+
+/* Compare */
+.cmp{margin-top:48px}
+.cmp__tabs{display:none;gap:6px;padding:6px;border-radius:14px;background:var(--glass);border:1px solid var(--glass-line);margin-bottom:18px}
+.cmp__tabs button{all:unset;box-sizing:border-box;flex:1;text-align:center;min-height:48px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--ink3);cursor:pointer;transition:all .25s var(--ease)}
+.cmp__tabs button[aria-selected="true"]{background:var(--red);color:#fff;box-shadow:0 0 24px rgba(229,0,17,.35)}
+.cmp__tabs button:focus-visible{box-shadow:0 0 0 2px #000,0 0 0 4px var(--red)}
+.cmp table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;border:1px solid var(--glass-line);border-radius:20px;overflow:hidden;background:var(--glass)}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:22px 26px;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;line-height:1.55}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+.cmp thead th{font-size:22px;font-weight:800;letter-spacing:-.015em;color:#fff;padding-top:30px;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+.cmp thead th small{display:block;margin-top:6px;font-size:13px;font-weight:500;letter-spacing:0;color:var(--ink3)}
+.cmp thead th.dfy{background:linear-gradient(180deg,rgba(229,0,17,.16),rgba(229,0,17,.04));box-shadow:inset 0 2px 0 var(--red)}
+.cmp tbody th{font-weight:600;color:var(--ink3);font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding-top:25px}
+.cmp td{color:var(--ink2)}
+.cmp col.c1{width:26%}.cmp col.c2,.cmp col.c3{width:37%}
+.cmp td.dfy{background:rgba(229,0,17,.035)}
+.cmp td b{color:#fff;font-weight:600}
+.yes{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:600}
+.yes svg{color:var(--red);flex-shrink:0}
+@media(max-width:759px){
+  .cmp__tabs{display:flex}
+  .cmp table,.cmp tbody,.cmp tr{display:block}
+  .cmp thead{display:none}
+  .cmp tr{padding:20px 20px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .cmp tbody tr:last-child{border-bottom:0}
+  .cmp th,.cmp td{display:block;width:auto;padding:0;border:0;background:none}
+  .cmp tbody th{margin-bottom:8px;padding:0}
+  .cmp td{font-size:16.5px}
+  .cmp td.dfy{background:none}
+  .cmp[data-show="dfy"] td.dwy,.cmp[data-show="dwy"] td.dfy{display:none}
+}
+
+/* Performance condition */
+.pc{display:grid;gap:40px;grid-template-columns:1fr;align-items:center}
+@media(min-width:960px){.pc{grid-template-columns:5fr 6fr;gap:80px}}
+.pc__big{position:relative;text-align:center;padding:40px 20px;border-radius:24px;background:radial-gradient(ellipse at 50% 40%,rgba(229,0,17,.2),transparent 70%),var(--glass);border:1px solid rgba(229,0,17,.3)}
+.pc__big b{display:block;font-size:clamp(130px,26vw,240px);font-weight:800;line-height:.9;letter-spacing:-.06em;background:linear-gradient(180deg,#fff 30%,rgba(255,255,255,.45));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pc__big span{display:block;margin-top:14px;font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2)}
+.pc p.body{margin-top:22px;font-size:clamp(17px,2.1vw,19px);line-height:1.7;color:var(--ink2)}
+.pc p.body b{color:#fff}
+.def{margin-top:26px;padding:22px 24px;border-radius:16px;background:var(--glass);border:1px solid var(--glass-line);font-size:16px;line-height:1.65;color:var(--ink2)}
+.def b{display:block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.facts{display:grid;gap:14px;grid-template-columns:1fr;margin-top:64px}
+@media(min-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.fact{padding:28px;border-radius:20px;background:var(--glass);border:1px solid var(--glass-line)}
+.fact b{display:block;font-size:clamp(21px,2.6vw,26px);font-weight:700;letter-spacing:-.015em;line-height:1.25;color:#fff}
+.fact span{display:block;margin-top:10px;font-size:16px;line-height:1.6;color:var(--ink3)}
+
+/* Not for */
+.no{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:1fr;border-top:1px solid rgba(255,255,255,.1)}
+@media(min-width:860px){.no{grid-template-columns:1fr 1fr;column-gap:56px}}
+.no li{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:clamp(17px,2.1vw,20px);line-height:1.45;color:#fff;font-weight:500}
+.no li svg{flex-shrink:0;margin-top:3px;color:var(--red)}
+.sig{display:flex;align-items:center;gap:14px;margin-top:40px}
+.sig img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--red);border:1px solid rgba(255,255,255,.15)}
+.sig b{display:block;font-size:15px;font-weight:700;color:#fff}
+.sig span{display:block;font-size:13px;color:var(--ink3)}
+</style>
+</head>
+<body>
+
+<!-- ===== SITE NAV (shared by /services/, /results/, /resources/; reconcile with home-v2) ===== -->
+<nav class="nav" id="nav" aria-label="Site">
+  <div class="nav__in">
+    <a class="nav__logo" href="/"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE home" width="113" height="20"></a>
+    <div class="nav__links">
+      <a href="/about/">About</a>
+      <a href="/services/" aria-current="page">Services</a>
+      <a href="/results/">Results</a>
+      <a href="/resources/">Resources</a>
+      <a href="/careers/">Careers</a>
+    </div>
+    <div class="nav__cta">
+      <a class="btn btn--solid btn--sm" href="/apply/">See if you qualify</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu" id="burger"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/services/" aria-current="page">Services</a>
+    <a href="/results/">Results</a>
+    <a href="/resources/">Resources</a>
+    <a href="/careers/">Careers</a>
+    <div class="menu__meta"><a href="mailto:info@leadfuse.co">info@leadfuse.co</a><a href="https://instagram.com/leadfuse" target="_blank" rel="noopener">@leadfuse</a></div>
+  </div>
+</nav>
+<!-- ===== /SITE NAV ===== -->
+
+<main>
+<header class="hero center">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>Services</div>
+    <h1 class="h1" data-reveal style="--d:.08s"><span class="nw">Two Ways In.</span> <em class="s">One System.</em></h1>
+    <p class="lead" data-reveal style="--d:.16s">We are a system, not an agency. Pick how much of it you want to run yourself. Same plumbing either way.</p>
+    <div class="doors" data-reveal style="--d:.26s">
+      <a class="door" href="#dfy"><span class="door__n" aria-hidden="true">01</span><div><b>Done For You</b><span>My team runs it. You run the business.</span></div><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v11M4.5 9.5 9 14l4.5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="door" href="#dwy"><span class="door__n" aria-hidden="true">02</span><div><b>Done With You</b><span>You run it. We show you how.</span></div><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 3v11M4.5 9.5 9 14l4.5-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<section class="sec" id="dfy" aria-labelledby="dfy-h">
+  <div class="wrap offer">
+    <div class="offer__head" data-reveal>
+      <div class="offer__num" aria-hidden="true">01</div>
+      <div class="eyebrow">Done For You</div>
+      <h2 class="h2" id="dfy-h">You Film. <em class="s">We Do the Rest.</em></h2>
+      <p class="lead">You hand us footage of your work. My team turns it into ads, runs them every day, and sends the right people to your phone.</p>
+      <div class="pill"><i aria-hidden="true"></i>5 spots a month</div>
+    </div>
+    <div>
+      <ul class="gets">
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>We craft your offer.</b><span>What you sell in the ad, and why someone should book you now.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>We write every script.</b><span>You never stare at a camera wondering what to say.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>We edit 8 to 10 videos a month.</b><span>Cut from your own footage. Your cars, your work, your voice.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>We publish and manage your ads daily.</b><span>Not once a month. Every single day.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>We build your video sales page and qualification funnel.</b><span>Price shoppers get filtered out before they ever reach your phone.</span></li>
+      </ul>
+      <div class="callout" data-reveal><b>Why only 5 a month?</b> That's how many new businesses my team can launch right. When the spots are gone, the next owner waits for next month.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="dwy" aria-labelledby="dwy-h">
+  <div class="wrap offer">
+    <div class="offer__head" data-reveal>
+      <div class="offer__num" aria-hidden="true">02</div>
+      <div class="eyebrow">Done With You</div>
+      <h2 class="h2" id="dwy-h">You Run It. <em class="s">We Show You How.</em></h2>
+      <p class="lead">For the owner who wants to own the skill. You build and run the system yourself, with our templates, playbooks and coaching behind you.</p>
+      <div class="pill"><i aria-hidden="true"></i>A 30-day sprint</div>
+    </div>
+    <div>
+      <ul class="gets">
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Templates and playbooks.</b><span>So you don't start from a blank page.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Coaching while you build.</b><span>Get stuck, ask us. We tell you what to fix.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>A Creative Starter Pack of 15 videos.</b><span>Ads to launch with on day one.</span></li>
+        <li data-reveal><span class="ck" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="m3 7.4 2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>Run-your-own-ads training in LEADFUSE VIP.</b><span>Step by step, inside the classroom. Watch it, build it, launch it.</span></li>
+      </ul>
+      <div class="callout" data-reveal><b>Why a sprint?</b> Thirty days keeps you moving. You build it, you launch it, and you don't let it sit.</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="both-h">
+  <div class="wrap">
+    <div class="center" data-reveal>
+      <div class="eyebrow">Every client gets</div>
+      <h2 class="h2" id="both-h">The Plumbing Behind <em class="s">Every Lead.</em></h2>
+      <p class="lead">Ads get you a lead. This is what turns that lead into a job. Done For You and Done With You both get all of it.</p>
+    </div>
+    <div class="both">
+      <article class="tile" data-reveal>
+        <div class="tile__ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="6" y="2.75" width="12" height="18.5" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M10 6h4M9 11h6M9 14.5h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>The LEADFUSE App</h3>
+        <p>Your CRM. It texts every new lead back in seconds, follows up on its own, records your calls, and sends you a weekly scoreboard.</p>
+      </article>
+      <article class="tile" data-reveal style="--d:.08s">
+        <div class="tile__ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8.5" r="3.25" stroke="currentColor" stroke-width="1.7"/><path d="M3 19.5c.6-3.2 3-5 6-5s5.4 1.8 6 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M15.5 5.6a3.2 3.2 0 0 1 0 5.8M18 14.9c1.6.7 2.7 2.4 3 4.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>LEADFUSE VIP</h3>
+        <p>A private community and classroom. Live calls every Tuesday, Wednesday and Thursday, and every recording saved.</p>
+      </article>
+      <article class="tile" data-reveal>
+        <div class="tile__ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 5.75A1.75 1.75 0 0 1 5.75 4h12.5A1.75 1.75 0 0 1 20 5.75v9.5A1.75 1.75 0 0 1 18.25 17H10l-4.5 3.5V17h0A1.5 1.5 0 0 1 4 15.5z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 10.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Direct Access</h3>
+        <p>Message us on any weekday. You get an answer the same business day.</p>
+      </article>
+      <article class="tile" data-reveal style="--d:.08s">
+        <div class="tile__ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6.5 3.75h4l1.2 4.1-2.3 1.6a11 11 0 0 0 5.1 5.1l1.6-2.3 4.1 1.2v4a2.5 2.5 0 0 1-2.7 2.5A16.5 16.5 0 0 1 4 6.4a2.5 2.5 0 0 1 2.5-2.65z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+        <h3>Weekly sales training</h3>
+        <p>Leads don't pay you. Closed jobs do. Every week we work on the calls that turn one into the other.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="compare" aria-labelledby="cmp-h">
+  <div class="wrap">
+    <div class="center" data-reveal>
+      <div class="eyebrow">Side by side</div>
+      <h2 class="h2" id="cmp-h">Pick the One <em class="s">That Fits.</em></h2>
+      <p class="lead">Same system. The only question is who does the work.</p>
+    </div>
+    <div class="cmp" data-tabs data-show="dfy" data-reveal>
+      <div class="cmp__tabs" role="tablist" aria-label="Choose a plan to compare">
+        <button type="button" role="tab" aria-selected="true" data-col="dfy" id="tab-dfy">Done For You</button>
+        <button type="button" role="tab" aria-selected="false" tabindex="-1" data-col="dwy" id="tab-dwy">Done With You</button>
+      </div>
+      <table>
+        <caption class="sr">Done For You compared with Done With You</caption>
+        <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+        <thead>
+          <tr><td></td><th scope="col" class="dfy">Done For You<small>We run it</small></th><th scope="col" class="dwy">Done With You<small>You run it, with us</small></th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Who does the work</th><td class="dfy"><b>My team.</b> You film and close.</td><td class="dwy"><b>You.</b> With our coaching.</td></tr>
+          <tr><th scope="row">Offer and scripts</th><td class="dfy">We craft the offer and write every script.</td><td class="dwy">You build them with our templates and playbooks.</td></tr>
+          <tr><th scope="row">Videos</th><td class="dfy">8 to 10 a month, edited from your footage.</td><td class="dwy">A Creative Starter Pack of 15 videos.</td></tr>
+          <tr><th scope="row">Your ads</th><td class="dfy">Published and managed by us, daily.</td><td class="dwy">Run by you. Trained step by step in VIP.</td></tr>
+          <tr><th scope="row">How long</th><td class="dfy">12 weeks from launch, then month to month.</td><td class="dwy">A 30-day sprint.</td></tr>
+          <tr><th scope="row">The LEADFUSE App</th><td class="dfy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td><td class="dwy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td></tr>
+          <tr><th scope="row">LEADFUSE VIP</th><td class="dfy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td><td class="dwy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td></tr>
+          <tr><th scope="row">Direct Access</th><td class="dfy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td><td class="dwy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td></tr>
+          <tr><th scope="row">Weekly sales training</th><td class="dfy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td><td class="dwy"><span class="yes"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="m4 9.4 3.2 3.2L14 5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Included</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="condition" aria-labelledby="pc-h">
+  <div class="wrap">
+    <div class="pc">
+      <div class="pc__big" data-reveal>
+        <b data-count="50">50</b>
+        <span>Qualified leads in 8 weeks</span>
+      </div>
+      <div data-reveal style="--d:.1s">
+        <div class="eyebrow">The performance condition</div>
+        <h2 class="h2" id="pc-h">Under 50? <em class="s">4 More Weeks, Free.</em></h2>
+        <p class="body">On Done For You, if your campaigns run 8 weeks at the ad spend we agreed on and you have fewer than 50 qualified leads in your App, <b>we work 4 more weeks for free.</b></p>
+        <div class="def"><b>What counts as qualified</b>The lead wants your service in your area, gave a real name, phone and email, and replied to us at least once.</div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact" data-reveal><b>Your 12 weeks start when your ads go live.</b><span>Not the day you pay. Setup never eats into your 12 weeks.</span></div>
+      <div class="fact" data-reveal style="--d:.08s"><b>After that, it's month to month.</b><span>Want out? Give us 30 days notice. That's it.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="not-for" aria-labelledby="no-h">
+  <div class="wrap">
+    <div data-reveal>
+      <div class="eyebrow">Saying it out loud</div>
+      <h2 class="h2" id="no-h">Who This Is <em class="s">Not</em> For.</h2>
+      <p class="lead">If one of these is you, don't apply. I'd rather tell you now than take your money.</p>
+    </div>
+    <ul class="no">
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Your business does under $10K a month in sales.</li>
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>You can't fund a real ad budget every month.</li>
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>You don't sell high-ticket services.</li>
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>You're slammed, with no room for more jobs and nobody to hand work to.</li>
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>You want us to run your whole business.</li>
+      <li data-reveal><svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="10" stroke="currentColor" stroke-opacity=".45" stroke-width="1.5"/><path d="m7.5 7.5 7 7m0-7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>You're shopping for the lowest price.</li>
+    </ul>
+    <div class="sig" data-reveal>
+      <img src="/assets/site/sebastian-104.jpg" alt="" width="52" height="52" loading="lazy">
+      <div><b>Sebastian Fonseca</b><span>Founder, LEADFUSE</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec final" aria-labelledby="final-h">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap" data-reveal>
+    <h2 class="h2" id="final-h">Read the List. <em class="s">Still Here?</em></h2>
+    <p class="lead">Answer a few questions about your business. If your numbers fit, we get on a call and go over everything, price included.</p>
+    <div class="hero__cta"><a class="btn btn--solid btn--lg" href="/apply/">See if you qualify</a></div>
+  </div>
+</section>
+</main>
+
+<!-- ===== SITE FOOTER (shared by /services/, /results/, /resources/; reconcile with home-v2) ===== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <img src="/assets/logo-silver@4x.png" alt="LEADFUSE" width="113" height="20" loading="lazy">
+        <p>The Meta ads and lead conversion system for automotive detailing and protection businesses. A system, not an agency.</p>
+        <div class="foot__stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp; 5.0 on Trustpilot</div>
+      </div>
+      <div class="foot__cols">
+        <div class="foot__col">
+          <b>Pages</b>
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+          <a href="/services/" aria-current="page">Services</a>
+          <a href="/results/">Results</a>
+          <a href="/resources/">Resources</a>
+          <a href="/careers/">Careers</a>
+        </div>
+        <div class="foot__col">
+          <b>Contact</b>
+          <a href="mailto:info@leadfuse.co">info@leadfuse.co</a>
+          <a href="https://instagram.com/leadfuse" target="_blank" rel="noopener">Instagram @leadfuse</a>
+          <a href="https://www.trustpilot.com/review/leadfuse.co" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+        <div class="foot__col">
+          <b>Legal</b>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/service-terms/">Service Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot__bottom"><span>&copy; 2026 LEADFUSE. All rights reserved.</span><span>Newport Beach, California</span></div>
+  </div>
+</footer>
+<!-- ===== /SITE FOOTER ===== -->
+
+<script src="/assets/site/site.js?v=1" defer></script>
+</body>
+</html>
