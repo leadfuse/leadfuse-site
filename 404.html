@@ -1,1 +1,60 @@
-<!DOCTYPE html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/"><title>LEADFUSE</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page Not Found | LEADFUSE</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#050505">
+<link rel="icon" href="/assets/favicon-32.png">
+<link rel="stylesheet" href="/_ds/leadfuse-design-system-e3be75cf-f7a5-414a-9771-ccf6955737da/tokens/fonts.css">
+<!-- GitHub Pages serves this file at any missing address, so every path here is absolute. -->
+<style>
+:root{--red:#E50011;--red-hi:#FF1524;--red-press:#AB000C;--bg:#050505;--line:rgba(255,255,255,.07);--ink:#fff;--ink2:rgba(255,255,255,.78);--ink3:rgba(255,255,255,.55);--sans:'Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;--serif:'Instrument Serif',Georgia,serif;--ease:cubic-bezier(.4,0,.2,1)}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--red);color:#fff}
+.s{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--red);letter-spacing:0}
+@keyframes lfGlow{from{transform:translate(-50%,0) scale(1);opacity:.8}to{transform:translate(-46%,30px) scale(1.12);opacity:1}}
+.nav{border-bottom:1px solid var(--line);padding:0 20px}
+.nav__in{max-width:1140px;margin:0 auto;display:flex;align-items:center;padding:12px 0;min-height:64px}
+.nav__in a{display:block;padding:6px 0}
+.nav__in img{height:20px;width:auto;display:block}
+main{flex:1;position:relative;overflow:hidden;display:flex;align-items:center;padding:clamp(72px,14vw,140px) 20px}
+.glow{position:absolute;top:-260px;left:50%;transform:translate(-50%,0);width:1100px;height:640px;background:radial-gradient(ellipse at center,rgba(229,0,17,.16),transparent 62%);pointer-events:none;animation:lfGlow 13s ease-in-out infinite alternate}
+.wrap{position:relative;max-width:1140px;width:100%;margin:0 auto}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--red)}
+h1{margin:22px 0 0;max-width:820px;font-size:clamp(40px,8.4vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.02em;color:#fff;text-wrap:balance}
+.lead{margin:22px 0 0;max-width:520px;font-size:clamp(16px,2.2vw,19px);line-height:1.7;color:var(--ink2)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{font-family:var(--sans);font-weight:600;letter-spacing:.05em;text-transform:uppercase;border-radius:10px;border:1px solid transparent;white-space:nowrap;transition:all .24s var(--ease);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:14px;padding:18px 36px}
+.btn--solid{background:var(--red);color:#fff;box-shadow:0 0 40px rgba(229,0,17,.35),0 0 120px rgba(229,0,17,.15)}
+.btn--solid:hover{background:var(--red-hi);box-shadow:0 0 50px rgba(229,0,17,.55),0 0 140px rgba(229,0,17,.25);transform:translateY(-2px)}
+.btn--solid:active{transform:none;background:var(--red-press)}
+.btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.btn--ghost:hover{background:rgba(255,255,255,.08)}
+.btn:focus-visible,.nav a:focus-visible{outline:none;box-shadow:0 0 0 2px #000,0 0 0 4px var(--red)}
+@media(max-width:560px){.cta .btn{width:100%}}
+.foot{border-top:1px solid var(--line);padding:20px;font-size:12.5px;color:var(--ink3)}
+.foot div{max-width:1140px;margin:0 auto}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Site"><div class="nav__in"><a href="/"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE" width="113" height="20"></a></div></nav>
+<main>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="eyebrow">Error 404</div>
+    <h1>This Page <em class="s">Isn’t Here.</em></h1>
+    <p class="lead">The link is broken or the page moved.</p>
+    <div class="cta">
+      <a class="btn btn--solid" href="/">Back to home</a>
+      <a class="btn btn--ghost" href="/apply/">See if you qualify</a>
+    </div>
+  </div>
+</main>
+<footer class="foot"><div>&copy; 2026 LEADFUSE. All rights reserved.</div></footer>
+</body>
+</html>
