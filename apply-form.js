@@ -31,7 +31,7 @@
   var TEAM = ['Just me, no revenue yet', 'Just me, with some revenue', '2 to 3', '4 to 9', '10 or more'];
   var REVENUE = ['Under $5K', '$5K to $10K', '$10K to $15K', '$15K to $25K', '$25K to $50K', 'Over $50K'];
   var AD_SPEND = ['Nothing yet', 'Under $1K', '$1K to $3K', '$3K to $5K', 'Over $5K'];
-  var READY = ['Yes, has money or credit', 'Maybe, needs to see the plan', 'No way to invest right now'];
+  var READY = ['Yes, I have money or credit I can use', 'Maybe, I need to see the plan', "No, I don't have a way to invest right now"];
   /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($1K to $3K) up. */
   var REV_FLOOR = 2, ADS_FLOOR = 2;
 
@@ -45,7 +45,7 @@
 
   /* ---------- Grade: the App's rule, word for word (BUILD-SPEC Nov 9 2026, same as the roadmap quiz). ----------
      red    = technicians "Just me, no revenue yet", OR revenue "Under $5K" / "$5K to $10K", OR "Something else",
-              OR "No way to invest right now"
+              OR "No, I don't have a way to invest right now"
      green  = revenue "$10K to $15K" and up AND ads "$1K to $3K" and up
      yellow = revenue "$10K to $15K" and up, ads "Nothing yet" / "Under $1K"
      Team size only counts for "Just me, no revenue yet".
@@ -54,7 +54,7 @@
   function grade(a) {
     var revOk = REVENUE.indexOf(a.lead_revenue) >= REV_FLOOR;
     var adsOk = AD_SPEND.indexOf(a.lead_ad_spend) >= ADS_FLOOR;
-    var red = !revOk || a.lead_team_size === TEAM[0] || a.lead_main_service === OTHER || a.lead_ready_to_invest === 'No way to invest right now';
+    var red = !revOk || a.lead_team_size === TEAM[0] || a.lead_main_service === OTHER || a.lead_ready_to_invest === "No, I don't have a way to invest right now";
     if (red) return { grade: 'red', score: 0 };
     return adsOk ? { grade: 'green', score: 9 } : { grade: 'yellow', score: 3 };
   }
