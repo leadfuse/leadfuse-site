@@ -36,6 +36,7 @@ if "NO META FROM THE BROWSER" in _keep and "NO META FROM THE BROWSER" not in _px
     _px = _px[:_line_end] + _blk + _px[_line_end:]
 (SITE / "meta-pixel.js").write_text(_px); print("meta-pixel.js (site no-Meta rule kept)")
 shutil.copy2(SRC / "test-mode.js", SITE / "test-mode.js"); print("test-mode.js")
+shutil.copy2(SRC / "apply-form.js", SITE / "apply-form.js"); print("apply-form.js (our own application form; /apply-config.js is this site's own and is not copied)")
 for a in ASSETS:
     if (SRC / "assets" / a).exists(): shutil.copy2(SRC / "assets" / a, SITE / "assets" / a)
 if (SRC / "assets" / "proof").is_dir():

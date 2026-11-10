@@ -43,6 +43,11 @@ book-red -> `apply/not-ready`, confirmation -> `apply/confirmation`), so both fu
 change in client-leadfuse-funnel, re-run port.py here. The booking page only opens with `?email=` on the URL (a fresh
 Typeform redirect); anything else is sent back to /apply. `/apply/book-red/` forwards to `/apply/not-ready/`. `robots.txt`
 keeps search engines off book, not-ready and confirmation, and every /apply page is noindex.
+**Our own application form (Nov 2026, ships OFF):** every /apply page can show our own one-question-per-screen form
+(`/apply-form.js`, copied from client-leadfuse-funnel by port.py) instead of D8gcUEt2. The switch is `/apply-config.js`
+(this site's own copy): `DEFAULT_FORM` 'typeform' (as shipped) or 'own', plus the App webhook URL; `?form=own` /
+`?form=typeform` on a link picks one for that tab. It posts the shared lead_* fields with `lead_funnel` = "Apply (organic link)"
+and `source` = the slug, then goes to /apply/book/ or /apply/not-ready/. Full notes: APPLY-FORM.md in client-leadfuse-funnel.
 Old links bio-leadfuse and bio-sebas forward to bio-lf and bio-smf (`aliases` in sources.json). To add a source: add a row to sources.json, run build.py, commit. Never rename a slug that has been posted somewhere.
 
 ## /careers: the careers page and LEADFUSE's own application form
