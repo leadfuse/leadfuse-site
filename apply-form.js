@@ -23,34 +23,38 @@
 (function () {
   'use strict';
 
-  /* ---------- Questions. Labels are the exact App field options: never change one without the App field. ---------- */
-  var SERVICE = ['Detailing', 'Mobile detailing', 'Ceramic coating / paint correction', 'PPF / window tint', 'Wraps', 'Something else'];
-  var TEAM = ['Just me', '2 to 3', '4 to 9', '10+'];
-  var REVENUE = ['Just me, no revenue yet', 'Under $5K', '$5K to $10K', '$10K to $15K', '$15K to $30K', '$30K to $60K', '$60K+'];
-  var AD_SPEND = ['Nothing yet', 'Under $1K', '$1K to $3K', '$3K to $5K', '$5K+'];
+  /* ---------- Questions. Labels are the exact App field options: never change one without the App field.
+     Questions 1 to 4 are word for word the roadmap quiz's (roadmap-source/src/lib/quiz-data.ts q0, qe, q1, qa):
+     change them in both places. ---------- */
+  var SERVICE = ['Detailing', 'Ceramic coating / paint correction', 'PPF / window tint', 'Wraps', 'Something else'];
+  var OTHER = 'Something else'; /* opens a short "What do you offer?" box, sent as lead_other_service */
+  var TEAM = ['Just me, no revenue yet', 'Just me, with some revenue', '2 to 3', '4 to 9', '10 or more'];
+  var REVENUE = ['Under $5K', '$5K to $10K', '$10K to $15K', '$15K to $25K', '$25K to $50K', 'Over $50K'];
+  var AD_SPEND = ['Nothing yet', 'Under $1K', '$1K to $3K', '$3K to $5K', 'Over $5K'];
   var READY = ['Yes, has money or credit', 'Maybe, needs to see the plan', 'No way to invest right now'];
   /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($1K to $3K) up. */
-  var REV_FLOOR = 3, ADS_FLOOR = 2;
+  var REV_FLOOR = 2, ADS_FLOOR = 2;
 
   var QUESTIONS = [
     { key: 'lead_main_service', title: 'What do you mainly offer?', options: SERVICE },
-    { key: 'lead_team_size', title: 'How many people work in the business, counting you?', options: TEAM },
+    { key: 'lead_team_size', title: 'How many full-time technicians do you have, counting you?', options: TEAM },
     { key: 'lead_revenue', title: 'Monthly revenue (approximate)', options: REVENUE },
     { key: 'lead_ad_spend', title: 'Monthly ad spend (approximate)', options: AD_SPEND },
     { key: 'lead_ready_to_invest', title: 'If we show you a plan that makes sense, are you ready to put money behind it?', sub: 'Savings, card, or financing is okay.', options: READY }
   ];
 
   /* ---------- Grade: the App's rule, word for word (BUILD-SPEC Nov 9 2026, same as the roadmap quiz). ----------
-     red    = under $10K/mo or no revenue yet, OR "Something else", OR "No way to invest right now"
-     green  = $10K+/mo AND $1K+/mo on ads
-     yellow = $10K+/mo, ads under $1K/mo
-     Team size is saved, never graded.
+     red    = technicians "Just me, no revenue yet", OR revenue "Under $5K" / "$5K to $10K", OR "Something else",
+              OR "No way to invest right now"
+     green  = revenue "$10K to $15K" and up AND ads "$1K to $3K" and up
+     yellow = revenue "$10K to $15K" and up, ads "Nothing yet" / "Under $1K"
+     Team size only counts for "Just me, no revenue yet".
      score  = the old Typeform score, kept so the App's "Application Score" reads the same:
               revenue $10K+ adds 3, ads $1K+ adds 6, any red answer makes it 0. So red 0, yellow 3, green 9. */
   function grade(a) {
     var revOk = REVENUE.indexOf(a.lead_revenue) >= REV_FLOOR;
     var adsOk = AD_SPEND.indexOf(a.lead_ad_spend) >= ADS_FLOOR;
-    var red = !revOk || a.lead_main_service === 'Something else' || a.lead_ready_to_invest === 'No way to invest right now';
+    var red = !revOk || a.lead_team_size === TEAM[0] || a.lead_main_service === OTHER || a.lead_ready_to_invest === 'No way to invest right now';
     if (red) return { grade: 'red', score: 0 };
     return adsOk ? { grade: 'green', score: 9 } : { grade: 'yellow', score: 3 };
   }
@@ -177,6 +181,7 @@
     injectCss();
 
     var answers = {};
+    var otherService = '';
     var contact = { first_name: '', last_name: '', business_name: '', email: '', phone: '' };
     var step = 0;
     var total = QUESTIONS.length + 1;
@@ -220,14 +225,38 @@
           type: 'button', class: 'lfa-opt' + (on ? ' on' : ''), 'aria-pressed': on ? 'true' : 'false', text: label,
           onclick: function (ev) {
             if (wrap.getAttribute('data-done')) return; /* one tap per screen, no double-advance */
-            wrap.setAttribute('data-done', '1');
             answers[q.key] = label;
+            Array.prototype.forEach.call(list.children, function (b) { b.className = 'lfa-opt'; b.setAttribute('aria-pressed', 'false'); });
             ev.currentTarget.className = 'lfa-opt on';
+            ev.currentTarget.setAttribute('aria-pressed', 'true');
+            if (q.key === 'lead_main_service' && label === OTHER) { showOther(); return; }
+            if (other) { other.remove(); other = null; }
+            wrap.setAttribute('data-done', '1');
             setTimeout(function () { step += 1; draw(1); }, 180);
           }
         }));
       });
       wrap.appendChild(list);
+      /* "Something else": a short "What do you offer?" box, then Continue. */
+      var other = null;
+      function showOther() {
+        if (other) return;
+        var box = h('input', { class: 'lfa-in', name: 'other_service', id: 'lfa-other_service', type: 'text', placeholder: 'What do you offer?', 'aria-label': 'What do you offer?', maxlength: '200' });
+        box.value = otherService;
+        var go = h('button', { type: 'submit', class: 'lfa-go', text: 'Continue' });
+        var sync = function () { otherService = box.value; if (box.value.trim().length >= 2) go.removeAttribute('disabled'); else go.setAttribute('disabled', 'disabled'); };
+        box.addEventListener('input', sync);
+        other = h('form', { class: 'lfa-fields', novalidate: 'novalidate', onsubmit: function (ev) {
+          ev.preventDefault();
+          if (otherService.trim().length < 2 || wrap.getAttribute('data-done')) return;
+          wrap.setAttribute('data-done', '1');
+          step += 1; draw(1);
+        } }, [box, go]);
+        list.parentNode.insertBefore(other, list.nextSibling);
+        sync();
+        try { box.focus(); } catch (e) {}
+      }
+      if (q.key === 'lead_main_service' && answers[q.key] === OTHER) showOther();
       if (step > 0) wrap.appendChild(prevBtn(function () { step -= 1; draw(-1); }));
     }
 
@@ -296,6 +325,7 @@
         lead_revenue: answers.lead_revenue || '',
         lead_ad_spend: answers.lead_ad_spend || '',
         lead_ready_to_invest: answers.lead_ready_to_invest || '',
+        lead_other_service: answers.lead_main_service === OTHER ? clean(otherService).slice(0, 200) : '',
         lead_funnel: opts.funnel || 'Apply (Meta ads)',
         grade: g.grade,
         score: g.score,
