@@ -9,7 +9,7 @@
 <body>
 <x-dc>
 <helmet>
-<title>About LEADFUSE | The Story Behind the Agency</title>
+<title>About LEADFUSE | The Story Behind LEADFUSE</title>
 <meta name="description" content="Sebastian Fonseca started a detailing business at 18, hit six figures in year one, and built LEADFUSE in 2024. Meet the team keeping service businesses booked.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050505">
@@ -334,7 +334,7 @@ a{color:#E50011}a:hover{color:#FF1524}
       <div>
         <div style="font-family:var(--font-serif-display);font-style:italic;font-size:44px;color:#E50011;line-height:1;text-shadow:0 0 30px rgba(229,0,17,.5)">03</div>
         <h2 style="margin:18px 0 0;font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--lf-ink)">LEADFUSE</h2>
-        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.75;color:var(--lf-ink2)">In 2024 I built the agency I couldn't find when I needed one. We started with detailing and protection shops because that was my world, and we proved the system there. Over 100 launches deep, it books calendars in any service business that runs on appointments. That's who we serve now.</p>
+        <p style="margin:16px 0 0;font-size:15.5px;line-height:1.75;color:var(--lf-ink2)">In 2024 I built the system I couldn't find when I needed one. We started with detailing and protection shops because that was my world, and we proved the system there. Over 100 launches deep, it books calendars in any service business that runs on appointments. That's who we serve now.</p>
       </div>
       <div style="border-radius:16px;overflow:hidden;border:1px solid var(--lf-line);aspect-ratio:4/3;background:var(--lf-panel);color:var(--lf-ink3)"><image-slot id="story-leadfuse" shape="rect" placeholder="[SEBASTIAN AT WORK PHOTO] You and the team running campaigns, screens visible"></image-slot></div>
     </div>
@@ -372,7 +372,7 @@ a{color:#E50011}a:hover{color:#FF1524}
       <div style="border-radius:16px;background:rgba(229,0,17,.06);border:1px solid rgba(229,0,17,.35);aspect-ratio:4/3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;transition:all .3s cubic-bezier(.4,0,.2,1)" style-hover="background:rgba(229,0,17,.1);transform:translateY(-4px)">
         <span style="font-family:var(--font-serif-display);font-style:italic;font-size:34px;color:#E50011;line-height:1">Join us</span>
         <p style="margin:0;font-size:13.5px;color:var(--lf-ink2);line-height:1.6">We hire people who hate losing.</p>
-        <a href="#" style="font-size:13px;font-weight:600;color:#E50011;text-decoration:none">See open roles →</a>
+        <a href="/careers/" style="font-size:13px;font-weight:600;color:#E50011;text-decoration:none">See open roles →</a>
       </div>
     </div>
     <div data-rv="" style="margin-top:44px;display:flex;justify-content:center;gap:0;flex-wrap:wrap">
@@ -389,17 +389,17 @@ a{color:#E50011}a:hover{color:#FF1524}
   <div data-rv="" style="position:relative;max-width:760px;margin:0 auto">
     <h2 style="margin:0;font-size:clamp(36px,6vw,60px);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--lf-ink)">Now you know us. <em style="font-family:var(--font-serif-display);font-style:italic;font-weight:400;color:#E50011;letter-spacing:0">Let's talk.</em></h2>
     <p style="margin:24px auto 0;max-width:480px;font-size:16.5px;line-height:1.65;color:var(--lf-ink2)">15 minutes. If we can help, we show you exactly how. If we can't, we tell you that too.</p>
-    <div style="margin-top:36px"><a href="{{ bookingUrl }}" style="text-decoration:none"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.GlowButton" hint-size="210px,56px">Book my call</x-import></a></div>
+    <div style="margin-top:36px"><a href="{{ bookingUrl }}" style="text-decoration:none"><x-import component-from-global-scope="LeadfuseDesignSystem_e3be75.GlowButton" hint-size="210px,56px">See if you qualify</x-import></a></div>
   </div>
 </section>
 
 <dc-import name="SiteFooter" hint-size="100%,320px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script="" data-props="{&quot;bookingUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://apply.leadfuse.co&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;bookingUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;/apply/&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
 class Component extends DCLogic {
   componentDidMount() { import('./site.js').then(m => m.initMotion()); }
   renderVals() {
-    return { bookingUrl: this.props.bookingUrl ?? 'Book.dc.html' };
+    return { bookingUrl: this.props.bookingUrl ?? '/apply/' };
   }
 }
 </script>
@@ -416,7 +416,7 @@ class Component extends DCLogic {
 @media print{#__claude_design_branding{display:none}}</style><button type="button" aria-label="Dismiss" onclick="this.parentElement.remove()"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></button></div><script>
 (function(){var q=location.search;if(!q||q.length<2)return;var keep=/^(utm_[a-z]+|fbclid|formsource)$/i,out=[];
 q.slice(1).split('&').forEach(function(kv){var k=kv.split('=')[0];if(keep.test(k))out.push(kv)});if(!out.length)return;
-function fix(){document.querySelectorAll('a[href^="https://apply.leadfuse.co"]').forEach(function(a){if(a.href.indexOf('utm_')>-1)return;a.href+=(a.href.indexOf('?')>-1?'&':'?')+out.join('&')})}
+function fix(){document.querySelectorAll('a[href^="/apply/"]').forEach(function(a){if(a.href.indexOf('utm_')>-1)return;a.href+=(a.href.indexOf('?')>-1?'&':'?')+out.join('&')})}
 fix();setTimeout(fix,1500);setTimeout(fix,4000)})();
 </script>
 </body></html>
