@@ -37,6 +37,8 @@ window.lfTfSubmitted = function () {
 </script>
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/vendor/react-dom.production.min.js"};</script>
 <meta name="robots" content="noindex">
+<!-- Test mode (?test=1): loads first, so nothing below can reach Meta. See TEST-MODE.md. -->
+<script src="/test-mode.js"></script>
 <script>/* 4-Week Test Drive: ends Sat Oct 31 2026 midnight PT, then this page sends people to the regular application. */
 if (Date.now() >= Date.UTC(2026, 10, 1, 7, 0, 0)) location.replace('/apply/' + location.search);
 /* Make sure the form always gets the campaign tags; tags on the link (utm_medium=email or sms) win. */

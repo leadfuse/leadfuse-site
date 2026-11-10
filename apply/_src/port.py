@@ -14,7 +14,7 @@ ASSETS = ["favicon-32.png", "logo-silver@4x.png", "confirm-calendar-invite.jpg",
 
 def port(name, html):
     html = re.sub(r'<script>\s*/\* Site traffic\..*?</script>\s*', '', html, flags=re.S)       # the ads-side bounce never ships here
-    html = html.replace('src="./attribution.js"', 'src="/attribution.js"').replace('src="./meta-pixel.js"', 'src="/meta-pixel.js"').replace('src="./support.js"', 'src="/support.js"')
+    html = html.replace('src="./attribution.js"', 'src="/attribution.js"').replace('src="./meta-pixel.js"', 'src="/meta-pixel.js"').replace('src="./support.js"', 'src="/support.js"').replace('src="./test-mode.js"', 'src="/test-mode.js"')
     html = re.sub(r'(["\'(])(assets|vendor|_ds)/', r'\1/\2/', html)                               # every relative asset path becomes absolute
     html = html.replace("(red ? '/book-red' : '/') + window.location.search", "(red ? '/apply/not-ready/' : '/apply/') + window.location.search")
     html = html.replace("const to = '/confirmation' + window.location.search;", "const to = '/apply/confirmation/' + window.location.search;")
@@ -35,6 +35,7 @@ if "NO META FROM THE BROWSER" in _keep and "NO META FROM THE BROWSER" not in _px
     _line_end = _px.index("\n", _px.index(_a)) + 1
     _px = _px[:_line_end] + _blk + _px[_line_end:]
 (SITE / "meta-pixel.js").write_text(_px); print("meta-pixel.js (site no-Meta rule kept)")
+shutil.copy2(SRC / "test-mode.js", SITE / "test-mode.js"); print("test-mode.js")
 for a in ASSETS:
     if (SRC / "assets" / a).exists(): shutil.copy2(SRC / "assets" / a, SITE / "assets" / a)
 if (SRC / "assets" / "proof").is_dir():

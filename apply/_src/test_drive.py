@@ -18,7 +18,7 @@ def swap(old, new, count=1):
 
 # 1. same path fixes as port.py (absolute asset paths, site legal links)
 html = re.sub(r'<script>\s*/\* Site traffic\..*?</script>\s*', '', html, flags=re.S)
-for f in ("attribution.js", "meta-pixel.js", "support.js"):
+for f in ("test-mode.js", "attribution.js", "meta-pixel.js", "support.js"):
     html = html.replace(f'src="./{f}"', f'src="/{f}"')
 html = re.sub(r'(["\'(])(assets|vendor|_ds)/', r'\1/\2/', html)
 html = html.replace('href="/privacy-policy"', 'href="/privacy/"').replace('href="/terms-of-use"', 'href="/terms/"').replace('href="/earnings-disclaimer"', 'href="https://apply.leadfuse.co/earnings-disclaimer"')

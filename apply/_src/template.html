@@ -10,6 +10,8 @@
 <link rel="icon" href="/assets/favicon-32.png">
 <link rel="preconnect" href="https://embed.typeform.com" crossorigin>
 <link rel="preconnect" href="https://form.typeform.com">
+<!-- Test mode (?test=1): loads first, so nothing below can reach Meta. Same file as apply.leadfuse.co. -->
+<script src="/test-mode.js"></script>
 <script>window.LF_QS0 = location.search; /* the link as clicked, before attribution.js restores older tags */</script>
 <script src="/attribution.js"></script>
 <script src="/meta-pixel.js"></script>
@@ -45,6 +47,8 @@ body.sent #form,body.sent #form iframe{top:52px;height:calc(100% - 52px)}
       var v = (q.get(k) || '').trim().replace(/[,=]/g, '-');
       if (v) { if (!(k in tags)) order.push(k); tags[k] = v; }
     });
+    /* Test mode (?test=1): tell the form, so the App can tag the lead "test | lead" once the form has a test hidden field. */
+    if (window.LF_TEST) { if (!('test' in tags)) order.push('test'); tags.test = '1'; }
     el.setAttribute('data-tf-hidden', order.map(function (k) { return k + '=' + tags[k]; }).join(','));
     /* A client's referral link (leadfuse.co/apply/refer/?utm_content=<their key>): say who sent them and what they get.
        The OS only answers for a real key, with the business name and first name; anything else leaves the page as it is. */

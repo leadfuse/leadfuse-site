@@ -39,6 +39,14 @@
     }
   } catch (e) {}
 
+  // Test mode (?test=1, see test-mode.js / TEST-MODE.md): no pixel at all.
+  // fbevents.js is never loaded and no event is sent. test-mode.js already
+  // set a logging lfMetaTrack; keep it.
+  if (window.LF_TEST) {
+    if (!window.lfMetaTrack) window.lfMetaTrack = function () {};
+    return;
+  }
+
   if (!PIXEL_ID || PIXEL_ID === 'PIXEL_ID_HERE') {
     // No ID yet: expose a no-op so page scripts calling lfMetaTrack don't error.
     window.lfMetaTrack = function () {};
