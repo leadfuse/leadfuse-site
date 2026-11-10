@@ -6,15 +6,14 @@
  *               'own'      = our own form (apply-form.js), posting to WEBHOOK_URL
  *               Ships as 'typeform', so merging this changes nothing for real visitors.
  *
- * WEBHOOK_URL   the LEADFUSE App inbound webhook of the new apply intake workflow.
- *               TODO(App): create the workflow (see APPLY-FORM.md "What the App needs"), paste its
- *               inbound webhook URL here, then flip DEFAULT_FORM to 'own'.
- *               While this is still the placeholder, the own form only shows in test mode
- *               (?test=1&form=own) and sends nothing; everyone else gets the Typeform.
+ * WEBHOOK_URL   the LEADFUSE App inbound webhook of workflow
+ *               "01.22 | CALL | Intake: own application form (webhook)" (id 024fadee-1d19-4b2a-b8bf-71d31bef252f,
+ *               published Nov 9 2026). Set, so ?form=own (and ?test=1&form=own) now posts to the App.
+ *               Next step after a hand test: flip DEFAULT_FORM to 'own'.
  *
  * Switch back instantly: set DEFAULT_FORM to 'typeform' (one line), or add ?form=typeform to a link.
  */
 window.LF_APPLY_CONFIG = {
   DEFAULT_FORM: 'typeform',
-  WEBHOOK_URL: 'APPLY_WEBHOOK_URL'
+  WEBHOOK_URL: 'https://services.leadconnectorhq.com/hooks/vXjfOvfK4qVI4MO4WcRR/webhook-trigger/5b198105-4184-482c-ad6a-142a79120a7c'
 };
