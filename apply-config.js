@@ -14,6 +14,6 @@
  * Switch back instantly: set DEFAULT_FORM to 'typeform' (one line), or add ?form=typeform to a link.
  */
 window.LF_APPLY_CONFIG = {
-  DEFAULT_FORM: 'typeform',
+  DEFAULT_FORM: 'own',
   WEBHOOK_URL: 'https://services.leadconnectorhq.com/hooks/vXjfOvfK4qVI4MO4WcRR/webhook-trigger/5b198105-4184-482c-ad6a-142a79120a7c'
 };
