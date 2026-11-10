@@ -24,11 +24,13 @@
   'use strict';
 
   /* ---------- Questions. Labels are the exact App field options: never change one without the App field. ---------- */
-  var SERVICE = ['Ceramic coating', 'PPF', 'Tint', 'Detailing', 'Paint correction', 'Wraps', 'Something else'];
-  var TEAM = ['Just me', '2 to 3', '4 to 6', '7+'];
-  var REVENUE = ['Just me, no revenue yet', 'Under $10K', '$10K to $25K', '$25K to $50K', '$50K to $100K', '$100K+'];
+  var SERVICE = ['Detailing', 'Mobile detailing', 'Ceramic coating / paint correction', 'PPF / window tint', 'Wraps', 'Something else'];
+  var TEAM = ['Just me', '2 to 3', '4 to 9', '10+'];
+  var REVENUE = ['Just me, no revenue yet', 'Under $5K', '$5K to $10K', '$10K to $15K', '$15K to $30K', '$30K to $60K', '$60K+'];
   var AD_SPEND = ['Nothing yet', 'Under $1K', '$1K to $3K', '$3K to $5K', '$5K+'];
-  var READY = ['Yes, ready now', 'Yes, within 30 days', 'Not right now'];
+  var READY = ['Yes, has money or credit', 'Maybe, needs to see the plan', 'No way to invest right now'];
+  /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($1K to $3K) up. */
+  var REV_FLOOR = 3, ADS_FLOOR = 2;
 
   var QUESTIONS = [
     { key: 'lead_main_service', title: 'What do you mainly offer?', options: SERVICE },
@@ -39,16 +41,16 @@
   ];
 
   /* ---------- Grade: the App's rule, word for word (BUILD-SPEC Nov 9 2026, same as the roadmap quiz). ----------
-     red    = under $10K/mo or no revenue yet, OR "Something else", OR "Not right now" (no way to invest)
+     red    = under $10K/mo or no revenue yet, OR "Something else", OR "No way to invest right now"
      green  = $10K+/mo AND $1K+/mo on ads
      yellow = $10K+/mo, ads under $1K/mo
      Team size is saved, never graded.
      score  = the old Typeform score, kept so the App's "Application Score" reads the same:
               revenue $10K+ adds 3, ads $1K+ adds 6, any red answer makes it 0. So red 0, yellow 3, green 9. */
   function grade(a) {
-    var revOk = REVENUE.indexOf(a.lead_revenue) >= 2;
-    var adsOk = AD_SPEND.indexOf(a.lead_ad_spend) >= 2;
-    var red = !revOk || a.lead_main_service === 'Something else' || a.lead_ready_to_invest === 'Not right now';
+    var revOk = REVENUE.indexOf(a.lead_revenue) >= REV_FLOOR;
+    var adsOk = AD_SPEND.indexOf(a.lead_ad_spend) >= ADS_FLOOR;
+    var red = !revOk || a.lead_main_service === 'Something else' || a.lead_ready_to_invest === 'No way to invest right now';
     if (red) return { grade: 'red', score: 0 };
     return adsOk ? { grade: 'green', score: 9 } : { grade: 'yellow', score: 3 };
   }
