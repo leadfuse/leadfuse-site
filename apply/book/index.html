@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<!-- Test mode (?test=1): loads first, so nothing below can reach Meta. See TEST-MODE.md. -->
+<script src="/test-mode.js"></script>
 <script>window.__resources={"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"/vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"/vendor/react-dom.production.min.js"};</script>
 <script>
 /* Gate. /book only opens for someone who just finished the application.
@@ -190,7 +192,7 @@ class Component extends DCLogic {
   // Params forwarded from the Typeform redirect into the GHL widget: utm_* so the
   // appointment carries its ad attribution, contact fields so nobody retypes what
   // Typeform already collected.
-  FORWARD_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'grade', 'formsource', 'first_name', 'last_name', 'email', 'phone'];
+  FORWARD_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'grade', 'formsource', 'first_name', 'last_name', 'email', 'phone', 'test'];
 
   _calendarSrc() {
     const base = this.props.calendarUrl ?? 'https://go.leadfuse.co/widget/booking/LFyl6JOYDYoMZExBJQKv';
