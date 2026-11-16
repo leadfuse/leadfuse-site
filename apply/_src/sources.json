@@ -80,6 +80,12 @@
       "where": "Mike Reynoso's referral link (Paradise Auto Care): his Instagram stories and bio, and texts to detailers he knows. Add ?utm_content=<place> per placement (ig-story, ig-bio, text) to see where it came from."
     },
     {
+      "slug": "christian",
+      "utm_source": "partner_christian",
+      "medium": "partner",
+      "where": "Christian Douglas's referral link (Red Wagon Detailing): his Instagram stories and bio, and texts to detailers he knows. Add ?utm_content=<place> per placement (ig-story, ig-bio, text) to see where it came from."
+    },
+    {
       "slug": "refer",
       "utm_source": "referral",
       "medium": "referral",
