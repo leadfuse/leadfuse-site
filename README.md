@@ -9,6 +9,16 @@ Marketing site for LEADFUSE, served by GitHub Pages from the `main` branch (cust
 
 Push to `main` = live in about a minute.
 
+## /calculator: the public capacity calculator
+
+leadfuse.co/calculator/ is a free, ungated lead magnet: five numbers (last month's revenue, techs, days open a week, hours a
+day, average job price) plus hours per job (default 3) and the target (default 80%) give the ceiling, the target, and what
+the business leaves on the table every month and every year. The math lives in `calculator/capacity.js` and is the same as
+the capacity tracker on the client dashboard in LEADFUSE OS: change one, change both. `node calculator/capacity.js` checks the
+worked example ($50,000 ceiling, $40,000 at 80%). The one button goes to `/apply/?utm_content=capacity-calculator`, so
+applications from it show up as utm_source website + utm_content capacity-calculator. The page loads test-mode.js,
+attribution.js and meta-pixel.js like every other page (PageView only).
+
 ## /apply: the application for everything that is not an ad
 
 apply.leadfuse.co (the VSL funnel, repo client-leadfuse-funnel) is for Meta ads only. Every other place a LEADFUSE
