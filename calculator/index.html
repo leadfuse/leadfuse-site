@@ -10,6 +10,15 @@
 <meta property="og:description" content="Five numbers. See your ceiling and what you leave on the table every month.">
 <meta property="og:url" content="https://leadfuse.co/calculator/">
 <meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LEADFUSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What Could Your Detailing Business Make?">
+<meta name="twitter:description" content="Five numbers. See your ceiling and what you leave on the table every month.">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Detailing Business Capacity Calculator", "url": "https://leadfuse.co/calculator/", "description": "Free calculator for detailing business owners. Put in five numbers and see the most your business can make a month, your 80% target, and what you leave on the table every month.", "applicationCategory": "BusinessApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "LEADFUSE", "url": "https://leadfuse.co/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is capacity?", "acceptedAnswer": {"@type": "Answer", "text": "Capacity is the most work your team can do in a month. It's your techs, times the hours they work, times the days you're open. Every business has a ceiling, even a busy one."}}, {"@type": "Question", "name": "How do I figure out the most my detailing business can make?", "acceptedAnswer": {"@type": "Answer", "text": "Take your techs, times the jobs each one can do in a day, times the days you're open a week, times 4.33 weeks in a month. That's your max jobs. Multiply by your average job price and you have your ceiling."}}, {"@type": "Question", "name": "Why aim for 80% and not 100%?", "acceptedAnswer": {"@type": "Answer", "text": "No team is booked every minute. Cars show up late, jobs run long, people cancel. 80% is a full calendar your team can keep up with."}}, {"@type": "Question", "name": "What does the gap mean?", "acceptedAnswer": {"@type": "Answer", "text": "The gap is your 80% target minus what you made last month. It's work your team has time for that nobody booked. Closing it takes more of the right leads, called fast."}}, {"@type": "Question", "name": "How many leads do I need to close the gap?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the jobs you need by how many of your leads book. If 1 in 4 books, you need 4 leads for every job. Your cost per lead then tells you the ad spend it takes."}}, {"@type": "Question", "name": "Is this calculator free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. No email, no sign-up. Put in your numbers and the answer shows up right away."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://leadfuse.co/"}, {"@type": "ListItem", "position": 2, "name": "Free Resources", "item": "https://leadfuse.co/resources/"}, {"@type": "ListItem", "position": 3, "name": "Capacity Calculator", "item": "https://leadfuse.co/calculator/"}]}</script>
 <link rel="icon" href="/assets/favicon-32.png">
 <!-- Test mode (?test=1) loads first, so nothing below can reach Meta. Then attribution (keeps utm_* for the apply link) and the pixel (PageView). -->
 <script src="/test-mode.js"></script>
@@ -99,10 +108,22 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-betw
 footer a{text-decoration:none}
 footer a:hover{color:#fff}
 @media (max-width:340px){.fields{grid-template-columns:1fr}}
+.faq{padding:8px 0 48px;max-width:760px;margin:0 auto}
+.faq h2{font-size:24px;font-weight:800;margin-bottom:14px}
+.faq details{border-top:1px solid var(--line);padding:16px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--red);font-weight:700}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin-top:10px;color:var(--muted);font-size:15.5px}
+.crumb{font-size:13px;color:var(--muted-2)}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:#fff}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><a href="/" aria-label="LEADFUSE home"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE"></a></div></header>
+<header class="top"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px"><a href="/" aria-label="LEADFUSE home"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE"></a><nav class="crumb" aria-label="Breadcrumb"><a href="/resources/">Free resources</a></nav></div></header>
 
 <main class="wrap">
   <section class="hero">
@@ -170,9 +191,19 @@ footer a:hover{color:#fff}
       <p class="how">Ceiling = techs x jobs a day each x days open x 4.33 weeks x your average job price.</p>
     </section>
   </div>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">FAQ</h2>
+    <details><summary>What is capacity?</summary><p>Capacity is the most work your team can do in a month. It's your techs, times the hours they work, times the days you're open. Every business has a ceiling, even a busy one.</p></details>
+    <details><summary>How do I figure out the most my detailing business can make?</summary><p>Take your techs, times the jobs each one can do in a day, times the days you're open a week, times 4.33 weeks in a month. That's your max jobs. Multiply by your average job price and you have your ceiling.</p></details>
+    <details><summary>Why aim for 80% and not 100%?</summary><p>No team is booked every minute. Cars show up late, jobs run long, people cancel. 80% is a full calendar your team can keep up with.</p></details>
+    <details><summary>What does the gap mean?</summary><p>The gap is your 80% target minus what you made last month. It's work your team has time for that nobody booked. Closing it takes more of the right leads, called fast.</p></details>
+    <details><summary>How many leads do I need to close the gap?</summary><p>Divide the jobs you need by how many of your leads book. If 1 in 4 books, you need 4 leads for every job. Your cost per lead then tells you the ad spend it takes.</p></details>
+    <details><summary>Is this calculator free?</summary><p>Yes. No email, no sign-up. Put in your numbers and the answer shows up right away.</p></details>
+  </section>
 </main>
 
-<footer><div class="wrap"><span>&copy; <span id="yr">2026</span> LEADFUSE</span><span><a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms/">Terms</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; <span id="yr">2026</span> LEADFUSE</span><span><a href="/resources/">Free resources</a> &nbsp;&middot;&nbsp; <a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms/">Terms</a></span></div></footer>
 
 <script src="/calculator/capacity.js"></script>
 <script>

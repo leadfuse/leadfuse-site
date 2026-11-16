@@ -4,10 +4,16 @@ Marketing site for LEADFUSE, served by GitHub Pages from the `main` branch (cust
 
 - `index.html` = Home, `about/`, `privacy/`, `terms/`. Pages are Claude Design exports. `apply/` is the application funnel for everything that is not a Meta ad (see below).
 - `SiteNav.dc.html` / `SiteFooter.dc.html` are shared components; `_ds/` is the LEADFUSE design system (`.nojekyll` keeps GitHub from hiding it); `vendor/` self-hosts React and Babel.
-- Nav links for pages not yet exported (Services, Results, Resources) point to `#`. Careers points to `/careers/`.
+- Nav links for pages not yet exported (Services, Results) point to `#`. Careers points to `/careers/`, Resources (nav and footer) to `/resources/`.
+- `sitemap.xml` lists the public pages for Google (robots.txt points at it). Add a line there for every new public page.
 - Any remaining link to https://apply.leadfuse.co forwards utm_*, fbclid and formsource from the current URL. The footer's apply link now points at `/apply/`.
 
 Push to `main` = live in about a minute.
+
+## /resources: free resources
+
+leadfuse.co/resources/ lists the free tools: the capacity calculator (/calculator/) and the Automotive Scaling Roadmap
+(roadmap.leadfuse.co/site). Add a card there for each new free tool.
 
 ## /calculator: the public capacity calculator
 
@@ -17,7 +23,8 @@ the business leaves on the table every month and every year. The math lives in `
 the capacity tracker on the client dashboard in LEADFUSE OS: change one, change both. `node calculator/capacity.js` checks the
 worked example ($50,000 ceiling, $40,000 at 80%). The one button goes to `/apply/?utm_content=capacity-calculator`, so
 applications from it show up as utm_source website + utm_content capacity-calculator. The page loads test-mode.js,
-attribution.js and meta-pixel.js like every other page (PageView only).
+attribution.js and meta-pixel.js like every other page (PageView only). For search: canonical, Open Graph, and three JSON-LD
+blocks (WebApplication, FAQPage, BreadcrumbList); the FAQ answers on the page and in the FAQPage block must match word for word.
 
 ## /apply: the application for everything that is not an ad
 
