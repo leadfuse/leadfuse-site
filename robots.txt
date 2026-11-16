@@ -3,3 +3,5 @@ Disallow: /apply/book
 Disallow: /apply/book-red
 Disallow: /apply/not-ready
 Disallow: /apply/confirmation
+
+Sitemap: https://leadfuse.co/sitemap.xml
