@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What Could Your Detailing Business Make? | LEADFUSE</title>
+<meta name="description" content="Put in five numbers and see the most your detailing business can make a month, your 80% target, and what you leave on the table every month.">
+<link rel="canonical" href="https://leadfuse.co/calculator/">
+<meta property="og:title" content="What Could Your Detailing Business Make?">
+<meta property="og:description" content="Five numbers. See your ceiling and what you leave on the table every month.">
+<meta property="og:url" content="https://leadfuse.co/calculator/">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="/assets/favicon-32.png">
+<!-- Test mode (?test=1) loads first, so nothing below can reach Meta. Then attribution (keeps utm_* for the apply link) and the pixel (PageView). -->
+<script src="/test-mode.js"></script>
+<script src="/attribution.js"></script>
+<script src="/meta-pixel.js"></script>
+<style>
+@font-face{font-family:'Poppins';font-weight:400;font-display:swap;src:url("/assets/8689aee8.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-weight:500;font-display:swap;src:url("/assets/54ab3311.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-weight:600;font-display:swap;src:url("/assets/4f03c8ff.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-weight:700;font-display:swap;src:url("/assets/f69e22a0.woff2") format('woff2')}
+@font-face{font-family:'Poppins';font-weight:800;font-display:swap;src:url("/assets/a21f5d52.woff2") format('woff2')}
+@font-face{font-family:'Instrument Serif';font-style:italic;font-weight:400;font-display:swap;src:url("/assets/fb2c6ee3.woff2") format('woff2')}
+:root{
+  --red:#E50011;--red-hover:#C9000F;--red-press:#AB000C;
+  --ink:#000;--panel:#161616;--line:#2A2A2A;
+  --muted:#A7A7A7;--muted-2:#818181;--gray:#F2F2F2;--body:#333;--soft:#6E6E6E;--border:#E2E2E2;
+  --sans:'Poppins',ui-sans-serif,system-ui,'Segoe UI',sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--ink);color:#fff;line-height:1.5;overflow-x:hidden;
+  background-image:radial-gradient(900px 520px at 50% -120px,rgba(229,0,17,.28),transparent 70%)}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+.top{padding:20px 0}
+.top img{height:22px;width:auto;display:block}
+.hero{text-align:center;padding:28px 0 36px}
+h1{font-weight:800;font-size:clamp(34px,7vw,60px);line-height:1.04;letter-spacing:-.02em;max-width:760px;margin:0 auto}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--red);letter-spacing:0}
+.sub{margin:16px auto 0;max-width:520px;color:var(--muted);font-size:17px}
+
+.grid{display:grid;grid-template-columns:1fr;gap:16px;align-items:start;padding-bottom:40px}
+@media (min-width:900px){.grid{grid-template-columns:1.05fr 1fr;gap:24px}}
+
+.card{background:#fff;color:var(--body);border-radius:16px;padding:22px 18px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+@media (min-width:600px){.card{padding:28px}}
+.card h2{font-size:18px;font-weight:700;color:#000;margin-bottom:16px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:14px;font-weight:600;color:#000;line-height:1.3}
+.field small{font-size:12.5px;color:var(--soft);line-height:1.35}
+.box{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:10px;background:#fff;transition:border-color .15s,box-shadow .15s}
+.box:focus-within{border-color:#000;box-shadow:0 0 0 3px rgba(229,0,17,.12)}
+.box span{padding:0 0 0 12px;font-weight:600;color:var(--soft);font-size:17px}
+.box span.after{padding:0 12px 0 0}
+.box input{flex:1;min-width:0;width:100%;border:0;background:transparent;font:600 18px/1.2 var(--sans);color:#000;padding:13px 12px;outline:none}
+.box input::placeholder{color:#BDBDBD;font-weight:500}
+
+.result{background:var(--panel);color:#fff;border:1px solid var(--line);box-shadow:none}
+.result h2{color:#fff}
+.lost{font-size:15px;color:var(--muted)}
+.lost strong{display:block;font-size:clamp(40px,9vw,56px);line-height:1.05;font-weight:800;color:#fff;letter-spacing:-.02em;margin:6px 0 4px}
+.lost strong.red{color:var(--red)}
+.lost .line{font-size:18px;font-weight:600;color:#fff}
+.year{margin-top:6px;color:var(--muted);font-size:15px}
+.year b{color:#fff;font-weight:700}
+
+.bar{margin:22px 0 8px;position:relative;height:14px;border-radius:99px;background:#2A2A2A}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:#fff;width:0;transition:width .35s ease}
+.bar b{position:absolute;top:-6px;bottom:-6px;width:3px;border-radius:2px;background:var(--red);left:80%;transition:left .35s ease}
+.barkey{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--muted-2)}
+.barkey .t{color:#fff}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.tile{background:#000;border:1px solid var(--line);border-radius:12px;padding:14px}
+.tile.wide{grid-column:1/-1}
+.tile p{font-size:12.5px;color:var(--muted);font-weight:500}
+.tile strong{display:block;font-size:24px;font-weight:700;color:#fff;letter-spacing:-.01em;margin-top:2px;line-height:1.2}
+.tile span{display:block;font-size:12.5px;color:var(--muted-2);margin-top:2px}
+.tile.go strong{color:#fff}
+
+.cta{display:block;width:100%;margin-top:22px;text-align:center;text-decoration:none;background:var(--red);color:#fff;
+  font:600 17px/1 var(--sans);padding:18px 20px;border-radius:12px;transition:background .15s,transform .15s}
+.cta:hover{background:var(--red-hover)}
+.cta:active{background:var(--red-press);transform:translateY(1px)}
+.how{margin-top:14px;font-size:12.5px;color:var(--muted-2);text-align:center}
+
+.empty .lost strong,.empty .tile strong{color:#4D4D4D}
+.empty .when-ready{display:none}
+.when-empty{display:none}
+.empty .when-empty{display:block}
+
+footer{border-top:1px solid #161616;padding:22px 0 32px;color:var(--muted-2);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+@media (max-width:340px){.fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="/" aria-label="LEADFUSE home"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE"></a></div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>What Could Your Detailing Business <em>Make?</em></h1>
+    <p class="sub">Put in five numbers. See the most your team can make, and what you leave on the table every month.</p>
+  </section>
+
+  <div class="grid">
+    <form class="card" id="calc" novalidate onsubmit="return false">
+      <h2>Your numbers</h2>
+      <div class="fields">
+        <div class="field full">
+          <label for="lastMonth">Last month's revenue</label>
+          <div class="box"><span>$</span><input id="lastMonth" inputmode="decimal" autocomplete="off" placeholder="25,000"></div>
+        </div>
+        <div class="field">
+          <label for="techs">Techs doing the work</label>
+          <div class="box"><input id="techs" inputmode="decimal" autocomplete="off" placeholder="2"></div>
+          <small>Count yourself if you work on cars.</small>
+        </div>
+        <div class="field">
+          <label for="daysPerWeek">Days open a week</label>
+          <div class="box"><input id="daysPerWeek" inputmode="decimal" autocomplete="off" placeholder="6"></div>
+        </div>
+        <div class="field">
+          <label for="hoursPerDay">Hours each tech works a day</label>
+          <div class="box"><input id="hoursPerDay" inputmode="decimal" autocomplete="off" placeholder="8"></div>
+        </div>
+        <div class="field">
+          <label for="aov">Average job price</label>
+          <div class="box"><span>$</span><input id="aov" inputmode="decimal" autocomplete="off" placeholder="500"></div>
+        </div>
+        <div class="field">
+          <label for="jobHours">Hours one job takes</label>
+          <div class="box"><input id="jobHours" inputmode="decimal" autocomplete="off" value="3"></div>
+          <small>Your average job, start to finish.</small>
+        </div>
+        <div class="field">
+          <label for="targetPct">Aim for</label>
+          <div class="box"><input id="targetPct" inputmode="decimal" autocomplete="off" value="80"><span class="after">%</span></div>
+          <small>Nobody runs at 100%. 80% leaves room for drive time and reschedules.</small>
+        </div>
+      </div>
+    </form>
+
+    <section class="card result empty" id="result" aria-live="polite">
+      <div class="lost">
+        <span class="when-empty line">Fill in your numbers to see what you could make.</span>
+        <span class="when-ready" id="lostLead">You're leaving</span>
+        <strong class="red when-ready" id="gap">$0</strong>
+        <span class="line when-ready" id="lostTail">on the table every month.</span>
+      </div>
+      <p class="year when-ready" id="yearLine">That's <b id="year">$0</b> a year.</p>
+
+      <div class="bar" aria-hidden="true"><i id="fill"></i><b id="mark"></b></div>
+      <div class="barkey"><span>Last month <span class="t" id="usedPct">0%</span> of your ceiling</span><span>Target <span class="t" id="markPct">80%</span></span></div>
+
+      <div class="tiles">
+        <div class="tile"><p>Your ceiling</p><strong id="ceiling">$0</strong><span id="ceilingJobs">a month, at 100%</span></div>
+        <div class="tile"><p>Your target</p><strong id="target">$0</strong><span id="targetJobs">a month, at 80%</span></div>
+        <div class="tile wide go"><p>To get there</p><strong id="moreJobs">0 more jobs a week</strong><span id="moreNote">on top of what you did last month</span></div>
+      </div>
+
+      <a class="cta" id="cta" href="/apply/?utm_content=capacity-calculator">See if you qualify</a>
+      <p class="how">Ceiling = techs x jobs a day each x days open x 4.33 weeks x your average job price.</p>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>&copy; <span id="yr">2026</span> LEADFUSE</span><span><a href="/privacy/">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms/">Terms</a></span></div></footer>
+
+<script src="/calculator/capacity.js"></script>
+<script>
+(function () {
+  var C = window.LFCapacity;
+  var ids = ['lastMonth', 'techs', 'daysPerWeek', 'hoursPerDay', 'aov', 'jobHours', 'targetPct'];
+  var limits = { techs: 100, daysPerWeek: 7, hoursPerDay: 24, jobHours: 24, targetPct: 100 };
+  var $ = function (id) { return document.getElementById(id); };
+  var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  var whole = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+
+  function num(id) {
+    var v = parseFloat(String($(id).value).replace(/[^0-9.]/g, ''));
+    if (!isFinite(v) || v < 0) return 0;
+    return limits[id] ? Math.min(v, limits[id]) : v;
+  }
+
+  /* Money inputs show commas as they type: 25000 -> 25,000. */
+  ['lastMonth', 'aov'].forEach(function (id) {
+    $(id).addEventListener('blur', function () {
+      var v = num(id);
+      if (String(this.value).trim()) this.value = whole.format(v);
+    });
+  });
+
+  function render() {
+    var i = {};
+    ids.forEach(function (id) { i[id] = num(id); });
+    var r = C.capacity(i);
+    var box = $('result');
+    if (!r) { box.classList.add('empty'); return; }
+    box.classList.remove('empty');
+
+    var pct = Math.round(i.targetPct);
+    var over = r.gap <= 0;
+    if (over) {
+      $('lostLead').textContent = "You're already past " + pct + "%.";
+      $('gap').textContent = money.format(i.lastMonth);
+      $('gap').classList.remove('red');
+      $('lostTail').textContent = 'last month. To grow from here, add a tech or raise your price.';
+      $('yearLine').style.display = 'none';
+    } else {
+      $('lostLead').textContent = "You're leaving";
+      $('gap').textContent = money.format(r.gap);
+      $('gap').classList.add('red');
+      $('lostTail').textContent = 'on the table every month.';
+      $('yearLine').style.display = '';
+      $('year').textContent = money.format(r.gapPerYear);
+    }
+
+    $('ceiling').textContent = money.format(r.maxRevenue);
+    $('ceilingJobs').textContent = 'a month, about ' + whole.format(r.maxJobs) + ' jobs';
+    $('target').textContent = money.format(r.targetRevenue);
+    $('targetJobs').textContent = 'a month at ' + pct + '%, about ' + whole.format(r.targetJobs) + ' jobs';
+
+    var more = Math.max(0, r.moreJobsPerWeek);
+    var moreRounded = more > 0 && more < 1 ? 1 : Math.round(more);
+    if (over || moreRounded === 0) {
+      $('moreJobs').textContent = 'More techs or a higher price';
+      $('moreNote').textContent = 'your team is close to full';
+    } else {
+      $('moreJobs').textContent = 'About ' + moreRounded + ' more job' + (moreRounded === 1 ? '' : 's') + ' a week';
+      $('moreNote').textContent = 'on top of what you did last month';
+    }
+
+    var used = Math.max(0, Math.min(100, r.usedPct));
+    $('fill').style.width = used + '%';
+    $('mark').style.left = 'calc(' + Math.min(100, pct) + '% - 1.5px)';
+    $('usedPct').textContent = Math.round(r.usedPct) + '%';
+    $('markPct').textContent = pct + '%';
+  }
+
+  ids.forEach(function (id) { $(id).addEventListener('input', render); });
+  try { $('yr').textContent = new Date().getFullYear(); } catch (e) {}
+  render();
+})();
+</script>
+</body>
+</html>
