@@ -9,22 +9,18 @@
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://leadfuse.co/apply/">
 <link rel="icon" href="/assets/favicon-32.png">
-<link rel="preconnect" href="https://embed.typeform.com" crossorigin>
-<link rel="preconnect" href="https://form.typeform.com">
 <!-- Test mode (?test=1): loads first, so nothing below can reach Meta. Same file as apply.leadfuse.co. -->
 <script src="/test-mode.js"></script>
 <script>window.LF_QS0 = location.search; /* the link as clicked, before attribution.js restores older tags */</script>
 <script src="/attribution.js"></script>
 <script src="/meta-pixel.js"></script>
-<!-- Application form: Typeform or our own. One switch in /apply-config.js; ?form=own / ?form=typeform per link.
-     See APPLY-FORM.md in FluxomateTeam/client-leadfuse-funnel. -->
+<!-- Application form: our own (Typeform retired Nov 23 2026). See APPLY-FORM.md in leadfuse/leadfuse-funnel. -->
 <!-- ?v= = cache-buster: bump it (date + letter) whenever apply-config.js or apply-form.js changes (APPLY-FORM.md in client-leadfuse-funnel). -->
-<script src="/apply-config.js?v=2026-11-10b"></script>
-<script src="/apply-form.js?v=2026-11-10b"></script>
+<script src="/apply-config.js?v=2026-11-23a"></script>
+<script src="/apply-form.js?v=2026-11-23a"></script>
 <script>
-window.LF_APPLY_MODE = 'typeform';
-try { if (window.LFApplyForm) window.LF_APPLY_MODE = window.LFApplyForm.mode(); } catch (e) {}
-if (window.LF_APPLY_MODE === 'own') document.documentElement.className += ' own';
+window.LF_APPLY_MODE = 'own';
+document.documentElement.className += ' own';
 </script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -53,15 +49,16 @@ html.own body.sent #own{padding-top:76px}
 <body>
 <div id="sent-by" role="status"></div>
 <div id="own"><div class="lfa-head"><img src="/assets/logo-silver@4x.png" alt="LEADFUSE"><p>See if you qualify &#183; 2 minutes</p></div><div id="own-box"></div></div>
-<div id="form" data-tf-widget="D8gcUEt2" data-tf-hidden="formsource=bio-lf,utm_source=bio_business,utm_medium=bio,utm_campaign=apply" data-tf-transitive-search-params="fbclid" data-tf-inline-on-mobile data-tf-opacity="100" data-tf-iframe-props="title=The LEADFUSE application" data-tf-medium="snippet"></div>
-<noscript><div class="fallback"><a href="https://form.typeform.com/to/D8gcUEt2#formsource=bio-lf&amp;utm_source=bio_business&amp;utm_medium=bio&amp;utm_campaign=apply">Open the application</a></div></noscript>
+<!-- This page's source tags (formsource + utm_*), read by the script below and sent with the application. -->
+<div id="form" hidden data-tags="formsource=bio-lf,utm_source=bio_business,utm_medium=bio,utm_campaign=apply"></div>
+<noscript><div class="fallback">Please turn on JavaScript to fill in the application.</div></noscript>
 <script>
 /* Tags on the link win over this page's built-in tags. leadfuse.co/apply/bio-leadfuse reports utm_source=bio_business on its own;
    leadfuse.co/apply/bio-leadfuse?utm_campaign=black-friday reports the same plus that campaign. formsource always stays the folder. */
 (function () {
   try {
     var el = document.getElementById('form'), tags = {}, order = [];
-    el.getAttribute('data-tf-hidden').split(',').forEach(function (kv) {
+    el.getAttribute('data-tags').split(',').forEach(function (kv) {
       var i = kv.indexOf('='); if (i > 0) { tags[kv.slice(0, i)] = kv.slice(i + 1); order.push(kv.slice(0, i)); }
     });
     var q = new URLSearchParams(window.LF_QS0 || '');
@@ -69,11 +66,10 @@ html.own body.sent #own{padding-top:76px}
       var v = (q.get(k) || '').trim().replace(/[,=]/g, '-');
       if (v) { if (!(k in tags)) order.push(k); tags[k] = v; }
     });
-    /* Test mode (?test=1): tell the form, so the App can tag the lead "test | lead" once the form has a test hidden field. */
+    /* Test mode (?test=1): the App tags the lead "test | lead". */
     if (window.LF_TEST) { if (!('test' in tags)) order.push('test'); tags.test = '1'; }
-    el.setAttribute('data-tf-hidden', order.map(function (k) { return k + '=' + tags[k]; }).join(','));
-    /* Our own form (when switched on): same tags, its own pages for the next step. */
-    if (window.LF_APPLY_MODE === 'own' && window.LFApplyForm) {
+    /* Our own form: these tags, its own pages for the next step. */
+    if (window.LFApplyForm) {
       window.LFApplyForm.mount(document.getElementById('own-box'), {
         funnel: 'Apply (organic link)', bookUrl: '/apply/book/', redUrl: '/apply/not-ready/', tags: tags, source: tags.formsource || ''
       });
@@ -96,12 +92,6 @@ html.own body.sent #own{padding-top:76px}
     }
   } catch (e) {}
 })();
-</script>
-<script>
-/* Typeform's embed only loads when the Typeform is the form. */
-if (window.LF_APPLY_MODE !== 'own') {
-  var tfs = document.createElement('script'); tfs.src = 'https://embed.typeform.com/next/embed.js'; tfs.async = true; document.body.appendChild(tfs);
-}
 </script>
 </body>
 </html>

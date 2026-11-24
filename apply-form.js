@@ -12,7 +12,7 @@
  * (copied by the site repo's apply/_src/port.py): keep the two identical, change it here.
  *
  * Page API:
- *   LFApplyForm.mode()            'own' or 'typeform' for this visit (see APPLY-FORM.md "The switch")
+ *   LFApplyForm.mode()            always 'own' since Nov 23 2026 (Typeform retired)
  *   LFApplyForm.mount(el, opts)   draws the form into el. opts:
  *       funnel   value of lead_funnel, e.g. 'Apply (Meta ads)'
  *       bookUrl  where green/yellow go (default '/book')
@@ -24,33 +24,36 @@
   'use strict';
 
   /* ---------- Questions. Labels are the exact App field options: never change one without the App field.
-     Questions 1 to 4 are word for word the roadmap quiz's (roadmap-source/src/lib/quiz-data.ts q0, qe, q1, qa):
+     Questions 1 to 4 are word for word the roadmap quiz's (roadmap-source/src/lib/quiz-data.ts q0, qe, qa, q1):
      change them in both places. ---------- */
   var SERVICE = ['Detailing', 'Ceramic coating / paint correction', 'PPF / window tint', 'Wraps', 'Something else'];
   var OTHER = 'Something else'; /* opens a short "What do you offer?" box, sent as lead_other_service */
   var TEAM = ['Just me, no revenue yet', 'Just me, with some revenue', '2 to 3', '4 to 9', '10 or more'];
   var REVENUE = ['Under $5K', '$5K to $10K', '$10K to $15K', '$15K to $25K', '$25K to $50K', 'Over $50K'];
-  var AD_SPEND = ['Nothing yet', 'Under $1K', '$1K to $3K', '$3K to $5K', 'Over $5K'];
+  /* Nov 23 2026: ad spend is asked per DAY with the month in brackets, before revenue. The App field keeps the old
+     monthly options too ("Under $1K", "$1K to $3K", "$3K to $5K", "Over $5K") for leads from before. */
+  var AD_SPEND = ['Nothing yet', 'Under $35 a day (under $1K a month)', '$35 to $100 a day ($1K to $3K a month)',
+    '$100 to $165 a day ($3K to $5K a month)', '$165 to $250 a day ($5K to $7.5K a month)', 'Over $250 a day (over $7.5K a month)'];
   var READY = ['Yes, I have money or credit I can use', 'Maybe, I need to see the plan', "No, I don't have a way to invest right now"];
-  /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($1K to $3K) up. */
+  /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($35 to $100 a day) up. */
   var REV_FLOOR = 2, ADS_FLOOR = 2;
 
   var QUESTIONS = [
     { key: 'lead_main_service', title: 'What do you mainly offer?', options: SERVICE },
     { key: 'lead_team_size', title: 'How many full-time technicians do you have, counting you?', options: TEAM },
+    { key: 'lead_ad_spend', title: 'Daily ad spend (approximate)', options: AD_SPEND },
     { key: 'lead_revenue', title: 'Monthly revenue (approximate)', options: REVENUE },
-    { key: 'lead_ad_spend', title: 'Monthly ad spend (approximate)', options: AD_SPEND },
     { key: 'lead_ready_to_invest', title: 'If we show you a plan that makes sense, are you ready to put money behind it?', sub: 'Savings, card, or financing is okay.', options: READY }
   ];
 
   /* ---------- Grade: the App's rule, word for word (BUILD-SPEC Nov 9 2026, same as the roadmap quiz). ----------
      red    = technicians "Just me, no revenue yet", OR revenue "Under $5K" / "$5K to $10K", OR "Something else",
               OR "No, I don't have a way to invest right now"
-     green  = revenue "$10K to $15K" and up AND ads "$1K to $3K" and up
-     yellow = revenue "$10K to $15K" and up, ads "Nothing yet" / "Under $1K"
+     green  = revenue "$10K to $15K" and up AND ads "$35 to $100 a day" and up
+     yellow = revenue "$10K to $15K" and up, ads "Nothing yet" / "Under $35 a day"
      Team size only counts for "Just me, no revenue yet".
      score  = the old Typeform score, kept so the App's "Application Score" reads the same:
-              revenue $10K+ adds 3, ads $1K+ adds 6, any red answer makes it 0. So red 0, yellow 3, green 9. */
+              revenue $10K+ adds 3, ads $35+ a day adds 6, any red answer makes it 0. So red 0, yellow 3, green 9. */
   function grade(a) {
     var revOk = REVENUE.indexOf(a.lead_revenue) >= REV_FLOOR;
     var adsOk = AD_SPEND.indexOf(a.lead_ad_spend) >= ADS_FLOOR;
@@ -75,21 +78,8 @@
     return u && u !== PLACEHOLDER && /^https:\/\//.test(u) ? u : '';
   }
 
-  /* ?form=own / ?form=typeform picks the form for this tab (remembered on refresh); otherwise DEFAULT_FORM.
-     The own form never shows to a real visitor while the webhook is not set: they get the Typeform. */
-  function mode() {
-    var want = qp('form');
-    try {
-      if (want === 'own' || want === 'typeform') sessionStorage.setItem('lf_form', want);
-      else want = sessionStorage.getItem('lf_form');
-    } catch (e) {}
-    if (want !== 'own' && want !== 'typeform') want = CFG.DEFAULT_FORM === 'own' ? 'own' : 'typeform';
-    if (want === 'own' && !webhookUrl() && !isTest()) {
-      try { console.warn('[LEADFUSE apply] own form asked for, but WEBHOOK_URL is not set: showing the Typeform.'); } catch (e) {}
-      return 'typeform';
-    }
-    return want;
-  }
+  /* Nov 23 2026: Typeform is gone. Our own form is the only form, everywhere. */
+  function mode() { return 'own'; }
 
   /* ---------- Validation ---------- */
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;

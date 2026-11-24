@@ -87,12 +87,12 @@
     }
   ],
   "form": "D8gcUEt2",
-  "_form_note": "D8gcUEt2 is the site's copy of the ads form xPLSrpmn (same questions, scoring and App webhook); its endings redirect to leadfuse.co/apply/book/ and /apply/not-ready/. Keep it in sync with funnel-forms/typeform_site_copy.py.",
+  "_form_note": "Nov 23 2026: Typeform retired. Every page uses our own form (apply-form.js); 'form' is only kept for build.py. D8gcUEt2 and xPLSrpmn are left in the Typeform account, not deleted, linked from nowhere.",
   "aliases": {
     "bio-leadfuse": "bio-lf",
     "bio-sebas": "bio-smf",
     "free-trial": "test-drive"
   },
   "_aliases_note": "Old slugs that went live on Oct 22 2026 before Sebastian picked bio-lf and bio-smf. They forward to the new link, keeping the query. Never delete an alias.",
-  "_test_drive_note": "apply/test-drive/ is NOT built from template.html. It is the apply.leadfuse.co landing page copied by apply/_src/test_drive.py with the 4-Week Test Drive words swapped in (same design). /apply/free-trial forwards to it."
+  "_test_drive_note": "Nov 23 2026: apply/test-drive/ is now a hand-written forward to /apply/ (the 4-Week Test Drive page used the Typeform, which is retired). Do not re-run test_drive.py. /apply/free-trial forwards to it."
 }
