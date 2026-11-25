@@ -46,6 +46,51 @@
     }
   });
 
+  /*
+   * No utm_source on the link? Then say where the visitor actually came from,
+   * using the page that sent them (document.referrer), so an organic Google or
+   * ChatGPT visit is not filed as "direct". Only on the first page of the tab
+   * (nothing stored yet), only for outside sites, and never when the link carried
+   * its own tags or a Meta click id (ads always carry utm_source). The values are
+   * plain names the App's source-tag workflow (01.17) can match: search engines
+   * -> google / bing / duckduckgo / yahoo (medium organic), AI assistants ->
+   * chatgpt.com / perplexity / gemini / copilot / claude (medium ai), YouTube and
+   * Skool -> youtube / skool. Facebook and Instagram are left alone on purpose:
+   * 01.17 reads anything with "facebook" or "fb" in it as a Meta ad.
+   * Kept off the address bar on this page (nothing visible changes); it rides
+   * along in LF_ATTR, the form payload and every later hop.
+   */
+  var derived = {};
+  (function () {
+    if (merged.utm_source || merged.fbclid || merged.gclid) return;
+    var ref = '';
+    try { ref = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ''; } catch (e) { return; }
+    if (!ref) return;
+    if (/(^|\.)(leadfuse\.co|leadconnectorhq\.com|msgsndr\.com|typeform\.com|railway\.app)$/.test(ref)) return;
+    var host = ref.replace(/^(www|m|l|lm)\./, '');
+    var MAP = [
+      [/^(chatgpt\.com|chat\.openai\.com)$/, 'chatgpt.com', 'ai'],
+      [/(^|\.)perplexity\.ai$/, 'perplexity', 'ai'],
+      [/^gemini\.google\.com$|^bard\.google\.com$/, 'gemini', 'ai'],
+      [/^copilot\.microsoft\.com$/, 'copilot', 'ai'],
+      [/^claude\.ai$/, 'claude', 'ai'],
+      [/^google\.[a-z.]+$/, 'google', 'organic'],
+      [/^bing\.com$/, 'bing', 'organic'],
+      [/^duckduckgo\.com$/, 'duckduckgo', 'organic'],
+      [/(^|\.)search\.yahoo\.com$|^yahoo\.com$/, 'yahoo', 'organic'],
+      [/^(youtube\.com|youtu\.be)$/, 'youtube', 'referral'],
+      [/^skool\.com$/, 'skool', 'referral']
+    ];
+    for (var i = 0; i < MAP.length; i++) {
+      if (MAP[i][0].test(host)) {
+        derived.utm_source = MAP[i][1];
+        if (!merged.utm_medium) derived.utm_medium = MAP[i][2];
+        break;
+      }
+    }
+    Object.keys(derived).forEach(function (k) { merged[k] = derived[k]; dirty = true; });
+  })();
+
   if (dirty) {
     try { sessionStorage.setItem(KEY, JSON.stringify(merged)); } catch (e) {}
   }
@@ -70,6 +115,7 @@
     try { url = new URL(window.location.href); } catch (e) { return; }
     var added = false;
     keys.forEach(function (k) {
+      if (derived[k]) return; // referrer guess: kept off this page's address bar
       if (!url.searchParams.has(k)) { url.searchParams.set(k, merged[k]); added = true; }
     });
     if (added) {
