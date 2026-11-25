@@ -143,7 +143,7 @@
         <p style="margin:12px auto 0;max-width:620px;font-size:clamp(14px,3.8vw,16px);line-height:1.6;color:rgba(255,255,255,.55)">Watch the ones that apply to you. Skip the rest.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(150px,42vw,250px),1fr));gap:12px">
-        <sc-for list="{{ breakouts }}" as="b" hint-placeholder-count="8">
+        <sc-for list="{{ breakouts }}" as="b" hint-placeholder-count="13">
           <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:var(--glass-bg);border:var(--glass-border)">
             <div style="position:relative;aspect-ratio:16/9;background:#0C0C0C;flex:none">
               <sc-if value="{{ b.playing }}" hint-placeholder-val="{{ false }}">
@@ -278,14 +278,19 @@ class Component extends DCLogic {
   // breakdownVideoId / urgencyVideoId props; until each has an ID its frame
   // shows a plain play button rather than a player.
   BREAKOUTS = [
-    { id: 'vvstucuhhf', title: 'What happens on the call', duration: '0:24' },
-    { id: 'kbyrwsuszc', title: 'How fast will I see results?', duration: '0:26' },
-    { id: '43yrli8bjp', title: "What if I don't have time to manage this?", duration: '0:23' },
-    { id: 'p63glak6au', title: "What if I've tried Facebook ads before and they didn't work?", duration: '0:45' },
-    { id: '8zh0c89wa1', title: "What happens if this doesn't work?", duration: '0:33' },
-    { id: 'bhscwb8qts', title: "What's your dispute and refund rate?", duration: '0:38' },
-    { id: 'd7e8pep28s', title: 'What kind of support do I get?', duration: '0:20' },
-    { id: 'vkd8grn2ew', title: 'Who is this NOT for?', duration: '0:25' },
+    { id: 'rn2wvnqrmo', title: 'How much does it cost?', duration: '0:39' },
+    { id: 's7v3e0w49p', title: "I tried Facebook ads or an agency before, and it didn't work.", duration: '0:42' },
+    { id: 'vtp9qdz56y', title: 'Should I bring my partner or spouse?', duration: '0:28' },
+    { id: 'te0oie8o6q', title: "What do you do, and what do I do? I don't have time.", duration: '0:26' },
+    { id: '3z3h6am4oq', title: 'Do I have to switch my software or booking app?', duration: '0:37' },
+    { id: 'o5pldfwcvq', title: 'Do I have to be on camera?', duration: '0:31' },
+    { id: 'utthbrm7ia', title: 'How fast will I see results?', duration: '0:33' },
+    { id: 'z1x7ajwtga', title: 'Will I just get junk leads again?', duration: '0:27' },
+    { id: 'vvk5zlcxro', title: 'Is this legit? Show me proof.', duration: '0:39' },
+    { id: '1x3bou47bn', title: 'Will it work in my market? Small town, winter, crowded city.', duration: '0:33' },
+    { id: 'mr8qn6kkxi', title: "What happens if it doesn't work?", duration: '0:27' },
+    { id: 'prcq8hpnbc', title: "What's your refund and dispute rate?", duration: '0:32' },
+    { id: '4fkec2mxjs', title: 'Who is this NOT for?', duration: '0:31' },
   ];
   state = { playing: {}, thumbs: {} };
 
