@@ -1,10 +1,9 @@
 {
-  "_readme": "Short booking links: leadfuse.co/book/<slug> opens the Free Discovery Call calendar with the source on it, so a call booked from a DM, a text or an email says where it came from. Same names as the apply links (apply/_src/sources.json): formsource = the value the App's source-tag workflow (01.17) already matches, utm_source / utm_medium = the shared naming, utm_campaign is always 'book'. Any utm_* added to the link (?utm_content=bf-blast) wins for that click. Add a row, run build.py, commit. Never rename a slug that has been sent to someone.",
-  "calendar": "https://go.leadfuse.co/widget/booking/LFyl6JOYDYoMZExBJQKv",
+  "_readme": "Short links: leadfuse.co/book/<slug> forwards to the APPLICATION for that place (leadfuse.co/apply/<apply>/), never to a calendar. Everyone fills out the application first so they get graded before they can book (reds never reach the green calendar). Sebastian, Nov 25 2026: 'Nobody should ever be sent to a calendar.' The query on the clicked link is kept. Add a row, run build.py, commit. Never rename a slug that has been sent to someone.",
   "links": [
-    { "slug": "sebas", "formsource": "sebas", "utm_source": "dm_personal", "utm_medium": "dm", "where": "@sebassmfonseca Instagram DMs" },
-    { "slug": "leadfuse", "formsource": "leadfuse", "utm_source": "dm_business", "utm_medium": "dm", "where": "@leadfuse Instagram DMs" },
-    { "slug": "text", "formsource": "sms", "utm_source": "sms", "utm_medium": "sms", "where": "Texts (by hand or from the App)" },
-    { "slug": "email", "formsource": "email", "utm_source": "email", "utm_medium": "email", "where": "Emails (by hand or from the App)" }
+    { "slug": "sebas", "apply": "sebas", "where": "@sebassmfonseca Instagram DMs" },
+    { "slug": "leadfuse", "apply": "leadfuse", "where": "@leadfuse Instagram DMs" },
+    { "slug": "text", "apply": "text", "where": "Texts (by hand or from the App)" },
+    { "slug": "email", "apply": "email", "where": "Emails (by hand or from the App)" }
   ]
 }
