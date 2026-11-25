@@ -35,6 +35,10 @@
   var AD_SPEND = ['Nothing yet', 'Under $35 a day (under $1K a month)', '$35 to $100 a day ($1K to $3K a month)',
     '$100 to $165 a day ($3K to $5K a month)', '$165 to $250 a day ($5K to $7.5K a month)', 'Over $250 a day (over $7.5K a month)'];
   var READY = ['Yes, I have money or credit I can use', 'Maybe, I need to see the plan', "No, I don't have a way to invest right now"];
+  /* Nov 25 2026: first touch ("Where did you first hear about LEADFUSE?"). Saved to the App field "First heard about us"
+     (contact.first_heard_about_us, id 33VjsoSB8LLw0ch10lbu, folder 1.0). NEVER graded. Labels = the field's options. */
+  var FIRST_HEARD = ['Instagram', 'YouTube', 'A Facebook or Instagram ad', 'A friend or another business owner',
+    'Google or AI search (like ChatGPT)', 'Someone I follow recommended you', 'Email', 'Somewhere else'];
   /* Grade lines: revenue from REVENUE[REV_FLOOR] ($10K to $15K) up, ads from AD_SPEND[ADS_FLOOR] ($35 to $100 a day) up. */
   var REV_FLOOR = 2, ADS_FLOOR = 2;
 
@@ -43,7 +47,8 @@
     { key: 'lead_team_size', title: 'How many full-time technicians do you have, counting you?', options: TEAM },
     { key: 'lead_ad_spend', title: 'Daily ad spend (approximate)', options: AD_SPEND },
     { key: 'lead_revenue', title: 'Monthly revenue (approximate)', options: REVENUE },
-    { key: 'lead_ready_to_invest', title: 'If we show you a plan that makes sense, are you ready to put money behind it?', sub: 'Savings, card, or financing is okay.', options: READY }
+    { key: 'lead_ready_to_invest', title: 'If we show you a plan that makes sense, are you ready to put money behind it?', sub: 'Savings, card, or financing is okay.', options: READY },
+    { key: 'first_heard_about_us', title: 'Where did you first hear about LEADFUSE?', options: FIRST_HEARD }
   ];
 
   /* ---------- Grade: the App's rule, word for word (BUILD-SPEC Nov 9 2026, same as the roadmap quiz). ----------
@@ -51,7 +56,7 @@
               OR "No, I don't have a way to invest right now"
      green  = revenue "$10K to $15K" and up AND ads "$35 to $100 a day" and up
      yellow = revenue "$10K to $15K" and up, ads "Nothing yet" / "Under $35 a day"
-     Team size only counts for "Just me, no revenue yet".
+     Team size only counts for "Just me, no revenue yet". "Where did you first hear about LEADFUSE?" never counts.
      score  = the old Typeform score, kept so the App's "Application Score" reads the same:
               revenue $10K+ adds 3, ads $35+ a day adds 6, any red answer makes it 0. So red 0, yellow 3, green 9. */
   function grade(a) {
@@ -316,6 +321,7 @@
         lead_ad_spend: answers.lead_ad_spend || '',
         lead_ready_to_invest: answers.lead_ready_to_invest || '',
         lead_other_service: answers.lead_main_service === OTHER ? clean(otherService).slice(0, 200) : '',
+        first_heard_about_us: answers.first_heard_about_us || '', /* first touch; utm_* / formsource stay the conversion touch */
         lead_funnel: opts.funnel || 'Apply (Meta ads)',
         grade: g.grade,
         score: g.score,
