@@ -62,6 +62,12 @@
       "where": "YouTube descriptions, pinned comments, end screens"
     },
     {
+      "slug": "text",
+      "utm_source": "sms",
+      "medium": "sms",
+      "where": "Texts (by hand or from the App)"
+    },
+    {
       "slug": "email",
       "utm_source": "email",
       "medium": "email",
